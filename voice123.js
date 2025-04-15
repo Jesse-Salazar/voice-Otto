@@ -57,8 +57,26 @@ module.exports = {
       await signInButton?.click();
       //Secong login button click
       console.log('🔄 Signed in, now logging in again...');
-      const secondLoginButton = await page.waitForSelector('#app-bar-component > div > div > div.bar-action > a:nth-child(2)', {visible: true, timeout: 5000});
-      await secondLoginButton?.click();
+      
+      // Wait for necessary elements to load
+  await page.waitForSelector('button, input, a');
+
+  // Wait for navigation triggered by clicking the button
+  await Promise.all([
+    page.waitForNavigation({ waitUntil: 'networkidle2',timeout: 5000 }), // or 'load', depending on the site
+    page.evaluate(() => {
+      const elements = document.querySelectorAll('button, input[type="button"], input[type="submit"], a');
+      for (let el of elements) {
+        const text = (el.textContent || el.value || '').trim();
+        if (text === 'Log in') {
+          el.click();
+          break;
+        }
+      }
+    })
+  ]);
+
+      
       console.log('🔄  Officially logged in and looking for projects container...');
 
       // --- DASHBOARD SCRAPING ---
@@ -67,7 +85,7 @@ module.exports = {
       });
       await sleep(5000); // Additional buffer for loading
 
-      console.log('🔍 Scraping projects...');
+      console.log('🔍 Container found. Scraping projects...');
       const projects = await page.$$eval(
         '#app > div.vdl-page.no-full-width.dashboard > div.page-content > section > div.vdl-data-list > ul:nth-child(7)',
         (items) => items.map(item => {
@@ -83,13 +101,13 @@ module.exports = {
                 `temp-${Math.random().toString(36).substring(2, 9)}`,
             script: getText('.md-list-text-container, [data-testid="Project description"]'),
             title: getText('.field-name, [data-testid="Project name"]'),
-            //deadline: getText('.project-deadline, [data-testid="deadline"]'),
+            deadline: getText('.project-deadline, [data-testid="deadline"]'),
             canAccept: !!item.querySelector('#app > div:nth-child(4) > div.vdl-page.no-full-width.project-management.specs > div.md-whiteframe.md-whiteframe-1dp.vdl-banner.action-bearer.sticky.primary > div > div.md-layout.md-flex-100.button-wrapper > div:nth-child(1) > button, [data-testid="accept-btn"]'),
-            //url: getAttribute('a', 'href')
+            url: getAttribute('a', 'href')
           };
         })
       );
-
+      console.log(projects);
       // Process new projects
       const acceptableProjects = projects.filter(p => p.canAccept);
       console.log(`✅ Found ${acceptableProjects.length} acceptable projects`);
@@ -103,13 +121,14 @@ module.exports = {
           'Deadline': project.deadline,
           'URL': project.url
         });
+        console.log(acceptableProjects);
       }
 
       return acceptableProjects;
 
     } catch (error) {
       const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
-      await page.screenshot({ path: `error-${timestamp}.png` });
+      await page.screenshot({ path: `./errors/error-${timestamp}.png` });
       console.error('❌ Error in checkInvites:', error);
       throw error;
     } finally {
