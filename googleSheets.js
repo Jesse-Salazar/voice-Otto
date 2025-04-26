@@ -1,53 +1,63 @@
 const { GoogleSpreadsheet } = require("google-spreadsheet");
+const { JWT } = require("google-auth-library");
+require("dotenv").config(); // Ensure .env loading
+
+// Validate critical environment variables first
+const REQUIRED_ENV = [
+  "GOOGLE_SHEET_ID",
+  "GOOGLE_SERVICE_ACCOUNT_EMAIL",
+  "GOOGLE_PRIVATE_KEY"
+];
+
+REQUIRED_ENV.forEach(variable => {
+  if (!process.env[variable]) {
+    throw new Error(`Missing required environment variable: ${variable}`);
+  }
+});
+
+// Configure authentication safely
+const serviceAccountAuth = new JWT({
+  email: process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL,
+  key: process.env.GOOGLE_PRIVATE_KEY.replace(/\\n/g, "\n"),
+  scopes: ["https://www.googleapis.com/auth/spreadsheets"]
+});
 
 let _sheet;
 
 async function getSheet() {
   if (!_sheet) {
-    const doc = new GoogleSpreadsheet(process.env.GOOGLE_SHEET_ID);
-    await doc.useServiceAccountAuth({
-      client_email: process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL,
-      private_key: process.env.GOOGLE_PRIVATE_KEY.replace(/\\n/g, "\n"),
-    });
-    await doc.loadInfo();
-    _sheet = doc.sheetsByIndex[0];
+    const doc = new GoogleSpreadsheet(
+      process.env.GOOGLE_SHEET_ID,
+      serviceAccountAuth
+    );
+
+    try {
+      await doc.loadInfo();
+      _sheet = doc.sheetsByIndex[0];
+    } catch (error) {
+      console.error("Failed to load Google Sheet:");
+      console.error("1. Verify the Sheet ID is correct");
+      console.error("2. Ensure service account has editor access");
+      console.error("3. Confirm network connectivity");
+      throw error;
+    }
   }
   return _sheet;
 }
 
-async function addProject(fullProject) {
-  // Map to spreadsheet columns
-  const row = [
-    fullProject.title,
-    fullProject.deadline,
-    fullProject.quoteType,
-    fullProject.script,
-    fullProject.status,
-  ];
+module.exports = {
+  async addProject(project) {
+    const sheet = await getSheet();
+    await sheet.addRow({
+      'Project Title': project.title,
+      'Project URL': project.url,
+      'Deadline': project.deadline || project.meta.find(t => t.includes('remaining')),
+      'Budget': project.budget || project.meta.find(t => t.includes('USD')),
+      'Script Excerpt': project.script?.substring(0, 200) + '...', // Truncate long scripts
+      'Script': project.script,
+      'Status': 'New',
+      'Processed At': new Date().toISOString()
+    });
+  }
+};
 
-  module.exports = {
-    async addProject(data) {
-      const sheet = await getSheet();
-      await sheet.addRow(data);
-    },
-
-    async updateProject(projectId, updates) {
-      const sheet = await getSheet();
-      const rows = await sheet.getRows();
-      const row = rows.find((r) => r["Project ID"] === projectId);
-
-      if (row) {
-        Object.entries(updates).forEach(([key, value]) => {
-          row[key] = value;
-        });
-        await row.save();
-      }
-    },
-
-    async getPendingProjects() {
-      const sheet = await getSheet();
-      const rows = await sheet.getRows();
-      return rows.filter((row) => row["Status"] === "New");
-    },
-  };
-}

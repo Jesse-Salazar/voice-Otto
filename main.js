@@ -1,4 +1,4 @@
-require('dotenv/config');
+require("dotenv").config({ path: ".env" });
 const validateEnv = require('./validateEnv'); // Now properly imported
 const voice123 = require('./voice123');
 const { generateAudio } = require('./elevenlabs');

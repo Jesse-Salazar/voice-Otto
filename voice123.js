@@ -1,7 +1,8 @@
 const { connect } = require("./browser");
 const fs = require("fs-extra");
 const { addProject } = require("./googleSheets");
-const { waitForElf } = require("./helpers");
+const { log, retry, waitFor, safeQuerySelector } = require('./helpers');
+
 
 const CONFIG = {
   baseUrl: "https://voice123.com",
@@ -20,20 +21,25 @@ const CONFIG = {
       projectMeta: ".item-info:not(.small-icon)",
     },
     project: {
-      script:
-        "div.vdl-expandable-text.field-value-text > div.content clickable",
-      description: "div.read-only-extended",
-      additionalDetails:
-        "div.vdl-expandable-text.field-value-text > div.content clickable",
-      acceptBtn:
-        "#app > div:nth-child(4) > div.vdl-page.no-full-width.project-management.specs > div.md-whiteframe.md-whiteframe-1dp.vdl-banner.action-bearer.sticky.primary.md-outset.invitation-toast > div > div.md-layout.md-flex-100.button-wrapper > div:nth-child(1) > button",
+      script: validateSelector(process.env.SCRIPT_SELECTOR, 'script'),
+      description: validateSelector(process.env.DESCRIPTION_SELECTOR, 'description'),
+      requirements: validateSelector(process.env.REQUIREMENTS_SELECTOR, 'requirements'),
+      acceptBtn: validateSelector(process.env.ACCEPT_BTN_SELECTOR, 'accept button')
     },
   },
   navigation: {
-    timeout: 60000,
+    timeout: 10000,
     waitUntil: "networkidle2",
   },
 };
+
+// Utility function to check for invalid or missing selectors
+function validateSelector(selector, context = 'general') {
+  if (!selector || typeof selector !== 'string' || selector.trim() === '') {
+    throw new Error(`Invalid selector in ${context}: ${selector}`);
+  }
+  return selector;
+}
 
 module.exports = {
   async checkInvites() {
@@ -136,7 +142,7 @@ module.exports = {
           })),
         CONFIG.selectors.dashboard
       );
-      console.log(projectList);
+      
 
       const processedProjects = [];
 
@@ -150,28 +156,28 @@ module.exports = {
           await projectPage.goto(project.url, CONFIG.navigation);
 
           // Extract details
-          const details = await projectPage.evaluate(
-            (selectors) => ({
-              script: document
-                .querySelector(selectors.script)
-                ?.textContent?.trim(),
-              description: document
-                .querySelector(selectors.description)
-                ?.textContent?.trim(),
-              additionalDetails: document
-                .querySelector(selectors.additionalDetails)
-                ?.textContent?.trim(),
-              // requirements: document
-              //   .querySelector(selectors.requirements)
-              //   ?.textContent?.trim(),
-            }),
-            CONFIG.selectors.project
-          );
-
-          console.log(details);
+          const details = {
+            script: await safeQuerySelector(projectPage, CONFIG.selectors.project.script),
+            description: await safeQuerySelector(projectPage, CONFIG.selectors.project.description),
+            requirements: await safeQuerySelector(projectPage, CONFIG.selectors.project.requirements)
+          };
 
           // Save to Google Sheets
-          const fullProject = { ...project, ...details };
+          const fullProject = {
+            title: project.title,
+            url: project.url,
+            
+            // Safely handle meta data
+            deadline: project.deadline || (project.meta || []).find(t => t.includes?.('remaining')) || 'No deadline found',
+            
+            budget: project.budget || (project.meta || []).find(t => t.includes?.('USD')) || 'Budget not specified',
+            
+            // Safely handle nested details
+            script: project.script || details?.script || 'No script available',
+            description: details?.description || 'No description',
+            requirements: details?.requirements || 'No requirements'
+          };
+          
           await addProject(fullProject);
           processedProjects.push(fullProject);
 
@@ -193,7 +199,7 @@ module.exports = {
           });
         } finally {
           await projectPage.close();
-          await waitForElf(2000);
+          await waitFor(2000);
         }
       }
 
