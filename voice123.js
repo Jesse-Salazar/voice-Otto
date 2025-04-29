@@ -24,7 +24,9 @@ const CONFIG = {
       script: validateSelector(process.env.SCRIPT_SELECTOR, 'script'),
       description: validateSelector(process.env.DESCRIPTION_SELECTOR, 'description'),
       requirements: validateSelector(process.env.REQUIREMENTS_SELECTOR, 'requirements'),
-      acceptBtn: validateSelector(process.env.ACCEPT_BTN_SELECTOR, 'accept button')
+      acceptBtn: validateSelector(process.env.ACCEPT_BTN_SELECTOR, 'accept button'),
+      clientId: validateSelector(process.env.CLIENT_SELECTOR, 'clientId'
+      )
     },
   },
   navigation: {
@@ -125,7 +127,7 @@ module.exports = {
       // --- PROJECT PROCESSING ---
       console.log("🔍 Scanning for projects...");
       await mainPage.waitForSelector(CONFIG.selectors.dashboard.projects, {
-        timeout: 20000,
+        timeout: 10000,
       });
 
       const projectList = await mainPage.$$eval(
@@ -159,7 +161,8 @@ module.exports = {
           const details = {
             script: await safeQuerySelector(projectPage, CONFIG.selectors.project.script),
             description: await safeQuerySelector(projectPage, CONFIG.selectors.project.description),
-            requirements: await safeQuerySelector(projectPage, CONFIG.selectors.project.requirements)
+            requirements: await safeQuerySelector(projectPage, CONFIG.selectors.project.requirements),
+            clientId: await safeQuerySelector(projectPage, CONFIG.selectors.project.clientId)
           };
 
           // Save to Google Sheets
@@ -170,28 +173,29 @@ module.exports = {
             // Safely handle meta data
             deadline: project.deadline || (project.meta || []).find(t => t.includes?.('remaining')) || 'No deadline found',
             
-            budget: project.budget || (project.meta || []).find(t => t.includes?.('USD')) || 'Budget not specified',
+            // budget: project.budget || (project.meta || []).find(t => t.includes?.('USD')) || 'Budget not specified',
             
             // Safely handle nested details
             script: project.script || details?.script || 'No script available',
             description: details?.description || 'No description',
-            requirements: details?.requirements || 'No requirements'
+            requirements: details?.requirements || 'No requirements',
+            clientId: details?.clientId || 'No client ID'
           };
           
           await addProject(fullProject);
           processedProjects.push(fullProject);
 
           // Accept project
-          const acceptButton = await projectPage.$(
-            CONFIG.selectors.project.acceptBtn
-          );
-          if (acceptButton) {
-            await Promise.all([
-              projectPage.waitForNavigation(CONFIG.navigation),
-              acceptButton.click(),
-            ]);
-            console.log("✅ Accepted project");
-          }
+          // const acceptButton = await projectPage.$(
+          //   CONFIG.selectors.project.acceptBtn
+          // );
+          // if (acceptButton) {
+          //   await Promise.all([
+          //     projectPage.waitForNavigation(CONFIG.navigation),
+          //     acceptButton.click(),
+          //   ]);
+          //   console.log("✅ Accepted project");
+          // }
         } catch (error) {
           console.error(`⚠️ Project error: ${error.message}`);
           await projectPage.screenshot({

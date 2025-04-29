@@ -52,11 +52,12 @@ module.exports = {
       'Project Title': project.title,
       'Project URL': project.url,
       'Deadline': project.deadline || project.meta.find(t => t.includes('remaining')),
-      'Budget': project.budget || project.meta.find(t => t.includes('USD')),
+      //'Budget': project.budget || project.meta.find(t => t.includes('USD')),
       'Script Excerpt': project.script?.substring(0, 200) + '...', // Truncate long scripts
       'Script': project.script,
       'Status': 'New',
-      'Processed At': new Date().toISOString()
+      'Processed At': new Date().toISOString(),
+      'Client ID': project.clientId
     });
   }
 };
