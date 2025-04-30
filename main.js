@@ -12,10 +12,24 @@ async function main() {
     console.log("🚀 Starting Voice123 Automation");
 
     // 1. Login and extract project details
-    await voice123.checkInvites();
-    await voiceBuild.generateAudio();
+    const projects = await voice123.checkInvites();
+    
+    // 2. Process audio for each project
+    for (const project of projects) {
+      try {
+        if (project.script && project.id) {
+          await voiceBuild.generateAudio(project.id, project.script);
+        }
+      } catch (error) {
+        console.error(`🚧 Project ${project.id} failed:`);
+        console.error(error);
+        await updateProject(project.id, {
+          'Status': 'Error',
+          'Notes': error.message
+        });
+      }
+    };
 
-    // 2. Sent to Eleven Labs for audio generation
     console.log("\n🏁 All projects processed successfully");
   } catch (error) {
     console.error("🔥 Critical error:", error);

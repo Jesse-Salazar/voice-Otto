@@ -1,15 +1,16 @@
 const { GoogleSpreadsheet } = require("google-spreadsheet");
 const { JWT } = require("google-auth-library");
 require("dotenv").config(); // Ensure .env loading
+const { v4: uuidv4 } = require('uuid');
 
 // Validate critical environment variables first
 const REQUIRED_ENV = [
   "GOOGLE_SHEET_ID",
   "GOOGLE_SERVICE_ACCOUNT_EMAIL",
-  "GOOGLE_PRIVATE_KEY"
+  "GOOGLE_PRIVATE_KEY",
 ];
 
-REQUIRED_ENV.forEach(variable => {
+REQUIRED_ENV.forEach((variable) => {
   if (!process.env[variable]) {
     throw new Error(`Missing required environment variable: ${variable}`);
   }
@@ -19,7 +20,7 @@ REQUIRED_ENV.forEach(variable => {
 const serviceAccountAuth = new JWT({
   email: process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL,
   key: process.env.GOOGLE_PRIVATE_KEY.replace(/\\n/g, "\n"),
-  scopes: ["https://www.googleapis.com/auth/spreadsheets"]
+  scopes: ["https://www.googleapis.com/auth/spreadsheets"],
 });
 
 let _sheet;
@@ -47,18 +48,37 @@ async function getSheet() {
 
 module.exports = {
   async addProject(project) {
+    const projectId = uuidv4();
     const sheet = await getSheet();
     await sheet.addRow({
-      'Project Title': project.title,
-      'Project URL': project.url,
-      'Deadline': project.deadline || project.meta.find(t => t.includes('remaining')),
+      "Project ID": projectId,
+      "Project Title": project.title,
+      "Project URL": project.url,
+      Deadline:
+        project.deadline || project.meta.find((t) => t.includes("remaining")),
       //'Budget': project.budget || project.meta.find(t => t.includes('USD')),
-      'Script Excerpt': project.script?.substring(0, 200) + '...', // Truncate long scripts
-      'Script': project.script,
-      'Status': 'New',
-      'Processed At': new Date().toISOString(),
-      'Client ID': project.clientId
+      "Script Excerpt": project.script?.substring(0, 200) + "...", // Truncate long scripts
+      Script: project.script,
+      Status: "New",
+      "Processed At": new Date().toISOString(),
+      "Client ID": project.clientId,
     });
-  }
-};
+    return projectId; //Return ID for Tracking
+  },
+  async updateProject(projectId, updates) {
+    const sheet = await getSheet();
+    const rows = await sheet.getRows();
 
+    // Find project by ID (need to store IDs first)
+    const row = rows.find((row) => row.get("Project ID") === projectId);
+
+    if (!row) throw new Error(`Project ${projectId} not found`);
+
+    // Update specified fields
+    Object.entries(updates).forEach(([key, value]) => {
+      row.set(key, value);
+    });
+
+    await row.save();
+  },
+};

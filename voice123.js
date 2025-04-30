@@ -2,6 +2,7 @@ const { connect } = require("./browser");
 const fs = require("fs-extra");
 const { addProject } = require("./googleSheets");
 const { log, retry, waitFor, safeQuerySelector } = require('./helpers');
+const { v4: uuidv4 } = require('uuid');
 
 
 const CONFIG = {
@@ -165,8 +166,11 @@ module.exports = {
             clientId: await safeQuerySelector(projectPage, CONFIG.selectors.project.clientId)
           };
 
+          
+
           // Save to Google Sheets
           const fullProject = {
+            id: uuidv4(),
             title: project.title,
             url: project.url,
             
@@ -182,8 +186,8 @@ module.exports = {
             clientId: details?.clientId || 'No client ID'
           };
           
-          await addProject(fullProject);
-          processedProjects.push(fullProject);
+          const projectId = await addProject(fullProject);
+          processedProjects.push({ ...fullProject, id: projectId });
 
           // Accept project
           // const acceptButton = await projectPage.$(

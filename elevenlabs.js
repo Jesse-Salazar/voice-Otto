@@ -1,6 +1,6 @@
 const fs = require('fs');
-const fetch = require('node-fetch');
 const { updateProject } = require('./googleSheets');
+const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
 
 module.exports = {
   async generateAudio(projectId, text) {
@@ -25,11 +25,17 @@ module.exports = {
         }
       );
 
-      if (!response.ok) throw new Error(await response.text());
+      if (!response.ok) {
+        const errorText = await response.text();
+        throw new Error(`API Error [${response.status}]: ${errorText}`);
+      }
 
-      const buffer = await response.buffer();
+      // Updated buffer handling
+      const arrayBuffer = await response.arrayBuffer();
+      const buffer = Buffer.from(arrayBuffer);
+      
       const filename = `audio_${projectId}_${Date.now()}.mp3`;
-      fs.writeFileSync(filename, buffer);
+      await fs.promises.writeFile(filename, buffer);
 
       await updateProject(projectId, {
         'Status': 'Generated',
@@ -41,7 +47,7 @@ module.exports = {
     } catch (error) {
       await updateProject(projectId, {
         'Status': 'Error',
-        'Notes': `Audio generation failed: ${error.message}`
+        'Notes': `Audio generation failed: ${error.message.substring(0, 100)}`
       });
       throw error;
     }
