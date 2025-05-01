@@ -2,15 +2,6 @@ const fs = require('fs');
 const { updateProject } = require('./googleSheets');
 const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
 
-// Voice parameter configuration
-const VOICE_SETTINGS = {
-  stability: parseFloat(process.env.ELEVENLABS_STABILITY) || 0.7,
-  similarity_boost: parseFloat(process.env.ELEVENLABS_SIMILARITY) || 0.8,
-  style: parseFloat(process.env.ELEVENLABS_STYLE_EXAGGERATION) || 0.0,
-  speed: parseFloat(process.env.ELEVENLABS_SPEED) || 1.0,
-  speaker_boost: process.env.ELEVENLABS_SPEAKER_BOOST === 'true' || true
-};
-
 module.exports = {
   async generateAudio(projectId, text) {
     try {
@@ -22,13 +13,14 @@ module.exports = {
           method: 'POST',
           headers: {
             'xi-api-key': process.env.ELEVENLABS_API_KEY,
-            'Content-Type': 'application/json',
-            'Accept': 'audio/mpeg'
+            'Content-Type': 'application/json'
           },
           body: JSON.stringify({
             text: text,
-            model_id: process.env.ELEVENLABS_MODEL_ID || "eleven_monolingual_v1",
-            voice_settings: VOICE_SETTINGS
+            voice_settings: {
+              stability: 0.7,
+              similarity_boost: 0.8
+            }
           })
         }
       );
@@ -38,6 +30,7 @@ module.exports = {
         throw new Error(`API Error [${response.status}]: ${errorText}`);
       }
 
+      // Updated buffer handling
       const arrayBuffer = await response.arrayBuffer();
       const buffer = Buffer.from(arrayBuffer);
       
@@ -46,8 +39,7 @@ module.exports = {
 
       await updateProject(projectId, {
         'Status': 'Generated',
-        'Audio File URL': filename,
-        'Voice Settings': JSON.stringify(VOICE_SETTINGS) // Optional: Store settings
+        'Audio File URL': filename
       });
 
       return filename;

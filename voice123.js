@@ -1,9 +1,8 @@
 const { connect } = require("./browser");
 const fs = require("fs-extra");
 const { addProject } = require("./googleSheets");
-const { log, retry, waitFor, safeQuerySelector } = require('./helpers');
-const { v4: uuidv4 } = require('uuid');
-
+const { log, retry, waitFor, safeQuerySelector } = require("./helpers");
+const { v4: uuidv4 } = require("uuid");
 
 const CONFIG = {
   baseUrl: "https://voice123.com",
@@ -22,12 +21,20 @@ const CONFIG = {
       projectMeta: ".item-info:not(.small-icon)",
     },
     project: {
-      script: validateSelector(process.env.SCRIPT_SELECTOR, 'script'),
-      description: validateSelector(process.env.DESCRIPTION_SELECTOR, 'description'),
-      requirements: validateSelector(process.env.REQUIREMENTS_SELECTOR, 'requirements'),
-      acceptBtn: validateSelector(process.env.ACCEPT_BTN_SELECTOR, 'accept button'),
-      clientId: validateSelector(process.env.CLIENT_SELECTOR, 'clientId'
-      )
+      script: validateSelector(process.env.SCRIPT_SELECTOR, "script"),
+      description: validateSelector(
+        process.env.DESCRIPTION_SELECTOR,
+        "description"
+      ),
+      requirements: validateSelector(
+        process.env.REQUIREMENTS_SELECTOR,
+        "requirements"
+      ),
+      acceptBtn: validateSelector(
+        process.env.ACCEPT_BTN_SELECTOR,
+        "accept button"
+      ),
+      clientId: validateSelector(process.env.CLIENT_SELECTOR, "clientId"),
     },
   },
   navigation: {
@@ -37,8 +44,8 @@ const CONFIG = {
 };
 
 // Utility function to check for invalid or missing selectors
-function validateSelector(selector, context = 'general') {
-  if (!selector || typeof selector !== 'string' || selector.trim() === '') {
+function validateSelector(selector, context = "general") {
+  if (!selector || typeof selector !== "string" || selector.trim() === "") {
     throw new Error(`Invalid selector in ${context}: ${selector}`);
   }
   return selector;
@@ -67,37 +74,37 @@ module.exports = {
         process.env.VOICE123_EMAIL,
         { delay: 50 }
       );
-      console.log("Typing email");
+      console.log("💬 Entering email...");
       // Click continue
       await Promise.all([
         mainPage.waitForNavigation(CONFIG.navigation),
         mainPage.click(CONFIG.selectors.login.continueBtn),
       ]);
-      console.log("Switching to password login");
+      console.log("🔁 Switching to password login...");
       // Switch to password login
       await mainPage.waitForSelector(CONFIG.selectors.login.passwordLogin, {
         visible: true,
       });
-      console.log("found use password button ");
+      console.log("🧐 Found use password button");
       await Promise.all([
         mainPage.waitForNavigation(CONFIG.navigation),
         mainPage.click(CONFIG.selectors.login.passwordLogin),
       ]);
-      console.log("clicked type your password button");
+      console.log("✅ Clicked type your password button");
       // Handle password input
       await mainPage.type(
         CONFIG.selectors.login.password,
         process.env.VOICE123_PASSWORD,
         { delay: 50 }
       );
-      console.log("entered password information");
+      console.log("🔐 Entered password information");
       await Promise.all([
         mainPage.waitForNavigation(CONFIG.navigation),
         mainPage.waitForSelector(CONFIG.selectors.login.continueBtn),
         mainPage.click(CONFIG.selectors.login.continueBtn),
       ]);
 
-      console.log("Moving on to second login button");
+      console.log("🚚 Moving on to second login button...");
       //Secong login button click
 
       // Wait for necessary elements to load
@@ -123,13 +130,27 @@ module.exports = {
         }),
       ]);
 
-      console.log("🔄  Officially logged in...");
+      console.log("🪪 Officially logged in");
 
       // --- PROJECT PROCESSING ---
       console.log("🔍 Scanning for projects...");
-      await mainPage.waitForSelector(CONFIG.selectors.dashboard.projects, {
-        timeout: 10000,
-      });
+      try {
+        await mainPage.waitForSelector(CONFIG.selectors.dashboard.projects, {
+          timeout: 10000,
+        });
+      } catch (error) {
+        if (error.name === "TimeoutError") {
+          // Verify if projects are actually missing
+          const projectsExist = await mainPage.$(
+            CONFIG.selectors.dashboard.projects
+          );
+          if (!projectsExist) {
+            console.log("🚫 No available projects found");
+            return []; // Return empty array instead of error
+          }
+        }
+        throw error; // Re-throw other errors
+      }
 
       const projectList = await mainPage.$$eval(
         CONFIG.selectors.dashboard.projects,
@@ -145,7 +166,6 @@ module.exports = {
           })),
         CONFIG.selectors.dashboard
       );
-      
 
       const processedProjects = [];
 
@@ -160,32 +180,42 @@ module.exports = {
 
           // Extract details
           const details = {
-            script: await safeQuerySelector(projectPage, CONFIG.selectors.project.script),
-            description: await safeQuerySelector(projectPage, CONFIG.selectors.project.description),
-            requirements: await safeQuerySelector(projectPage, CONFIG.selectors.project.requirements),
-            clientId: await safeQuerySelector(projectPage, CONFIG.selectors.project.clientId)
+            script: await safeQuerySelector(
+              projectPage,
+              CONFIG.selectors.project.script
+            ),
+            description: await safeQuerySelector(
+              projectPage,
+              CONFIG.selectors.project.description
+            ),
+            //requirements: await safeQuerySelector(projectPage, CONFIG.selectors.project.requirements),
+            clientId: await safeQuerySelector(
+              projectPage,
+              CONFIG.selectors.project.clientId
+            ),
           };
-
-          
 
           // Save to Google Sheets
           const fullProject = {
             id: uuidv4(),
             title: project.title,
             url: project.url,
-            
+
             // Safely handle meta data
-            deadline: project.deadline || (project.meta || []).find(t => t.includes?.('remaining')) || 'No deadline found',
-            
+            deadline:
+              project.deadline ||
+              (project.meta || []).find((t) => t.includes?.("remaining")) ||
+              "No deadline found",
+
             // budget: project.budget || (project.meta || []).find(t => t.includes?.('USD')) || 'Budget not specified',
-            
+
             // Safely handle nested details
-            script: project.script || details?.script || 'No script available',
-            description: details?.description || 'No description',
-            requirements: details?.requirements || 'No requirements',
-            clientId: details?.clientId || 'No client ID'
+            script: project.script || details?.script || "No script available",
+            description: details?.description || "No description",
+            //requirements: details?.requirements || 'No requirements',
+            clientId: details?.clientId || "No client ID",
           };
-          
+
           const projectId = await addProject(fullProject);
           processedProjects.push({ ...fullProject, id: projectId });
 
@@ -217,14 +247,16 @@ module.exports = {
       );
       return processedProjects;
     } catch (error) {
+      if (error.name === 'TimeoutError' && error.message.includes(CONFIG.selectors.dashboard.projects)) {
+        console.log("🟡 No active projects available");
+        return []; // Return empty array instead of crashing
+      }
       console.error("🚨 Critical error:", error);
-      await mainPage.screenshot({
-        path: `errors/main-error-${Date.now()}.png`,
-      });
+      await mainPage.screenshot({ path: `errors/main-error-${Date.now()}.png` });
       throw error;
     } finally {
       await mainPage.close();
       await browser.close();
     }
-  },
+  }
 };
