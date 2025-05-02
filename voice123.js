@@ -204,7 +204,7 @@ module.exports = {
 
           // Save to Google Sheets
           const fullProject = {
-            id: uuidv4(),
+            //id: uuidv4(),
             title: project.title,
             url: project.url,
 
@@ -228,7 +228,7 @@ module.exports = {
           if (details.hasAttachment) {
             console.log("⏩ Project has attachments - requires manual review");
             fullProject.status = "needs_manual_review";
-            fullProject.script= null
+            fullProject.script = null
           } else if (
             !details.script ||
             details.script.length < MIN_SCRIPT_LENGTH

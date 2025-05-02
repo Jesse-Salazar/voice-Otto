@@ -57,7 +57,7 @@ async function getSheet() {
 
 module.exports = {
   async addProject(project) {
-    const projectId = uuidv4().substring(0,5);
+    const projectId = uuidv4();
     const sheet = await getSheet();
     await sheet.addRow({
       "Project ID": projectId,

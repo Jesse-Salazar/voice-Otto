@@ -4,10 +4,10 @@ const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch
 
 // Voice parameter configuration
 const VOICE_SETTINGS = {
-  stability: parseFloat(process.env.ELEVENLABS_STABILITY) || 0.7,
-  similarity_boost: parseFloat(process.env.ELEVENLABS_SIMILARITY) || 0.8,
-  style: parseFloat(process.env.ELEVENLABS_STYLE_EXAGGERATION) || 0.0,
-  speed: parseFloat(process.env.ELEVENLABS_SPEED) || 1.0,
+  stability: parseFloat(process.env.ELEVENLABS_STABILITY) || 0.6,
+  similarity_boost: parseFloat(process.env.ELEVENLABS_SIMILARITY) || 0.85,
+  style: parseFloat(process.env.ELEVENLABS_STYLE_EXAGGERATION) || 0.5,
+  speed: parseFloat(process.env.ELEVENLABS_SPEED) || 1.12,
   speaker_boost: process.env.ELEVENLABS_SPEAKER_BOOST === 'true' || true
 };
 
@@ -27,7 +27,7 @@ module.exports = {
           },
           body: JSON.stringify({
             text: text,
-            model_id: process.env.ELEVENLABS_MODEL_ID || "eleven_monolingual_v1",
+            model_id: process.env.ELEVENLABS_MODEL_ID || "eleven_multilingual_v2",
             voice_settings: VOICE_SETTINGS
           })
         }
