@@ -2,6 +2,15 @@ const { GoogleSpreadsheet } = require("google-spreadsheet");
 const { JWT } = require("google-auth-library");
 require("dotenv").config(); // Ensure .env loading
 const { v4: uuidv4 } = require('uuid');
+const formattedDate = new Intl.DateTimeFormat('en-GB', {
+  weekday: 'long',
+  month: 'long',
+  day: 'numeric',
+  year: 'numeric',
+  hour: '2-digit',
+  minute: '2-digit',
+  hour12: true
+}).format(new Date());
 
 // Validate critical environment variables first
 const REQUIRED_ENV = [
@@ -48,7 +57,7 @@ async function getSheet() {
 
 module.exports = {
   async addProject(project) {
-    const projectId = uuidv4();
+    const projectId = uuidv4().substring(0,5);
     const sheet = await getSheet();
     await sheet.addRow({
       "Project ID": projectId,
@@ -57,10 +66,9 @@ module.exports = {
       Deadline:
         project.deadline || project.meta.find((t) => t.includes("remaining")),
       //'Budget': project.budget || project.meta.find(t => t.includes('USD')),
-      "Script Excerpt": project.script?.substring(0, 200) + "...", // Truncate long scripts
       Script: project.script,
       Status: "New",
-      "Processed At": new Date().toISOString(),
+      "Processed At": formattedDate,
       "Client ID": project.clientId,
     });
     return projectId; //Return ID for Tracking

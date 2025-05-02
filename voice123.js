@@ -35,6 +35,7 @@ const CONFIG = {
         "accept button"
       ),
       clientId: validateSelector(process.env.CLIENT_SELECTOR, "clientId"),
+      hasAttachment: validateSelector(process.env.ATTACHMENT_SELECTOR, "hasAttachment"),
     },
   },
   navigation: {
@@ -149,7 +150,7 @@ module.exports = {
             return []; // Return empty array instead of error
           }
         }
-        throw error; // Re-throw other errors
+        throw error;
       }
 
       const projectList = await mainPage.$$eval(
@@ -193,7 +194,13 @@ module.exports = {
               projectPage,
               CONFIG.selectors.project.clientId
             ),
+            hasAttachment: await projectPage
+              .$(CONFIG.selectors.project.hasAttachment)
+              .catch(() => false),
           };
+
+          // --- ENHANCED VALIDATION ---
+          const MIN_SCRIPT_LENGTH = 50; // Minimum characters to consider valid
 
           // Save to Google Sheets
           const fullProject = {
@@ -214,10 +221,36 @@ module.exports = {
             description: details?.description || "No description",
             //requirements: details?.requirements || 'No requirements',
             clientId: details?.clientId || "No client ID",
+            status: "new",
           };
+
+          // --- VALIDATE SCRIPT ---
+          if (details.hasAttachment) {
+            console.log("⏩ Project has attachments - requires manual review");
+            fullProject.status = "needs_manual_review";
+            fullProject.script= null
+          } else if (
+            !details.script ||
+            details.script.length < MIN_SCRIPT_LENGTH
+          ) {
+            console.log(
+              "🔍 Script too short or missing - manual review needed"
+            );
+            fullProject.status = "needs_manual_review";
+            fullProject.script = "INVALID_SCRIPT_LENGTH"; // Flag for filtering
+          } else {
+            fullProject.status = "ready_for_audio"; // Ready for ElevenLabs
+          }
 
           const projectId = await addProject(fullProject);
           processedProjects.push({ ...fullProject, id: projectId });
+
+          // --- (Optional) TRIGGER AUDIO GENERATION IF VALID ---
+          // if (fullProject.status === "ready_for_audio") {
+          //   const audioFile = await generateAudio(fullProject.script); // Implement ElevenLabs call
+          //   fullProject.audio_url = await uploadToStorage(audioFile); // Save to Drive/S3
+          //   await updateProject(fullProject); // Update Sheets with audio URL
+          // }
 
           // Accept project
           // const acceptButton = await projectPage.$(
@@ -247,16 +280,21 @@ module.exports = {
       );
       return processedProjects;
     } catch (error) {
-      if (error.name === 'TimeoutError' && error.message.includes(CONFIG.selectors.dashboard.projects)) {
+      if (
+        error.name === "TimeoutError" &&
+        error.message.includes(CONFIG.selectors.dashboard.projects)
+      ) {
         console.log("🟡 No active projects available");
         return []; // Return empty array instead of crashing
       }
       console.error("🚨 Critical error:", error);
-      await mainPage.screenshot({ path: `errors/main-error-${Date.now()}.png` });
+      await mainPage.screenshot({
+        path: `errors/main-error-${Date.now()}.png`,
+      });
       throw error;
     } finally {
       await mainPage.close();
       await browser.close();
     }
-  }
+  },
 };
