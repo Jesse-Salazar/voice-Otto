@@ -2,7 +2,6 @@ const { connect } = require("./browser");
 const fs = require("fs-extra");
 const { addProject } = require("./googleSheets");
 const { log, retry, waitFor, safeQuerySelector } = require("./helpers");
-const { v4: uuidv4 } = require("uuid");
 
 const CONFIG = {
   baseUrl: "https://voice123.com",
@@ -12,7 +11,7 @@ const CONFIG = {
       password: 'input[type="password"]',
       continueBtn: 'button[type="submit"]',
       passwordLogin: '.mdl-button--accent[href="/login/"]',
-      signInBtn: 'button:has-text("Continue")',
+      //signInBtn: 'button:has-text("Continue")',
     },
     dashboard: {
       projects: "ul.md-list.md-theme > li.vdl-invite-list-item",
@@ -35,7 +34,10 @@ const CONFIG = {
         "accept button"
       ),
       clientId: validateSelector(process.env.CLIENT_SELECTOR, "clientId"),
-      hasAttachment: validateSelector(process.env.ATTACHMENT_SELECTOR, "hasAttachment"),
+      hasAttachment: validateSelector(
+        process.env.ATTACHMENT_SELECTOR,
+        "hasAttachment"
+      ),
     },
   },
   navigation: {
@@ -131,7 +133,7 @@ module.exports = {
         }),
       ]);
 
-      console.log("🪪 Officially logged in");
+      console.log("🪪  Officially logged in");
 
       // --- PROJECT PROCESSING ---
       console.log("🔍 Scanning for projects...");
@@ -189,7 +191,7 @@ module.exports = {
               projectPage,
               CONFIG.selectors.project.description
             ),
-            //requirements: await safeQuerySelector(projectPage, CONFIG.selectors.project.requirements),
+
             clientId: await safeQuerySelector(
               projectPage,
               CONFIG.selectors.project.clientId
@@ -204,7 +206,6 @@ module.exports = {
 
           // Save to Google Sheets
           const fullProject = {
-            //id: uuidv4(),
             title: project.title,
             url: project.url,
 
@@ -214,12 +215,9 @@ module.exports = {
               (project.meta || []).find((t) => t.includes?.("remaining")) ||
               "No deadline found",
 
-            // budget: project.budget || (project.meta || []).find(t => t.includes?.('USD')) || 'Budget not specified',
-
             // Safely handle nested details
-            script: project.script || details?.script || "No script available",
+            script: null,
             description: details?.description || "No description",
-            //requirements: details?.requirements || 'No requirements',
             clientId: details?.clientId || "No client ID",
             status: "new",
           };
@@ -228,7 +226,6 @@ module.exports = {
           if (details.hasAttachment) {
             console.log("⏩ Project has attachments - requires manual review");
             fullProject.status = "needs_manual_review";
-            fullProject.script = null
           } else if (
             !details.script ||
             details.script.length < MIN_SCRIPT_LENGTH
@@ -237,20 +234,13 @@ module.exports = {
               "🔍 Script too short or missing - manual review needed"
             );
             fullProject.status = "needs_manual_review";
-            fullProject.script = "INVALID_SCRIPT_LENGTH"; // Flag for filtering
           } else {
-            fullProject.status = "ready_for_audio"; // Ready for ElevenLabs
+            fullProject.status = "ready_for_audio";
+            fullProject.script = details.script;
           }
 
           const projectId = await addProject(fullProject);
           processedProjects.push({ ...fullProject, id: projectId });
-
-          // --- (Optional) TRIGGER AUDIO GENERATION IF VALID ---
-          // if (fullProject.status === "ready_for_audio") {
-          //   const audioFile = await generateAudio(fullProject.script); // Implement ElevenLabs call
-          //   fullProject.audio_url = await uploadToStorage(audioFile); // Save to Drive/S3
-          //   await updateProject(fullProject); // Update Sheets with audio URL
-          // }
 
           // Accept project
           // const acceptButton = await projectPage.$(

@@ -1,34 +1,44 @@
-const { GoogleSpreadsheet } = require('google-spreadsheet');
-const { JWT } = require('google-auth-library');
-require('dotenv').config();
+const { 
+  S3Client, 
+  ListBucketsCommand, 
+  PutObjectCommand,
+  DeleteObjectCommand 
+} = require("@aws-sdk/client-s3");
+require("dotenv").config();
 
-async function verifyAccess() {
-  // Verify environment variables
-  console.log('Service Account Email:', process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL);
-  console.log('Sheet ID:', process.env.GOOGLE_SHEET_ID);
-  console.log('Private Key Start:', process.env.GOOGLE_PRIVATE_KEY?.slice(0, 35));
+const s3Client = new S3Client({
+  region: process.env.AWS_REGION,
+  credentials: {
+    accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+    secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY
+  }
+});
 
-  // Initialize auth
-  const auth = new JWT({
-    email: process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL,
-    key: process.env.GOOGLE_PRIVATE_KEY.replace(/\\n/g, '\n'),
-    scopes: ['https://www.googleapis.com/auth/spreadsheets']
-  });
-
-  // Test connection
-  const doc = new GoogleSpreadsheet(process.env.GOOGLE_SHEET_ID, auth);
-  
+async function testS3() {
   try {
-    await doc.loadInfo();
-    console.log('\n✅ Success! Connected to spreadsheet:', doc.title);
-    console.log('📑 First sheet title:', doc.sheetsByIndex[0].title);
-  } catch (error) {
-    console.log('\n❌ Failed to access spreadsheet:');
-    console.log('1. Confirm the service account email has EDIT access to the sheet');
-    console.log('2. Verify Sheet ID matches URL exactly');
-    console.log('3. Ensure Google Sheets API is enabled');
-    throw error;
+    // List buckets
+    const buckets = await s3Client.send(new ListBucketsCommand({}));
+    console.log("Buckets:", buckets.Buckets.map(b => b.Name));
+
+    // Upload test file
+    await s3Client.send(new PutObjectCommand({
+      Bucket: process.env.AWS_BUCKET_NAME,
+      Key: "test-file.txt",
+      Body: "Test content",
+      ContentType: "text/plain"
+    }));
+    console.log("✅ Upload successful");
+
+    // Cleanup
+    await s3Client.send(new DeleteObjectCommand({
+      Bucket: process.env.AWS_BUCKET_NAME,
+      Key: "test-file.txt"
+    }));
+    console.log("🧹 Cleanup successful");
+
+  } catch (err) {
+    console.error("❌ Error:", err.message);
   }
 }
 
-verifyAccess().catch(console.error);
+testS3();
