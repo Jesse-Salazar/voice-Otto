@@ -3,16 +3,19 @@
   "version": "1.0.0",
   "main": "main.js",
   "scripts": {
-    "start": "node main.js"
+    "generate": "node main.js",
+    "approve": "node approval.js",
+    "upload": "node upload.js"
   },
   "dependencies": {
-    "@aws-sdk/client-s3": "^3.802.0",
+    "@aws-sdk/client-s3": "^3.808.0",
     "aws-sdk": "^2.1692.0",
     "colors": "^1.4.0",
     "dotenv": "^16.4.7",
     "fs-extra": "^11.3.0",
     "google-auth-library": "^9.15.1",
     "google-spreadsheet": "^4.1.4",
+    "inquirer": "8.2.5",
     "node-fetch": "^3.3.1",
     "puppeteer": "^24.6.0",
     "puppeteer-core": "^24.6.0",

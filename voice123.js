@@ -11,7 +11,6 @@ const CONFIG = {
       password: 'input[type="password"]',
       continueBtn: 'button[type="submit"]',
       passwordLogin: '.mdl-button--accent[href="/login/"]',
-      //signInBtn: 'button:has-text("Continue")',
     },
     dashboard: {
       projects: "ul.md-list.md-theme > li.vdl-invite-list-item",
@@ -38,12 +37,28 @@ const CONFIG = {
         process.env.ATTACHMENT_SELECTOR,
         "hasAttachment"
       ),
+      // New upload selectors
+      upload: {
+        fileInput: validateSelector(
+          process.env.FILE_INPUT_SELECTOR,
+          "file input"
+        ),
+        submitButton: validateSelector(
+          process.env.SUBMIT_BUTTON_SELECTOR,
+          "submit button"
+        ),
+        successIndicator: validateSelector(
+          process.env.UPLOAD_SUCCESS_SELECTOR,
+          "upload success"
+        ),
+      },
     },
   },
   navigation: {
     timeout: 10000,
     waitUntil: "networkidle2",
   },
+  uploadRetries: 3,
 };
 
 // Utility function to check for invalid or missing selectors
@@ -52,6 +67,77 @@ function validateSelector(selector, context = "general") {
     throw new Error(`Invalid selector in ${context}: ${selector}`);
   }
   return selector;
+}
+
+async function handleLogin(page) {
+  console.log("🌐 Starting authentication...");
+  await page.setViewport({ width: 1280, height: 800 });
+  await page.goto("https://accounts.voice123.com/signin/", {
+    waitUntil: CONFIG.navigation.waitUntil,
+    timeout: CONFIG.navigation.timeout,
+  });
+  await page.waitForSelector(CONFIG.selectors.login.email, { visible: true });
+  await page.type(CONFIG.selectors.login.email, process.env.VOICE123_EMAIL, {
+    delay: 50,
+  });
+
+  console.log("💬 Entering email...");
+  // Click continue
+  await Promise.all([
+    page.waitForNavigation(CONFIG.navigation),
+    page.click(CONFIG.selectors.login.continueBtn),
+  ]);
+  console.log("🔁 Switching to password login...");
+  // Switch to password login
+  await page.waitForSelector(CONFIG.selectors.login.passwordLogin, {
+    visible: true,
+  });
+  console.log("🧐 Found use password button");
+  await Promise.all([
+    page.waitForNavigation(CONFIG.navigation),
+    page.click(CONFIG.selectors.login.passwordLogin),
+  ]);
+  console.log("✅ Clicked type your password button");
+  // Handle password input
+  await page.type(
+    CONFIG.selectors.login.password,
+    process.env.VOICE123_PASSWORD,
+    { delay: 50 }
+  );
+  console.log("🔐 Entered password information");
+  await Promise.all([
+    page.waitForNavigation(CONFIG.navigation),
+    page.waitForSelector(CONFIG.selectors.login.continueBtn),
+    page.click(CONFIG.selectors.login.continueBtn),
+  ]);
+
+  console.log("🚚 Moving on to second login button...");
+  //Secong login button click
+
+  // Wait for necessary elements to load
+  await page.waitForSelector("button, input, a");
+
+  // Wait for navigation triggered by clicking the button
+  await Promise.all([
+    page.waitForNavigation({
+      waitUntil: "networkidle2",
+      timeout: 5000,
+    }), // or 'load', depending on the site
+    page.evaluate(() => {
+      const elements = document.querySelectorAll(
+        'button, input[type="button"], input[type="submit"], a'
+      );
+      for (let el of elements) {
+        const text = (el.textContent || el.value || "").trim();
+        if (text === "Log in") {
+          el.click();
+          break;
+        }
+      }
+    }),
+  ]);
+
+  console.log("🪪  Officially logged in");
 }
 
 module.exports = {
@@ -235,7 +321,7 @@ module.exports = {
             );
             fullProject.status = "needs_manual_review";
           } else {
-            fullProject.status = "ready_for_audio";
+            fullProject.status = "Processing";
             fullProject.script = details.script;
           }
 
@@ -284,6 +370,74 @@ module.exports = {
       throw error;
     } finally {
       await mainPage.close();
+      await browser.close();
+    }
+  },
+  // Add new upload function
+  async uploadAudio(projectUrl, audioPath) {
+    const browser = await connect();
+    const page = await browser.newPage();
+
+    try {
+      // Reuse existing login functionality
+      await handleLogin(page);
+
+      console.log(`📤 Starting upload process for ${projectUrl}`);
+      await page.goto(projectUrl, CONFIG.navigation);
+
+      // Accept project first
+      await retry(async () => {
+        await page.waitForSelector(CONFIG.selectors.project.acceptBtn, {
+          visible: true,
+          timeout: 5000,
+        });
+        await page.click(CONFIG.selectors.project.acceptBtn);
+        console.log("✅ Accepted project invitation");
+      }, CONFIG.uploadRetries);
+
+      // Handle file upload
+      await retry(async () => {
+        console.log("📁 Selecting file input");
+        const [fileChooser] = await Promise.all([
+          page.waitForFileChooser(),
+          page.click(CONFIG.selectors.project.upload.fileInput),
+        ]);
+        await fileChooser.accept([audioPath]);
+        console.log("⬆️ File selected for upload");
+      }, CONFIG.uploadRetries);
+
+      // Submit the form
+      await retry(async () => {
+        await page.waitForSelector(
+          CONFIG.selectors.project.upload.submitButton,
+          {
+            visible: true,
+            timeout: 5000,
+          }
+        );
+        await page.click(CONFIG.selectors.project.upload.submitButton);
+        console.log("🚀 Submitted upload form");
+      }, CONFIG.uploadRetries);
+
+      // Verify successful upload
+      await page.waitForSelector(
+        CONFIG.selectors.project.upload.successIndicator,
+        {
+          visible: true,
+          timeout: 15000,
+        }
+      );
+      console.log("🎉 Successfully uploaded audio");
+
+      return true;
+    } catch (error) {
+      console.error("🚨 Upload failed:", error.message);
+      await page.screenshot({
+        path: `errors/upload-error-${Date.now()}.png`,
+      });
+      return false;
+    } finally {
+      await page.close();
       await browser.close();
     }
   },

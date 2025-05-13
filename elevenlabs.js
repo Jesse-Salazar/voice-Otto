@@ -48,7 +48,7 @@ module.exports = {
       const s3Url = await uploadFile(buffer, filename, "audio/mpeg");
 
       await updateProject(projectId, {
-        Status: "Generated",
+        Status: "Pending Approval",
         "Audio File URL": s3Url,
         "Voice Settings": JSON.stringify(VOICE_SETTINGS), // Optional: Store settings
       });

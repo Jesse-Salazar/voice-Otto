@@ -19,6 +19,17 @@ const REQUIRED_ENV = [
   "GOOGLE_PRIVATE_KEY",
 ];
 
+const VALID_STATUSES = [
+  "new",
+  "Processing",
+  "Pending Approval",
+  "Approved",
+  "Rejected",
+  "Uploaded",
+  "Upload Failed",
+  "Error",
+];
+
 REQUIRED_ENV.forEach((variable) => {
   if (!process.env[variable]) {
     throw new Error(`Missing required environment variable: ${variable}`);
@@ -57,8 +68,13 @@ async function getSheet() {
 
 module.exports = {
   async addProject(project) {
-    const projectId = uuidv4().substring(0,8);
+    if (!VALID_STATUSES.includes(project.status)) {
+      throw new Error(`Invalid status: ${project.status}`);
+    }
+
+    const projectId = uuidv4().substring(0, 8);
     const sheet = await getSheet();
+
     await sheet.addRow({
       "Project ID": projectId,
       "Project Title": project.title,
@@ -69,10 +85,15 @@ module.exports = {
       Status: project.status,
       "Processed At": formattedDate,
       "Client ID": project.clientId,
+      "Audio File URL": "", // New column for audio URL
+      "Approval Notes": "", // New column for rejection reasons
     });
     return projectId; //Return ID for Tracking
   },
   async updateProject(projectId, updates) {
+    if (updates.Status && !VALID_STATUSES.includes(updates.Status)) {
+      throw new Error(`Invalid status: ${updates.Status}`);
+    }
     const sheet = await getSheet();
     const rows = await sheet.getRows();
 
@@ -88,4 +109,19 @@ module.exports = {
 
     await row.save();
   },
+  async getProjectsByStatus(status) {
+    const sheet = await getSheet();
+    const rows = await sheet.getRows();
+    
+    return rows
+      .filter(row => row.get("Status") === status)
+      .map(row => ({
+        id: row.get("Project ID"),
+        title: row.get("Project Title"),
+        url: row.get("Project URL"),
+        status: row.get("Status"),
+        audioFileName: row.get("Audio File URL").split("/").pop(),
+        audioUrl: row.get("Audio File URL")
+      }));
+  }
 };

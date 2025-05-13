@@ -14,7 +14,7 @@ async function main() {
     // 2. Process audio for each project
     for (const project of projects) {
       try {
-        if (project.status === "ready_for_audio" && project.script) {
+        if (project.status === "Processing" && project.script) {
           await voiceBuild.generateAudio(project.id, project.script);
         } else {
           console.log(

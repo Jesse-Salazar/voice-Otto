@@ -6,3 +6,4 @@ projects-debug.json
 main-backup.js
 googleSheets-backup.js
 elevenlabs-backup.js
+s3-backup.js
