@@ -1,3 +1,4 @@
+const path = require("path");
 const { connect } = require("./browser");
 const fs = require("fs-extra");
 const { addProject } = require("./googleSheets");
@@ -55,8 +56,8 @@ const CONFIG = {
     },
   },
   navigation: {
-    timeout: 10000,
-    waitUntil: "networkidle2",
+    timeout: 15000,
+    waitUntil: "domcontentloaded",
   },
   uploadRetries: 3,
 };
@@ -136,8 +137,7 @@ async function handleLogin(page) {
       }
     }),
   ]);
-
-  console.log("🪪  Officially logged in");
+  console.log("🔑 Verified login success");
 }
 
 module.exports = {
@@ -375,6 +375,19 @@ module.exports = {
   },
   // Add new upload function
   async uploadAudio(projectUrl, audioPath) {
+    if (!audioPath || typeof audioPath !== "string") {
+      throw new Error("Invalid audio path");
+    }
+
+    // Resolve absolute path
+    const absolutePath = path.resolve(audioPath);
+    console.log("📂 Audio file path:", absolutePath);
+
+    // Verify file exists
+    if (!fs.existsSync(absolutePath)) {
+      throw new Error(`Audio file not found: ${absolutePath}`);
+    }
+
     const browser = await connect();
     const page = await browser.newPage();
 
@@ -382,29 +395,89 @@ module.exports = {
       // Reuse existing login functionality
       await handleLogin(page);
 
-      console.log(`📤 Starting upload process for ${projectUrl}`);
-      await page.goto(projectUrl, CONFIG.navigation);
+      console.log(`🌐 Navigating to project page: ${projectUrl}`);
+      await page.goto(projectUrl, {
+        waitUntil: "load",
+        timeout: 30000,
+      });
+      // Verify we're on project details page
+      await page.waitForSelector(".upload-box", {
+        visible: true,
+        timeout: 15000,
+      });
 
-      // Accept project first
-      await retry(async () => {
-        await page.waitForSelector(CONFIG.selectors.project.acceptBtn, {
-          visible: true,
-          timeout: 5000,
-        });
-        await page.click(CONFIG.selectors.project.acceptBtn);
-        console.log("✅ Accepted project invitation");
-      }, CONFIG.uploadRetries);
+      // // Accept project first
+      // await retry(
+      //   async () => {
+      //     // Wait for button to be actionable
+      //     await page.waitForSelector(CONFIG.selectors.project.acceptBtn, {
+      //       visible: true,
+      //       timeout: 10000,
+      //     });
+
+      //     // Scroll into view and click
+      //     await page.$eval(CONFIG.selectors.project.acceptBtn, (button) => {
+      //       button.scrollIntoView({ behavior: "smooth", block: "center" });
+      //     });
+
+      //     await page.click(CONFIG.selectors.project.acceptBtn);
+
+      //     // Wait for page state update
+      //     await page.waitForNavigation({
+      //       waitUntil: "networkidle0",
+      //       timeout: 15000,
+      //     });
+
+      //     console.log("✅ Accepted project invitation");
+      //   },
+      //   {
+      //     retries: 5,
+      //     delay: 3000,
+      //   }
+      // );
+      // After clicking accept button
 
       // Handle file upload
-      await retry(async () => {
-        console.log("📁 Selecting file input");
-        const [fileChooser] = await Promise.all([
-          page.waitForFileChooser(),
-          page.click(CONFIG.selectors.project.upload.fileInput),
-        ]);
-        await fileChooser.accept([audioPath]);
-        console.log("⬆️ File selected for upload");
-      }, CONFIG.uploadRetries);
+      // Verify absolute path exists
+      const absoluteAudioPath = path.resolve(process.cwd(), audioPath);
+      if (!fs.existsSync(absoluteAudioPath)) {
+        throw new Error(`Audio file not found: ${absoluteAudioPath}`);
+      }
+
+      // Enhanced file input handling
+      await retry(
+        async () => {
+          console.log("🔍 Locating file input...");
+
+          // Wait for input to be interactable
+          const fileInput = await page.waitForSelector(
+            CONFIG.selectors.project.upload.fileInput,
+            {
+              visible: true,
+              timeout: 15000,
+              state: "attached", // Ensure element is in DOM
+            }
+          );
+
+          // Scroll into view and hover
+          await fileInput.scrollIntoView();
+          await fileInput.hover();
+          await new Promise(resolve => setTimeout(resolve, 1000));
+
+          console.log("📁 Clicking file input...");
+          const [fileChooser] = await Promise.all([
+            page.waitForFileChooser({ timeout: 15000 }),
+            fileInput.click({ clickCount: 1, delay: 200 }),
+          ]);
+
+          console.log("⬆️ Selecting audio file...");
+          await fileChooser.accept([absoluteAudioPath]);
+        },
+        {
+          retries: 5,
+          delay: 3000,
+        }
+      );
 
       // Submit the form
       await retry(async () => {
