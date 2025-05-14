@@ -1,0 +1,34 @@
+[
+  {
+    "id": "invites",
+    "script": "Solidarity Voice \n    \n   Received - Sent by Voice1239 hours remaining • 6/25 proposalsZero Budget • For non-profit • Custom audition",
+    "title": null,
+    "deadline": null,
+    "canAccept": false,
+    "url": "/projects/IK5C0LJ8G/solidarity-voice/specs",
+    "_debug": {
+      "buttons": [
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        }
+      ]
+    }
+  }
+]
