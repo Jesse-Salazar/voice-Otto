@@ -1,0 +1,670 @@
+{
+  "fileInputs": [
+    {
+      "outerHTML": "<input type=\"file\" name=\"Custom audition\" accept=\"audio/*\">",
+      "id": null,
+      "name": "Custom audition",
+      "class": null
+    }
+  ],
+  "candidates": [
+    {
+      "tag": "HTML",
+      "snippet": "<html xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en\" xml:lang=\"en\"><head><link rel=\"preconnect\" href=\"https://fonts.gstatic.com/\" crossorigin=\"anonymous\"><link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/css2?family=Muli:ital,wght@0,300..900;1,400&amp;display=swap\"><meta name=\"google-site-verification\" content=\"saqMKBUAGy8ohtHtQR2N-EWNmmsZ8aTmoehGEB43mXA\"><meta name=\"google-site-verification\" content=\"xrD2FTrTYdcvwkh8qaMrQw_6KKt_LRsXfrQgtJfSW_g\"><meta charset=\"utf-8\"><meta http-equiv=\"cleartype\" content=\"on\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1,maximum-scale=5,user-scalable=1\"><meta name=\"mobile-web-app-capable\" content=\"yes\"><meta name=\"apple-mobile-web-app-capable\" content=\"yes\"><meta name=\"apple-mobile-web-app-status-bar-style\" content=\"black\"><meta name=\"apple-mobile-web-app-title\" content=\"Voice123 v3.0\"><meta name=\"application-name\" content=\"Voice123 v3.0\"><meta name=\"msapplication-config\" content=\"/assets/favicon/browserconfig.xml\"><meta name=\"theme-color\" content=\"#2196f3\"><meta name=\"fragment\" content=\"!\"><meta property=\"og:locale\" content=\"en_US\"><meta property=\"og:site_name\" content=\"Voice123\"><meta name=\"facebook-domain-verification\" content=\"zj6twx5rl05po9jm0z0tcisddp3onv\"><meta name=\"twitter:card\" content=\"summary_large_image\"><meta name=\"twitter:site\" content=\"@Voice123\"><meta name=\"twitter:image:alt\" content=\"Voice123 Logo\"><meta name=\"google-site-verification\" content=\"xrD2FTrTYdcvwkh8qaMrQw_6KKt_LRsXfrQgtJfSW_g\"><meta name=\"robots\" content=\"index, nofollow\"><meta name=\"ahrefs-site-verification\" content=\"9532158d34082267538437e6ffc1e2c9945a8b96e7c1a084fd3cf71ea454530b\"><link rel=\"apple-touch-icon\" sizes=\"180x180\" href=\"https://static.voice123.com/static/favicon-180.png\"><link rel=\"icon\" type=\"image/png\" href=\"https://static.voice123.com/static/favicon-32.png\" sizes=\"32x32\"><link rel=\"icon\" type=\"image/png\" href=\"https://static.voice123.com/static/favicon-192.png\" sizes=\"192x192\"><link rel=\"icon\" type=\"image/png\" ",
+      "id": null,
+      "class": null,
+      "text": "Jesse Salazar \nsalazarspots@gmail.com\nHome\nSearch\nFavorites\nProjects\nProfile\nMembership\nSettings and privacy\nCloud\nVerify Voice Credentials\nHelp\nSign out\nAbout us    Terms of use    Privacy policy\n© V"
+    },
+    {
+      "tag": "BODY",
+      "snippet": "<body class=\"md-theme md-theme-v123\"><div id=\"hs-web-interactives-top-push-anchor\" class=\"go3670563033\"></div><div id=\"hs-feedback-fetcher\" title=\"submit hubspot feedback\"><iframe frameborder=\"0\" title=\"Submit HubSpot product feedback\" src=\"https://app.hubspot.com/feedback-web-fetcher\"></iframe></div><div id=\"appContainer\" data-v-app=\"\"><div id=\"app\" class=\"v123 has-navigation\"><div data-v-9b1edc80=\"\" class=\"vdl-toast-bar warning-toast\" style=\"display: none;\"><div data-v-9b1edc80=\"\" class=\"toast-bar-wrapper\"><div data-v-9b1edc80=\"\" class=\"information\">Page and/or components of it are under development</div><!----></div></div><div class=\"\"><div class=\"md-sidenav md-theme md-left tdl-drawer drawer-light\" tabindex=\"0\"><div class=\"md-sidenav-content\"><header style=\"background-image: url(&quot;https://static.voice123.com/static/background-drawer-v123.png&quot;);\"><div class=\"md-whiteframe md-whiteframe-2dp\"><div class=\"md-toolbar md-theme md-theme-white\"><!----><img class=\"tdl-brand-logo\" width=\"95\" height=\"28\" alt=\"logo\" src=\"https://static.voice123.com/static/logo-branded-v123.png\"></div></div><div class=\"tdl-avatar\"><img alt=\"Jesse Salazar\" src=\"https://v1-media.s3.amazonaws.com:443/pics/users/3462595/r_3CZJB.jpg\" class=\"tdl-placeholder\"><div class=\"tdl-user-name\"><div>Jesse Salazar <div data-v-46acbbbb=\"\" class=\"vdl-membership\" provider=\"[object Object]\"><svg data-v-3c9dd3dd=\"\" data-v-46acbbbb=\"\" class=\"md-icon\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" style=\"font-size: 19px; color: rgb(180, 130, 3);\"><path data-v-3c9dd3dd=\"\" d=\"M19.9999 4V8.69L23.3099 12L19.9999 15.31V20H15.3099L13.4728 21.8371V11.111L16.3209 13.9971L17.9999 12L11.9999 6L5.99994 12L7.67452 13.9971L10.5343 11.111V21.8444L8.68994 20H3.99994V15.31L0.689941 12L3.99994 8.69V4H8.68994L11.9999 0.690002L15.3099 4H19.9999Z\"></path></svg></div></div></div><div>salazarspots@gmail.com</div></div></header><div class=\"tdl-drawer-options\"><ul class=\"md-list md-theme\"><!----><li class=\"md-list-item\"><div class=\"m",
+      "id": null,
+      "class": "md-theme md-theme-v123",
+      "text": "Jesse Salazar \nsalazarspots@gmail.com\nHome\nSearch\nFavorites\nProjects\nProfile\nMembership\nSettings and privacy\nCloud\nVerify Voice Credentials\nHelp\nSign out\nAbout us    Terms of use    Privacy policy\n© V"
+    },
+    {
+      "tag": "DIV",
+      "snippet": "<div id=\"appContainer\" data-v-app=\"\"><div id=\"app\" class=\"v123 has-navigation\"><div data-v-9b1edc80=\"\" class=\"vdl-toast-bar warning-toast\" style=\"display: none;\"><div data-v-9b1edc80=\"\" class=\"toast-bar-wrapper\"><div data-v-9b1edc80=\"\" class=\"information\">Page and/or components of it are under development</div><!----></div></div><div class=\"\"><div class=\"md-sidenav md-theme md-left tdl-drawer drawer-light\" tabindex=\"0\"><div class=\"md-sidenav-content\"><header style=\"background-image: url(&quot;https://static.voice123.com/static/background-drawer-v123.png&quot;);\"><div class=\"md-whiteframe md-whiteframe-2dp\"><div class=\"md-toolbar md-theme md-theme-white\"><!----><img class=\"tdl-brand-logo\" width=\"95\" height=\"28\" alt=\"logo\" src=\"https://static.voice123.com/static/logo-branded-v123.png\"></div></div><div class=\"tdl-avatar\"><img alt=\"Jesse Salazar\" src=\"https://v1-media.s3.amazonaws.com:443/pics/users/3462595/r_3CZJB.jpg\" class=\"tdl-placeholder\"><div class=\"tdl-user-name\"><div>Jesse Salazar <div data-v-46acbbbb=\"\" class=\"vdl-membership\" provider=\"[object Object]\"><svg data-v-3c9dd3dd=\"\" data-v-46acbbbb=\"\" class=\"md-icon\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" style=\"font-size: 19px; color: rgb(180, 130, 3);\"><path data-v-3c9dd3dd=\"\" d=\"M19.9999 4V8.69L23.3099 12L19.9999 15.31V20H15.3099L13.4728 21.8371V11.111L16.3209 13.9971L17.9999 12L11.9999 6L5.99994 12L7.67452 13.9971L10.5343 11.111V21.8444L8.68994 20H3.99994V15.31L0.689941 12L3.99994 8.69V4H8.68994L11.9999 0.690002L15.3099 4H19.9999Z\"></path></svg></div></div></div><div>salazarspots@gmail.com</div></div></header><div class=\"tdl-drawer-options\"><ul class=\"md-list md-theme\"><!----><li class=\"md-list-item\"><div class=\"md-list-item-container md-button\"><svg data-v-3c9dd3dd=\"\" class=\"md-icon\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path data-v-3c9dd3dd=\"\" d=\"M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z\"></path></svg><span class=\"md-body-1\">Home</span><!----><!----></div><button class=\"md-button md-theme md-button-g",
+      "id": "appContainer",
+      "class": null,
+      "text": "Jesse Salazar \nsalazarspots@gmail.com\nHome\nSearch\nFavorites\nProjects\nProfile\nMembership\nSettings and privacy\nCloud\nVerify Voice Credentials\nHelp\nSign out\nAbout us    Terms of use    Privacy policy\n© V"
+    },
+    {
+      "tag": "DIV",
+      "snippet": "<div id=\"app\" class=\"v123 has-navigation\"><div data-v-9b1edc80=\"\" class=\"vdl-toast-bar warning-toast\" style=\"display: none;\"><div data-v-9b1edc80=\"\" class=\"toast-bar-wrapper\"><div data-v-9b1edc80=\"\" class=\"information\">Page and/or components of it are under development</div><!----></div></div><div class=\"\"><div class=\"md-sidenav md-theme md-left tdl-drawer drawer-light\" tabindex=\"0\"><div class=\"md-sidenav-content\"><header style=\"background-image: url(&quot;https://static.voice123.com/static/background-drawer-v123.png&quot;);\"><div class=\"md-whiteframe md-whiteframe-2dp\"><div class=\"md-toolbar md-theme md-theme-white\"><!----><img class=\"tdl-brand-logo\" width=\"95\" height=\"28\" alt=\"logo\" src=\"https://static.voice123.com/static/logo-branded-v123.png\"></div></div><div class=\"tdl-avatar\"><img alt=\"Jesse Salazar\" src=\"https://v1-media.s3.amazonaws.com:443/pics/users/3462595/r_3CZJB.jpg\" class=\"tdl-placeholder\"><div class=\"tdl-user-name\"><div>Jesse Salazar <div data-v-46acbbbb=\"\" class=\"vdl-membership\" provider=\"[object Object]\"><svg data-v-3c9dd3dd=\"\" data-v-46acbbbb=\"\" class=\"md-icon\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" style=\"font-size: 19px; color: rgb(180, 130, 3);\"><path data-v-3c9dd3dd=\"\" d=\"M19.9999 4V8.69L23.3099 12L19.9999 15.31V20H15.3099L13.4728 21.8371V11.111L16.3209 13.9971L17.9999 12L11.9999 6L5.99994 12L7.67452 13.9971L10.5343 11.111V21.8444L8.68994 20H3.99994V15.31L0.689941 12L3.99994 8.69V4H8.68994L11.9999 0.690002L15.3099 4H19.9999Z\"></path></svg></div></div></div><div>salazarspots@gmail.com</div></div></header><div class=\"tdl-drawer-options\"><ul class=\"md-list md-theme\"><!----><li class=\"md-list-item\"><div class=\"md-list-item-container md-button\"><svg data-v-3c9dd3dd=\"\" class=\"md-icon\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path data-v-3c9dd3dd=\"\" d=\"M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z\"></path></svg><span class=\"md-body-1\">Home</span><!----><!----></div><button class=\"md-button md-theme md-button-ghost mdc-ripple-upgraded\" type=\"butto",
+      "id": "app",
+      "class": "v123 has-navigation",
+      "text": "Jesse Salazar \nsalazarspots@gmail.com\nHome\nSearch\nFavorites\nProjects\nProfile\nMembership\nSettings and privacy\nCloud\nVerify Voice Credentials\nHelp\nSign out\nAbout us    Terms of use    Privacy policy\n© V"
+    },
+    {
+      "tag": "DIV",
+      "snippet": "<div class=\"\"><div class=\"md-sidenav md-theme md-left tdl-drawer drawer-light\" tabindex=\"0\"><div class=\"md-sidenav-content\"><header style=\"background-image: url(&quot;https://static.voice123.com/static/background-drawer-v123.png&quot;);\"><div class=\"md-whiteframe md-whiteframe-2dp\"><div class=\"md-toolbar md-theme md-theme-white\"><!----><img class=\"tdl-brand-logo\" width=\"95\" height=\"28\" alt=\"logo\" src=\"https://static.voice123.com/static/logo-branded-v123.png\"></div></div><div class=\"tdl-avatar\"><img alt=\"Jesse Salazar\" src=\"https://v1-media.s3.amazonaws.com:443/pics/users/3462595/r_3CZJB.jpg\" class=\"tdl-placeholder\"><div class=\"tdl-user-name\"><div>Jesse Salazar <div data-v-46acbbbb=\"\" class=\"vdl-membership\" provider=\"[object Object]\"><svg data-v-3c9dd3dd=\"\" data-v-46acbbbb=\"\" class=\"md-icon\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" style=\"font-size: 19px; color: rgb(180, 130, 3);\"><path data-v-3c9dd3dd=\"\" d=\"M19.9999 4V8.69L23.3099 12L19.9999 15.31V20H15.3099L13.4728 21.8371V11.111L16.3209 13.9971L17.9999 12L11.9999 6L5.99994 12L7.67452 13.9971L10.5343 11.111V21.8444L8.68994 20H3.99994V15.31L0.689941 12L3.99994 8.69V4H8.68994L11.9999 0.690002L15.3099 4H19.9999Z\"></path></svg></div></div></div><div>salazarspots@gmail.com</div></div></header><div class=\"tdl-drawer-options\"><ul class=\"md-list md-theme\"><!----><li class=\"md-list-item\"><div class=\"md-list-item-container md-button\"><svg data-v-3c9dd3dd=\"\" class=\"md-icon\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path data-v-3c9dd3dd=\"\" d=\"M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z\"></path></svg><span class=\"md-body-1\">Home</span><!----><!----></div><button class=\"md-button md-theme md-button-ghost mdc-ripple-upgraded\" type=\"button\"></button></li><li class=\"md-list-item\"><div class=\"md-list-item-container md-button\"><svg data-v-3c9dd3dd=\"\" class=\"md-icon\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path data-v-3c9dd3dd=\"\" d=\"M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,1",
+      "id": null,
+      "class": null,
+      "text": "Jesse Salazar \nsalazarspots@gmail.com\nHome\nSearch\nFavorites\nProjects\nProfile\nMembership\nSettings and privacy\nCloud\nVerify Voice Credentials\nHelp\nSign out\nAbout us    Terms of use    Privacy policy\n© V"
+    },
+    {
+      "tag": "DIV",
+      "snippet": "<div class=\"md-sidenav md-theme md-left tdl-drawer drawer-light\" tabindex=\"0\"><div class=\"md-sidenav-content\"><header style=\"background-image: url(&quot;https://static.voice123.com/static/background-drawer-v123.png&quot;);\"><div class=\"md-whiteframe md-whiteframe-2dp\"><div class=\"md-toolbar md-theme md-theme-white\"><!----><img class=\"tdl-brand-logo\" width=\"95\" height=\"28\" alt=\"logo\" src=\"https://static.voice123.com/static/logo-branded-v123.png\"></div></div><div class=\"tdl-avatar\"><img alt=\"Jesse Salazar\" src=\"https://v1-media.s3.amazonaws.com:443/pics/users/3462595/r_3CZJB.jpg\" class=\"tdl-placeholder\"><div class=\"tdl-user-name\"><div>Jesse Salazar <div data-v-46acbbbb=\"\" class=\"vdl-membership\" provider=\"[object Object]\"><svg data-v-3c9dd3dd=\"\" data-v-46acbbbb=\"\" class=\"md-icon\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" style=\"font-size: 19px; color: rgb(180, 130, 3);\"><path data-v-3c9dd3dd=\"\" d=\"M19.9999 4V8.69L23.3099 12L19.9999 15.31V20H15.3099L13.4728 21.8371V11.111L16.3209 13.9971L17.9999 12L11.9999 6L5.99994 12L7.67452 13.9971L10.5343 11.111V21.8444L8.68994 20H3.99994V15.31L0.689941 12L3.99994 8.69V4H8.68994L11.9999 0.690002L15.3099 4H19.9999Z\"></path></svg></div></div></div><div>salazarspots@gmail.com</div></div></header><div class=\"tdl-drawer-options\"><ul class=\"md-list md-theme\"><!----><li class=\"md-list-item\"><div class=\"md-list-item-container md-button\"><svg data-v-3c9dd3dd=\"\" class=\"md-icon\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path data-v-3c9dd3dd=\"\" d=\"M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z\"></path></svg><span class=\"md-body-1\">Home</span><!----><!----></div><button class=\"md-button md-theme md-button-ghost mdc-ripple-upgraded\" type=\"button\"></button></li><li class=\"md-list-item\"><div class=\"md-list-item-container md-button\"><svg data-v-3c9dd3dd=\"\" class=\"md-icon\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path data-v-3c9dd3dd=\"\" d=\"M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.7",
+      "id": null,
+      "class": "md-sidenav md-theme md-left tdl-drawer drawer-light",
+      "text": "Jesse Salazar \nsalazarspots@gmail.com\nHome\nSearch\nFavorites\nProjects\nProfile\nMembership\nSettings and privacy\nCloud\nVerify Voice Credentials\nHelp\nSign out\nAbout us    Terms of use    Privacy policy\n© V"
+    },
+    {
+      "tag": "DIV",
+      "snippet": "<div class=\"md-sidenav-content\"><header style=\"background-image: url(&quot;https://static.voice123.com/static/background-drawer-v123.png&quot;);\"><div class=\"md-whiteframe md-whiteframe-2dp\"><div class=\"md-toolbar md-theme md-theme-white\"><!----><img class=\"tdl-brand-logo\" width=\"95\" height=\"28\" alt=\"logo\" src=\"https://static.voice123.com/static/logo-branded-v123.png\"></div></div><div class=\"tdl-avatar\"><img alt=\"Jesse Salazar\" src=\"https://v1-media.s3.amazonaws.com:443/pics/users/3462595/r_3CZJB.jpg\" class=\"tdl-placeholder\"><div class=\"tdl-user-name\"><div>Jesse Salazar <div data-v-46acbbbb=\"\" class=\"vdl-membership\" provider=\"[object Object]\"><svg data-v-3c9dd3dd=\"\" data-v-46acbbbb=\"\" class=\"md-icon\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" style=\"font-size: 19px; color: rgb(180, 130, 3);\"><path data-v-3c9dd3dd=\"\" d=\"M19.9999 4V8.69L23.3099 12L19.9999 15.31V20H15.3099L13.4728 21.8371V11.111L16.3209 13.9971L17.9999 12L11.9999 6L5.99994 12L7.67452 13.9971L10.5343 11.111V21.8444L8.68994 20H3.99994V15.31L0.689941 12L3.99994 8.69V4H8.68994L11.9999 0.690002L15.3099 4H19.9999Z\"></path></svg></div></div></div><div>salazarspots@gmail.com</div></div></header><div class=\"tdl-drawer-options\"><ul class=\"md-list md-theme\"><!----><li class=\"md-list-item\"><div class=\"md-list-item-container md-button\"><svg data-v-3c9dd3dd=\"\" class=\"md-icon\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path data-v-3c9dd3dd=\"\" d=\"M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z\"></path></svg><span class=\"md-body-1\">Home</span><!----><!----></div><button class=\"md-button md-theme md-button-ghost mdc-ripple-upgraded\" type=\"button\"></button></li><li class=\"md-list-item\"><div class=\"md-list-item-container md-button\"><svg data-v-3c9dd3dd=\"\" class=\"md-icon\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path data-v-3c9dd3dd=\"\" d=\"M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.",
+      "id": null,
+      "class": "md-sidenav-content",
+      "text": "Jesse Salazar \nsalazarspots@gmail.com\nHome\nSearch\nFavorites\nProjects\nProfile\nMembership\nSettings and privacy\nCloud\nVerify Voice Credentials\nHelp\nSign out\nAbout us    Terms of use    Privacy policy\n© V"
+    },
+    {
+      "tag": "DIV",
+      "snippet": "<div class=\"tdl-drawer-options\"><ul class=\"md-list md-theme\"><!----><li class=\"md-list-item\"><div class=\"md-list-item-container md-button\"><svg data-v-3c9dd3dd=\"\" class=\"md-icon\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path data-v-3c9dd3dd=\"\" d=\"M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z\"></path></svg><span class=\"md-body-1\">Home</span><!----><!----></div><button class=\"md-button md-theme md-button-ghost mdc-ripple-upgraded\" type=\"button\"></button></li><li class=\"md-list-item\"><div class=\"md-list-item-container md-button\"><svg data-v-3c9dd3dd=\"\" class=\"md-icon\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path data-v-3c9dd3dd=\"\" d=\"M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z\"></path></svg><span class=\"md-body-1\">Search</span><!----><!----></div><button class=\"md-button md-theme md-button-ghost mdc-ripple-upgraded\" type=\"button\"></button></li><li class=\"md-list-item\"><div class=\"md-list-item-container md-button\"><svg data-v-3c9dd3dd=\"\" class=\"md-icon\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path data-v-3c9dd3dd=\"\" d=\"M12,21.35L10.55,20.03C5.4,15.36 2,12.27 2,8.5C2,5.41 4.42,3 7.5,3C9.24,3 10.91,3.81 12,5.08C13.09,3.81 14.76,3 16.5,3C19.58,3 22,5.41 22,8.5C22,12.27 18.6,15.36 13.45,20.03L12,21.35Z\"></path></svg><span class=\"md-body-1\">Favorites</span><!----><!----></div><button class=\"md-button md-theme md-button-ghost mdc-ripple-upgraded\" type=\"button\"></button></li><li class=\"md-list-item\"><div class=\"md-list-item-container md-button\"><svg data-v-3c9dd3dd=\"\" class=\"md-icon\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path data-v-3c9dd3dd=\"\" d=\"M10 16V15H3L3 19C3 20.11 3.89 21 5 21H19C20.11 21 21 20.11 21 19V15H14V16H10M20 7H16V5L14 3H10L8 5V7H4C2.9 7 2 7.9 2 9V12C2 13.11 2.89 14 4 14H10V12H14V14H20C21.1 14 22 13.1 22 12V9C22 7.9 21.1 7 20 7M14 7H10",
+      "id": null,
+      "class": "tdl-drawer-options",
+      "text": "Home\nSearch\nFavorites\nProjects\nProfile\nMembership\nSettings and privacy\nCloud\nVerify Voice Credentials\nHelp\nSign out"
+    },
+    {
+      "tag": "UL",
+      "snippet": "<ul class=\"md-list md-theme\"><!----><li class=\"md-list-item\"><div class=\"md-list-item-container md-button\"><svg data-v-3c9dd3dd=\"\" class=\"md-icon\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path data-v-3c9dd3dd=\"\" d=\"M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z\"></path></svg><span class=\"md-body-1\">Home</span><!----><!----></div><button class=\"md-button md-theme md-button-ghost mdc-ripple-upgraded\" type=\"button\"></button></li><li class=\"md-list-item\"><div class=\"md-list-item-container md-button\"><svg data-v-3c9dd3dd=\"\" class=\"md-icon\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path data-v-3c9dd3dd=\"\" d=\"M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z\"></path></svg><span class=\"md-body-1\">Search</span><!----><!----></div><button class=\"md-button md-theme md-button-ghost mdc-ripple-upgraded\" type=\"button\"></button></li><li class=\"md-list-item\"><div class=\"md-list-item-container md-button\"><svg data-v-3c9dd3dd=\"\" class=\"md-icon\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path data-v-3c9dd3dd=\"\" d=\"M12,21.35L10.55,20.03C5.4,15.36 2,12.27 2,8.5C2,5.41 4.42,3 7.5,3C9.24,3 10.91,3.81 12,5.08C13.09,3.81 14.76,3 16.5,3C19.58,3 22,5.41 22,8.5C22,12.27 18.6,15.36 13.45,20.03L12,21.35Z\"></path></svg><span class=\"md-body-1\">Favorites</span><!----><!----></div><button class=\"md-button md-theme md-button-ghost mdc-ripple-upgraded\" type=\"button\"></button></li><li class=\"md-list-item\"><div class=\"md-list-item-container md-button\"><svg data-v-3c9dd3dd=\"\" class=\"md-icon\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path data-v-3c9dd3dd=\"\" d=\"M10 16V15H3L3 19C3 20.11 3.89 21 5 21H19C20.11 21 21 20.11 21 19V15H14V16H10M20 7H16V5L14 3H10L8 5V7H4C2.9 7 2 7.9 2 9V12C2 13.11 2.89 14 4 14H10V12H14V14H20C21.1 14 22 13.1 22 12V9C22 7.9 21.1 7 20 7M14 7H10V5H14V7Z\"></path></svg><span cla",
+      "id": null,
+      "class": "md-list md-theme",
+      "text": "Home\nSearch\nFavorites\nProjects\nProfile\nMembership\nSettings and privacy\nCloud\nVerify Voice Credentials\nHelp\nSign out"
+    },
+    {
+      "tag": "LI",
+      "snippet": "<li class=\"md-list-item person-menu\"><div class=\"md-list-item-container md-button\"><svg data-v-3c9dd3dd=\"\" class=\"md-icon\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path data-v-3c9dd3dd=\"\" d=\"M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z\"></path></svg><span class=\"md-body-1\">Profile</span><!----><!----></div><button class=\"md-button md-theme md-button-ghost mdc-ripple-upgraded\" type=\"button\"></button></li>",
+      "id": null,
+      "class": "md-list-item person-menu",
+      "text": "Profile"
+    },
+    {
+      "tag": "DIV",
+      "snippet": "<div class=\"md-list-item-container md-button\"><svg data-v-3c9dd3dd=\"\" class=\"md-icon\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path data-v-3c9dd3dd=\"\" d=\"M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z\"></path></svg><span class=\"md-body-1\">Profile</span><!----><!----></div>",
+      "id": null,
+      "class": "md-list-item-container md-button",
+      "text": "Profile"
+    },
+    {
+      "tag": "SPAN",
+      "snippet": "<span class=\"md-body-1\">Profile</span>",
+      "id": null,
+      "class": "md-body-1",
+      "text": "Profile"
+    },
+    {
+      "tag": "DIV",
+      "snippet": "<div slug=\"silent-screamsa-gacha-show\"><div data-v-eab33c06=\"\" class=\"vdl-page no-full-width project-management specs specs_proposal\"><!----><!----><!----><!----><!----><div data-v-eab33c06=\"\" class=\"md-whiteframe md-whiteframe-1dp tdl-toolbar\" id=\"app-bar-component\" style=\"top: -64px;\"><div class=\"md-toolbar md-theme md-theme-light\"><!----><!----><div class=\"md-toolbar-container\"><button id=\"menu_button\" class=\"md-button md-theme md-icon-button mdc-ripple-upgraded\" aria-label=\"menu\" type=\"button\"><svg data-v-3c9dd3dd=\"\" class=\"md-icon\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path data-v-3c9dd3dd=\"\" d=\"M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z\"></path></svg></button><div class=\"tdl-brand-logo-wrapper\"><a href=\"\"><img class=\"tdl-brand-logo\" width=\"95\" height=\"28\" alt=\"Voice123 - header\" src=\"https://static.voice123.com/static/logo-branded-v123.png\"></a></div><div style=\"width: 10px; height: 10px; background: red; position: absolute; border-radius: 50%; top: 34px; left: 31px;\"></div></div><hr class=\"tdl-divider\"><div class=\"md-toolbar-container\"><button data-v-eab33c06=\"\" class=\"md-button md-theme md-icon-button mdc-ripple-upgraded\" type=\"button\"><svg data-v-3c9dd3dd=\"\" data-v-eab33c06=\"\" class=\"md-icon\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path data-v-3c9dd3dd=\"\" d=\"M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z\"></path></svg></button><h1 data-v-eab33c06=\"\" class=\"md-title bar-title\">Silent screams(a gacha show) </h1><!----><div class=\"bar-extra\"><!----><!----></div></div><div class=\"md-toolbar-container\"><div class=\"project-nav-tabs\"><div class=\"tabs md-theme md-theme-v123\"><a aria-current=\"page\" href=\"/projects/IL4OPO7KG/silent-screamsa-gacha-show/specs\" class=\"router-link-active router-link-exact-active tab md-button amp-tracking\"><svg data-v-3c9dd3dd=\"\" class=\"md-icon\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" id=\"specs-view-tab\"><path data-v-3c9dd3dd=\"\" d=\"M20,19.88V22L18.2,20.83L13.41,11.83C14.07,11.62 14.67,11.28 15.19,",
+      "id": null,
+      "class": null,
+      "text": "Silent screams(a gacha show)\nSPECS\nINVITATIONS\nHome\nSearch\nMessages\nProjects\nPayments\nProfile\nMembership\nCloud\nProject status\nReceiving proposals (now inviting)\n5 days remaining • 8/30 proposals\nClien"
+    },
+    {
+      "tag": "DIV",
+      "snippet": "<div data-v-eab33c06=\"\" class=\"vdl-page no-full-width project-management specs specs_proposal\"><!----><!----><!----><!----><!----><div data-v-eab33c06=\"\" class=\"md-whiteframe md-whiteframe-1dp tdl-toolbar\" id=\"app-bar-component\" style=\"top: -64px;\"><div class=\"md-toolbar md-theme md-theme-light\"><!----><!----><div class=\"md-toolbar-container\"><button id=\"menu_button\" class=\"md-button md-theme md-icon-button mdc-ripple-upgraded\" aria-label=\"menu\" type=\"button\"><svg data-v-3c9dd3dd=\"\" class=\"md-icon\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path data-v-3c9dd3dd=\"\" d=\"M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z\"></path></svg></button><div class=\"tdl-brand-logo-wrapper\"><a href=\"\"><img class=\"tdl-brand-logo\" width=\"95\" height=\"28\" alt=\"Voice123 - header\" src=\"https://static.voice123.com/static/logo-branded-v123.png\"></a></div><div style=\"width: 10px; height: 10px; background: red; position: absolute; border-radius: 50%; top: 34px; left: 31px;\"></div></div><hr class=\"tdl-divider\"><div class=\"md-toolbar-container\"><button data-v-eab33c06=\"\" class=\"md-button md-theme md-icon-button mdc-ripple-upgraded\" type=\"button\"><svg data-v-3c9dd3dd=\"\" data-v-eab33c06=\"\" class=\"md-icon\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path data-v-3c9dd3dd=\"\" d=\"M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z\"></path></svg></button><h1 data-v-eab33c06=\"\" class=\"md-title bar-title\">Silent screams(a gacha show) </h1><!----><div class=\"bar-extra\"><!----><!----></div></div><div class=\"md-toolbar-container\"><div class=\"project-nav-tabs\"><div class=\"tabs md-theme md-theme-v123\"><a aria-current=\"page\" href=\"/projects/IL4OPO7KG/silent-screamsa-gacha-show/specs\" class=\"router-link-active router-link-exact-active tab md-button amp-tracking\"><svg data-v-3c9dd3dd=\"\" class=\"md-icon\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" id=\"specs-view-tab\"><path data-v-3c9dd3dd=\"\" d=\"M20,19.88V22L18.2,20.83L13.41,11.83C14.07,11.62 14.67,11.28 15.19,10.83L20,19.88M15,7A3,3 0 0,1 12,10C11.",
+      "id": null,
+      "class": "vdl-page no-full-width project-management specs specs_proposal",
+      "text": "Silent screams(a gacha show)\nSPECS\nINVITATIONS\nHome\nSearch\nMessages\nProjects\nPayments\nProfile\nMembership\nCloud\nProject status\nReceiving proposals (now inviting)\n5 days remaining • 8/30 proposals\nClien"
+    },
+    {
+      "tag": "DIV",
+      "snippet": "<div data-v-eab33c06=\"\" class=\"navigation-bar-container allow-side provider main-navigation-bar vaDashboard\"><div class=\"md-row md-layout bottom-nav-bar\"><div class=\"md-bottom-bar md-theme md-fixed\"><a data-v-eab33c06=\"\" href=\"/vaDashboard\" class=\"md-bottom-bar-item mdc-ripple-upgraded\" id=\"btn_home\" role=\"link\" aria-label=\"Home\"><!----><!----><svg data-v-3c9dd3dd=\"\" class=\"md-icon\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path data-v-3c9dd3dd=\"\" d=\"M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z\"></path></svg><span class=\"md-text\">Home</span></a><a data-v-eab33c06=\"\" href=\"/search\" class=\"md-bottom-bar-item mdc-ripple-upgraded\" id=\"btn_search\" role=\"link\" aria-label=\"Search\"><!----><!----><svg data-v-3c9dd3dd=\"\" class=\"md-icon\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path data-v-3c9dd3dd=\"\" d=\"M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z\"></path></svg><span class=\"md-text\">Search</span></a><a data-v-eab33c06=\"\" href=\"/messages\" class=\"md-bottom-bar-item mdc-ripple-upgraded\" id=\"btn_messages\" role=\"link\" aria-label=\"Messages\"><!----><!----><svg data-v-3c9dd3dd=\"\" class=\"md-icon\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path data-v-3c9dd3dd=\"\" d=\"M20,8L12,13L4,8V6L12,11L20,6M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z\"></path></svg><span class=\"md-text\">Messages</span></a><a data-v-eab33c06=\"\" href=\"/dashboard/invites\" class=\"md-bottom-bar-item mdc-ripple-upgraded\" id=\"btn_projects\" role=\"link\" aria-label=\"Projects\"><!----><!----><svg data-v-3c9dd3dd=\"\" class=\"md-icon\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path data-v-3c9dd3dd=\"\" d=\"M10 16V15H3L3 19C3 20.11 3.89 21 5 21H19C20.11 21 21 20.11 21 19V15H14V16H10M20 7H16V5L14 3H10L8 5V7H4C2.9 7 2 7.9 2 9V12C2 13.11 2.89 14 4 14H10V12H14V14H20C21.1 14 22 13.1 22",
+      "id": null,
+      "class": "navigation-bar-container allow-side provider main-navigation-bar vaDashboard",
+      "text": "Home\nSearch\nMessages\nProjects\nPayments\nProfile\nMembership\nCloud"
+    },
+    {
+      "tag": "DIV",
+      "snippet": "<div class=\"md-row md-layout bottom-nav-bar\"><div class=\"md-bottom-bar md-theme md-fixed\"><a data-v-eab33c06=\"\" href=\"/vaDashboard\" class=\"md-bottom-bar-item mdc-ripple-upgraded\" id=\"btn_home\" role=\"link\" aria-label=\"Home\"><!----><!----><svg data-v-3c9dd3dd=\"\" class=\"md-icon\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path data-v-3c9dd3dd=\"\" d=\"M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z\"></path></svg><span class=\"md-text\">Home</span></a><a data-v-eab33c06=\"\" href=\"/search\" class=\"md-bottom-bar-item mdc-ripple-upgraded\" id=\"btn_search\" role=\"link\" aria-label=\"Search\"><!----><!----><svg data-v-3c9dd3dd=\"\" class=\"md-icon\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path data-v-3c9dd3dd=\"\" d=\"M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z\"></path></svg><span class=\"md-text\">Search</span></a><a data-v-eab33c06=\"\" href=\"/messages\" class=\"md-bottom-bar-item mdc-ripple-upgraded\" id=\"btn_messages\" role=\"link\" aria-label=\"Messages\"><!----><!----><svg data-v-3c9dd3dd=\"\" class=\"md-icon\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path data-v-3c9dd3dd=\"\" d=\"M20,8L12,13L4,8V6L12,11L20,6M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z\"></path></svg><span class=\"md-text\">Messages</span></a><a data-v-eab33c06=\"\" href=\"/dashboard/invites\" class=\"md-bottom-bar-item mdc-ripple-upgraded\" id=\"btn_projects\" role=\"link\" aria-label=\"Projects\"><!----><!----><svg data-v-3c9dd3dd=\"\" class=\"md-icon\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path data-v-3c9dd3dd=\"\" d=\"M10 16V15H3L3 19C3 20.11 3.89 21 5 21H19C20.11 21 21 20.11 21 19V15H14V16H10M20 7H16V5L14 3H10L8 5V7H4C2.9 7 2 7.9 2 9V12C2 13.11 2.89 14 4 14H10V12H14V14H20C21.1 14 22 13.1 22 12V9C22 7.9 21.1 7 20 7M14 7H10V5H14V7Z\"></path></svg><span class=\"md-text\">Projects</span></a><a data-v-eab",
+      "id": null,
+      "class": "md-row md-layout bottom-nav-bar",
+      "text": "Home\nSearch\nMessages\nProjects\nPayments\nProfile\nMembership\nCloud"
+    },
+    {
+      "tag": "DIV",
+      "snippet": "<div class=\"md-bottom-bar md-theme md-fixed\"><a data-v-eab33c06=\"\" href=\"/vaDashboard\" class=\"md-bottom-bar-item mdc-ripple-upgraded\" id=\"btn_home\" role=\"link\" aria-label=\"Home\"><!----><!----><svg data-v-3c9dd3dd=\"\" class=\"md-icon\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path data-v-3c9dd3dd=\"\" d=\"M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z\"></path></svg><span class=\"md-text\">Home</span></a><a data-v-eab33c06=\"\" href=\"/search\" class=\"md-bottom-bar-item mdc-ripple-upgraded\" id=\"btn_search\" role=\"link\" aria-label=\"Search\"><!----><!----><svg data-v-3c9dd3dd=\"\" class=\"md-icon\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path data-v-3c9dd3dd=\"\" d=\"M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z\"></path></svg><span class=\"md-text\">Search</span></a><a data-v-eab33c06=\"\" href=\"/messages\" class=\"md-bottom-bar-item mdc-ripple-upgraded\" id=\"btn_messages\" role=\"link\" aria-label=\"Messages\"><!----><!----><svg data-v-3c9dd3dd=\"\" class=\"md-icon\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path data-v-3c9dd3dd=\"\" d=\"M20,8L12,13L4,8V6L12,11L20,6M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z\"></path></svg><span class=\"md-text\">Messages</span></a><a data-v-eab33c06=\"\" href=\"/dashboard/invites\" class=\"md-bottom-bar-item mdc-ripple-upgraded\" id=\"btn_projects\" role=\"link\" aria-label=\"Projects\"><!----><!----><svg data-v-3c9dd3dd=\"\" class=\"md-icon\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path data-v-3c9dd3dd=\"\" d=\"M10 16V15H3L3 19C3 20.11 3.89 21 5 21H19C20.11 21 21 20.11 21 19V15H14V16H10M20 7H16V5L14 3H10L8 5V7H4C2.9 7 2 7.9 2 9V12C2 13.11 2.89 14 4 14H10V12H14V14H20C21.1 14 22 13.1 22 12V9C22 7.9 21.1 7 20 7M14 7H10V5H14V7Z\"></path></svg><span class=\"md-text\">Projects</span></a><a data-v-eab33c06=\"\" href=\"/secure-payments\" class=\"md-bo",
+      "id": null,
+      "class": "md-bottom-bar md-theme md-fixed",
+      "text": "Home\nSearch\nMessages\nProjects\nPayments\nProfile\nMembership\nCloud"
+    },
+    {
+      "tag": "A",
+      "snippet": "<a data-v-eab33c06=\"\" href=\"/profile\" class=\"md-bottom-bar-item mdc-ripple-upgraded\" id=\"btn_profile\" role=\"link\" aria-label=\"Profile\"><!----><!----><svg data-v-3c9dd3dd=\"\" class=\"md-icon\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path data-v-3c9dd3dd=\"\" d=\"M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z\"></path></svg><span class=\"md-text\">Profile</span></a>",
+      "id": "btn_profile",
+      "class": "md-bottom-bar-item mdc-ripple-upgraded",
+      "text": "Profile"
+    },
+    {
+      "tag": "SPAN",
+      "snippet": "<span class=\"md-text\">Profile</span>",
+      "id": null,
+      "class": "md-text",
+      "text": "Profile"
+    },
+    {
+      "tag": "DIV",
+      "snippet": "<div data-v-eab33c06=\"\" class=\"page-content\" style=\"\"><!----><section class=\"project-specs management-content\" slug=\"silent-screamsa-gacha-show\"><!----><div class=\"md-layout md-gutter column-container\"><div class=\"md-layout project-info specs\"><div class=\"md-scrollbar\"><ul class=\"md-list md-theme\"><li class=\"md-list-item\"><div class=\"md-list-item-container\"><h2 class=\"md-headline no-margin-title\">Project status</h2></div></li><!----><li class=\"md-list-item md-list-item-clickable\"><div class=\"md-list-item-container md-button\"><div class=\"md-icon green\"><svg class=\"md-icon \" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\">\n    <path d=\"M16,10H14V7H10V10H8L12,14M19,15H15A3,3 0 0,1 12,18A3,3 0 0,1 9,15H5V5H19M19,3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5A2,2 0 0,0 19,3Z\" fill=\"currentColor\"></path>\n  </svg></div><div class=\"md-list-text-container\"><span>Receiving proposals (now inviting)</span><span>5 days remaining • 8/30 proposals</span></div><!----></div><button class=\"md-button md-theme md-button-ghost mdc-ripple-upgraded\" type=\"button\"></button></li><!----><li class=\"md-list-item\"><div class=\"md-list-item-container\"><h2 class=\"md-headline no-margin-title\">Client</h2></div></li><li class=\"md-list-item mdc-ripple-upgraded\"><a href=\"/client/4039051\" class=\"md-list-item-container md-button\"><div class=\"vdl-user-info vdl-user-info_content has-click\"><div><div class=\"md-avatar-container\"><div class=\"md-avatar md-theme\"><div><span class=\"centered-image\" role=\"img\" aria-label=\"Voice123 Membership Plans\" style=\"background-image: url(&quot;/static/profile_pic.png&quot;); width: inherit; height: inherit; display: block;\"></span></div></div><div><!----></div></div></div><div class=\"name\"><!----><div class=\"name-container\"><span class=\"md-subheading\">Client 4039051</span><!----></div><!----><div><p class=\"content-text item-info\">5 projects posted<br>81.82% proposals reviewed</p></div><!----></div></div></a></li><!----><!----><!----><!----><!----><!----><!----><!----",
+      "id": null,
+      "class": "page-content",
+      "text": "Project status\nReceiving proposals (now inviting)\n5 days remaining • 8/30 proposals\nClient\nClient 4039051\n\n5 projects posted\n81.82% proposals reviewed\n\nVoice actor requirements\nLanguage\nEnglish - USA "
+    },
+    {
+      "tag": "SECTION",
+      "snippet": "<section class=\"project-specs management-content\" slug=\"silent-screamsa-gacha-show\"><!----><div class=\"md-layout md-gutter column-container\"><div class=\"md-layout project-info specs\"><div class=\"md-scrollbar\"><ul class=\"md-list md-theme\"><li class=\"md-list-item\"><div class=\"md-list-item-container\"><h2 class=\"md-headline no-margin-title\">Project status</h2></div></li><!----><li class=\"md-list-item md-list-item-clickable\"><div class=\"md-list-item-container md-button\"><div class=\"md-icon green\"><svg class=\"md-icon \" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\">\n    <path d=\"M16,10H14V7H10V10H8L12,14M19,15H15A3,3 0 0,1 12,18A3,3 0 0,1 9,15H5V5H19M19,3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5A2,2 0 0,0 19,3Z\" fill=\"currentColor\"></path>\n  </svg></div><div class=\"md-list-text-container\"><span>Receiving proposals (now inviting)</span><span>5 days remaining • 8/30 proposals</span></div><!----></div><button class=\"md-button md-theme md-button-ghost mdc-ripple-upgraded\" type=\"button\"></button></li><!----><li class=\"md-list-item\"><div class=\"md-list-item-container\"><h2 class=\"md-headline no-margin-title\">Client</h2></div></li><li class=\"md-list-item mdc-ripple-upgraded\"><a href=\"/client/4039051\" class=\"md-list-item-container md-button\"><div class=\"vdl-user-info vdl-user-info_content has-click\"><div><div class=\"md-avatar-container\"><div class=\"md-avatar md-theme\"><div><span class=\"centered-image\" role=\"img\" aria-label=\"Voice123 Membership Plans\" style=\"background-image: url(&quot;/static/profile_pic.png&quot;); width: inherit; height: inherit; display: block;\"></span></div></div><div><!----></div></div></div><div class=\"name\"><!----><div class=\"name-container\"><span class=\"md-subheading\">Client 4039051</span><!----></div><!----><div><p class=\"content-text item-info\">5 projects posted<br>81.82% proposals reviewed</p></div><!----></div></div></a></li><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----></ul><div class=\"data-viewer\"><ul class=\"md-li",
+      "id": null,
+      "class": "project-specs management-content",
+      "text": "Project status\nReceiving proposals (now inviting)\n5 days remaining • 8/30 proposals\nClient\nClient 4039051\n\n5 projects posted\n81.82% proposals reviewed\n\nVoice actor requirements\nLanguage\nEnglish - USA "
+    },
+    {
+      "tag": "DIV",
+      "snippet": "<div class=\"md-layout md-gutter column-container\"><div class=\"md-layout project-info specs\"><div class=\"md-scrollbar\"><ul class=\"md-list md-theme\"><li class=\"md-list-item\"><div class=\"md-list-item-container\"><h2 class=\"md-headline no-margin-title\">Project status</h2></div></li><!----><li class=\"md-list-item md-list-item-clickable\"><div class=\"md-list-item-container md-button\"><div class=\"md-icon green\"><svg class=\"md-icon \" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\">\n    <path d=\"M16,10H14V7H10V10H8L12,14M19,15H15A3,3 0 0,1 12,18A3,3 0 0,1 9,15H5V5H19M19,3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5A2,2 0 0,0 19,3Z\" fill=\"currentColor\"></path>\n  </svg></div><div class=\"md-list-text-container\"><span>Receiving proposals (now inviting)</span><span>5 days remaining • 8/30 proposals</span></div><!----></div><button class=\"md-button md-theme md-button-ghost mdc-ripple-upgraded\" type=\"button\"></button></li><!----><li class=\"md-list-item\"><div class=\"md-list-item-container\"><h2 class=\"md-headline no-margin-title\">Client</h2></div></li><li class=\"md-list-item mdc-ripple-upgraded\"><a href=\"/client/4039051\" class=\"md-list-item-container md-button\"><div class=\"vdl-user-info vdl-user-info_content has-click\"><div><div class=\"md-avatar-container\"><div class=\"md-avatar md-theme\"><div><span class=\"centered-image\" role=\"img\" aria-label=\"Voice123 Membership Plans\" style=\"background-image: url(&quot;/static/profile_pic.png&quot;); width: inherit; height: inherit; display: block;\"></span></div></div><div><!----></div></div></div><div class=\"name\"><!----><div class=\"name-container\"><span class=\"md-subheading\">Client 4039051</span><!----></div><!----><div><p class=\"content-text item-info\">5 projects posted<br>81.82% proposals reviewed</p></div><!----></div></div></a></li><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----></ul><div class=\"data-viewer\"><ul class=\"md-list md-theme fields md-double-line\"><li class=\"field-item\"><ul class=\"unestiled-list\"><li cl",
+      "id": null,
+      "class": "md-layout md-gutter column-container",
+      "text": "Project status\nReceiving proposals (now inviting)\n5 days remaining • 8/30 proposals\nClient\nClient 4039051\n\n5 projects posted\n81.82% proposals reviewed\n\nVoice actor requirements\nLanguage\nEnglish - USA "
+    },
+    {
+      "tag": "DIV",
+      "snippet": "<div class=\"md-layout project-info specs\"><div class=\"md-scrollbar\"><ul class=\"md-list md-theme\"><li class=\"md-list-item\"><div class=\"md-list-item-container\"><h2 class=\"md-headline no-margin-title\">Project status</h2></div></li><!----><li class=\"md-list-item md-list-item-clickable\"><div class=\"md-list-item-container md-button\"><div class=\"md-icon green\"><svg class=\"md-icon \" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\">\n    <path d=\"M16,10H14V7H10V10H8L12,14M19,15H15A3,3 0 0,1 12,18A3,3 0 0,1 9,15H5V5H19M19,3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5A2,2 0 0,0 19,3Z\" fill=\"currentColor\"></path>\n  </svg></div><div class=\"md-list-text-container\"><span>Receiving proposals (now inviting)</span><span>5 days remaining • 8/30 proposals</span></div><!----></div><button class=\"md-button md-theme md-button-ghost mdc-ripple-upgraded\" type=\"button\"></button></li><!----><li class=\"md-list-item\"><div class=\"md-list-item-container\"><h2 class=\"md-headline no-margin-title\">Client</h2></div></li><li class=\"md-list-item mdc-ripple-upgraded\"><a href=\"/client/4039051\" class=\"md-list-item-container md-button\"><div class=\"vdl-user-info vdl-user-info_content has-click\"><div><div class=\"md-avatar-container\"><div class=\"md-avatar md-theme\"><div><span class=\"centered-image\" role=\"img\" aria-label=\"Voice123 Membership Plans\" style=\"background-image: url(&quot;/static/profile_pic.png&quot;); width: inherit; height: inherit; display: block;\"></span></div></div><div><!----></div></div></div><div class=\"name\"><!----><div class=\"name-container\"><span class=\"md-subheading\">Client 4039051</span><!----></div><!----><div><p class=\"content-text item-info\">5 projects posted<br>81.82% proposals reviewed</p></div><!----></div></div></a></li><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----></ul><div class=\"data-viewer\"><ul class=\"md-list md-theme fields md-double-line\"><li class=\"field-item\"><ul class=\"unestiled-list\"><li class=\"md-list-item step-title\"><div class=\"md-list-",
+      "id": null,
+      "class": "md-layout project-info specs",
+      "text": "Project status\nReceiving proposals (now inviting)\n5 days remaining • 8/30 proposals\nClient\nClient 4039051\n\n5 projects posted\n81.82% proposals reviewed\n\nVoice actor requirements\nLanguage\nEnglish - USA "
+    },
+    {
+      "tag": "DIV",
+      "snippet": "<div class=\"md-scrollbar\"><ul class=\"md-list md-theme\"><li class=\"md-list-item\"><div class=\"md-list-item-container\"><h2 class=\"md-headline no-margin-title\">Project status</h2></div></li><!----><li class=\"md-list-item md-list-item-clickable\"><div class=\"md-list-item-container md-button\"><div class=\"md-icon green\"><svg class=\"md-icon \" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\">\n    <path d=\"M16,10H14V7H10V10H8L12,14M19,15H15A3,3 0 0,1 12,18A3,3 0 0,1 9,15H5V5H19M19,3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5A2,2 0 0,0 19,3Z\" fill=\"currentColor\"></path>\n  </svg></div><div class=\"md-list-text-container\"><span>Receiving proposals (now inviting)</span><span>5 days remaining • 8/30 proposals</span></div><!----></div><button class=\"md-button md-theme md-button-ghost mdc-ripple-upgraded\" type=\"button\"></button></li><!----><li class=\"md-list-item\"><div class=\"md-list-item-container\"><h2 class=\"md-headline no-margin-title\">Client</h2></div></li><li class=\"md-list-item mdc-ripple-upgraded\"><a href=\"/client/4039051\" class=\"md-list-item-container md-button\"><div class=\"vdl-user-info vdl-user-info_content has-click\"><div><div class=\"md-avatar-container\"><div class=\"md-avatar md-theme\"><div><span class=\"centered-image\" role=\"img\" aria-label=\"Voice123 Membership Plans\" style=\"background-image: url(&quot;/static/profile_pic.png&quot;); width: inherit; height: inherit; display: block;\"></span></div></div><div><!----></div></div></div><div class=\"name\"><!----><div class=\"name-container\"><span class=\"md-subheading\">Client 4039051</span><!----></div><!----><div><p class=\"content-text item-info\">5 projects posted<br>81.82% proposals reviewed</p></div><!----></div></div></a></li><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----></ul><div class=\"data-viewer\"><ul class=\"md-list md-theme fields md-double-line\"><li class=\"field-item\"><ul class=\"unestiled-list\"><li class=\"md-list-item step-title\"><div class=\"md-list-item-container\"><!----><div class=\"md-list",
+      "id": null,
+      "class": "md-scrollbar",
+      "text": "Project status\nReceiving proposals (now inviting)\n5 days remaining • 8/30 proposals\nClient\nClient 4039051\n\n5 projects posted\n81.82% proposals reviewed\n\nVoice actor requirements\nLanguage\nEnglish - USA "
+    },
+    {
+      "tag": "UL",
+      "snippet": "<ul class=\"md-list md-theme\"><li class=\"md-list-item\"><div class=\"md-list-item-container\"><h2 class=\"md-headline no-margin-title\">Project status</h2></div></li><!----><li class=\"md-list-item md-list-item-clickable\"><div class=\"md-list-item-container md-button\"><div class=\"md-icon green\"><svg class=\"md-icon \" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\">\n    <path d=\"M16,10H14V7H10V10H8L12,14M19,15H15A3,3 0 0,1 12,18A3,3 0 0,1 9,15H5V5H19M19,3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5A2,2 0 0,0 19,3Z\" fill=\"currentColor\"></path>\n  </svg></div><div class=\"md-list-text-container\"><span>Receiving proposals (now inviting)</span><span>5 days remaining • 8/30 proposals</span></div><!----></div><button class=\"md-button md-theme md-button-ghost mdc-ripple-upgraded\" type=\"button\"></button></li><!----><li class=\"md-list-item\"><div class=\"md-list-item-container\"><h2 class=\"md-headline no-margin-title\">Client</h2></div></li><li class=\"md-list-item mdc-ripple-upgraded\"><a href=\"/client/4039051\" class=\"md-list-item-container md-button\"><div class=\"vdl-user-info vdl-user-info_content has-click\"><div><div class=\"md-avatar-container\"><div class=\"md-avatar md-theme\"><div><span class=\"centered-image\" role=\"img\" aria-label=\"Voice123 Membership Plans\" style=\"background-image: url(&quot;/static/profile_pic.png&quot;); width: inherit; height: inherit; display: block;\"></span></div></div><div><!----></div></div></div><div class=\"name\"><!----><div class=\"name-container\"><span class=\"md-subheading\">Client 4039051</span><!----></div><!----><div><p class=\"content-text item-info\">5 projects posted<br>81.82% proposals reviewed</p></div><!----></div></div></a></li><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----></ul>",
+      "id": null,
+      "class": "md-list md-theme",
+      "text": "Project status\nReceiving proposals (now inviting)\n5 days remaining • 8/30 proposals\nClient\nClient 4039051\n\n5 projects posted\n81.82% proposals reviewed"
+    },
+    {
+      "tag": "LI",
+      "snippet": "<li class=\"md-list-item md-list-item-clickable\"><div class=\"md-list-item-container md-button\"><div class=\"md-icon green\"><svg class=\"md-icon \" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\">\n    <path d=\"M16,10H14V7H10V10H8L12,14M19,15H15A3,3 0 0,1 12,18A3,3 0 0,1 9,15H5V5H19M19,3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5A2,2 0 0,0 19,3Z\" fill=\"currentColor\"></path>\n  </svg></div><div class=\"md-list-text-container\"><span>Receiving proposals (now inviting)</span><span>5 days remaining • 8/30 proposals</span></div><!----></div><button class=\"md-button md-theme md-button-ghost mdc-ripple-upgraded\" type=\"button\"></button></li>",
+      "id": null,
+      "class": "md-list-item md-list-item-clickable",
+      "text": "Receiving proposals (now inviting)\n5 days remaining • 8/30 proposals"
+    },
+    {
+      "tag": "DIV",
+      "snippet": "<div class=\"md-list-item-container md-button\"><div class=\"md-icon green\"><svg class=\"md-icon \" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\">\n    <path d=\"M16,10H14V7H10V10H8L12,14M19,15H15A3,3 0 0,1 12,18A3,3 0 0,1 9,15H5V5H19M19,3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5A2,2 0 0,0 19,3Z\" fill=\"currentColor\"></path>\n  </svg></div><div class=\"md-list-text-container\"><span>Receiving proposals (now inviting)</span><span>5 days remaining • 8/30 proposals</span></div><!----></div>",
+      "id": null,
+      "class": "md-list-item-container md-button",
+      "text": "Receiving proposals (now inviting)\n5 days remaining • 8/30 proposals"
+    },
+    {
+      "tag": "DIV",
+      "snippet": "<div class=\"md-list-text-container\"><span>Receiving proposals (now inviting)</span><span>5 days remaining • 8/30 proposals</span></div>",
+      "id": null,
+      "class": "md-list-text-container",
+      "text": "Receiving proposals (now inviting)\n5 days remaining • 8/30 proposals"
+    },
+    {
+      "tag": "SPAN",
+      "snippet": "<span>Receiving proposals (now inviting)</span>",
+      "id": null,
+      "class": null,
+      "text": "Receiving proposals (now inviting)"
+    },
+    {
+      "tag": "SPAN",
+      "snippet": "<span>5 days remaining • 8/30 proposals</span>",
+      "id": null,
+      "class": null,
+      "text": "5 days remaining • 8/30 proposals"
+    },
+    {
+      "tag": "LI",
+      "snippet": "<li class=\"md-list-item mdc-ripple-upgraded\"><a href=\"/client/4039051\" class=\"md-list-item-container md-button\"><div class=\"vdl-user-info vdl-user-info_content has-click\"><div><div class=\"md-avatar-container\"><div class=\"md-avatar md-theme\"><div><span class=\"centered-image\" role=\"img\" aria-label=\"Voice123 Membership Plans\" style=\"background-image: url(&quot;/static/profile_pic.png&quot;); width: inherit; height: inherit; display: block;\"></span></div></div><div><!----></div></div></div><div class=\"name\"><!----><div class=\"name-container\"><span class=\"md-subheading\">Client 4039051</span><!----></div><!----><div><p class=\"content-text item-info\">5 projects posted<br>81.82% proposals reviewed</p></div><!----></div></div></a></li>",
+      "id": null,
+      "class": "md-list-item mdc-ripple-upgraded",
+      "text": "Client 4039051\n\n5 projects posted\n81.82% proposals reviewed"
+    },
+    {
+      "tag": "A",
+      "snippet": "<a href=\"/client/4039051\" class=\"md-list-item-container md-button\"><div class=\"vdl-user-info vdl-user-info_content has-click\"><div><div class=\"md-avatar-container\"><div class=\"md-avatar md-theme\"><div><span class=\"centered-image\" role=\"img\" aria-label=\"Voice123 Membership Plans\" style=\"background-image: url(&quot;/static/profile_pic.png&quot;); width: inherit; height: inherit; display: block;\"></span></div></div><div><!----></div></div></div><div class=\"name\"><!----><div class=\"name-container\"><span class=\"md-subheading\">Client 4039051</span><!----></div><!----><div><p class=\"content-text item-info\">5 projects posted<br>81.82% proposals reviewed</p></div><!----></div></div></a>",
+      "id": null,
+      "class": "md-list-item-container md-button",
+      "text": "Client 4039051\n\n5 projects posted\n81.82% proposals reviewed"
+    },
+    {
+      "tag": "DIV",
+      "snippet": "<div class=\"vdl-user-info vdl-user-info_content has-click\"><div><div class=\"md-avatar-container\"><div class=\"md-avatar md-theme\"><div><span class=\"centered-image\" role=\"img\" aria-label=\"Voice123 Membership Plans\" style=\"background-image: url(&quot;/static/profile_pic.png&quot;); width: inherit; height: inherit; display: block;\"></span></div></div><div><!----></div></div></div><div class=\"name\"><!----><div class=\"name-container\"><span class=\"md-subheading\">Client 4039051</span><!----></div><!----><div><p class=\"content-text item-info\">5 projects posted<br>81.82% proposals reviewed</p></div><!----></div></div>",
+      "id": null,
+      "class": "vdl-user-info vdl-user-info_content has-click",
+      "text": "Client 4039051\n\n5 projects posted\n81.82% proposals reviewed"
+    },
+    {
+      "tag": "DIV",
+      "snippet": "<div class=\"name\"><!----><div class=\"name-container\"><span class=\"md-subheading\">Client 4039051</span><!----></div><!----><div><p class=\"content-text item-info\">5 projects posted<br>81.82% proposals reviewed</p></div><!----></div>",
+      "id": null,
+      "class": "name",
+      "text": "Client 4039051\n\n5 projects posted\n81.82% proposals reviewed"
+    },
+    {
+      "tag": "DIV",
+      "snippet": "<div><p class=\"content-text item-info\">5 projects posted<br>81.82% proposals reviewed</p></div>",
+      "id": null,
+      "class": null,
+      "text": "5 projects posted\n81.82% proposals reviewed"
+    },
+    {
+      "tag": "P",
+      "snippet": "<p class=\"content-text item-info\">5 projects posted<br>81.82% proposals reviewed</p>",
+      "id": null,
+      "class": "content-text item-info",
+      "text": "5 projects posted\n81.82% proposals reviewed"
+    },
+    {
+      "tag": "DIV",
+      "snippet": "<div class=\"data-viewer\"><ul class=\"md-list md-theme fields md-double-line\"><li class=\"field-item\"><ul class=\"unestiled-list\"><li class=\"md-list-item step-title\"><div class=\"md-list-item-container\"><!----><div class=\"md-list-text-container step-container\"><span class=\"md-title\">Voice actor requirements</span><!----></div></div></li><!----><!----></ul></li><li class=\"field-item\"><ul class=\"unestiled-list\"><!----><!----><li class=\"md-list-item\"><div class=\"md-list-item-container\"><svg data-v-3c9dd3dd=\"\" class=\"md-icon\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path data-v-3c9dd3dd=\"\" d=\"M12.87,15.07L10.33,12.56L10.36,12.53C12.1,10.59 13.34,8.36 14.07,6H17V4H10V2H8V4H1V6H12.17C11.5,7.92 10.44,9.75 9,11.35C8.07,10.32 7.3,9.19 6.69,8H4.69C5.42,9.63 6.42,11.17 7.67,12.56L2.58,17.58L4,19L9,14L12.11,17.11L12.87,15.07M18.5,10H16.5L12,22H14L15.12,19H19.87L21,22H23L18.5,10M15.88,17L17.5,12.67L19.12,17H15.88Z\"></path></svg><div class=\"md-list-text-container\"><span class=\"field-name\">Language</span><span class=\"chip-wrapper field-value-text\"><div class=\"md-chip md-theme\" tabindex=\"0\"><div class=\"md-chip-container\"><div>English - USA and Canada</div></div><!----></div></span><div class=\"nested-viewer\"><!----></div></div></div></li></ul></li><li class=\"field-item\"><ul class=\"unestiled-list\"><!----><!----><!----></ul></li><li class=\"field-item\"><ul class=\"unestiled-list\"><!----><!----><li class=\"md-list-item\"><div class=\"md-list-item-container\"><svg data-v-3c9dd3dd=\"\" class=\"md-icon\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path data-v-3c9dd3dd=\"\" d=\"M7.5,2A2,2 0 0,1 9.5,4A2,2 0 0,1 7.5,6A2,2 0 0,1 5.5,4A2,2 0 0,1 7.5,2M6,7H9A2,2 0 0,1 11,9V14.5H9.5V22H5.5V14.5H4V9A2,2 0 0,1 6,7M16.5,2A2,2 0 0,1 18.5,4A2,2 0 0,1 16.5,6A2,2 0 0,1 14.5,4A2,2 0 0,1 16.5,2M15,22V16H12L14.59,8.41C14.84,7.59 15.6,7 16.5,7C17.4,7 18.16,7.59 18.41,8.41L21,16H18V22H15Z\"></path></svg><div class=\"md-list-text-container\"><span class=\"field-name\">Voice gender and age</span><span class=\"chip-wrapper field-v",
+      "id": null,
+      "class": "data-viewer",
+      "text": "Voice actor requirements\nLanguage\nEnglish - USA and Canada\nVoice gender and age\nChild\nMale young adult\nFemale young adult\nProject details\nProject name\nSilent screams(a gacha show)\nProject description\n"
+    },
+    {
+      "tag": "UL",
+      "snippet": "<ul class=\"md-list md-theme fields md-double-line\"><li class=\"field-item\"><ul class=\"unestiled-list\"><li class=\"md-list-item step-title\"><div class=\"md-list-item-container\"><!----><div class=\"md-list-text-container step-container\"><span class=\"md-title\">Voice actor requirements</span><!----></div></div></li><!----><!----></ul></li><li class=\"field-item\"><ul class=\"unestiled-list\"><!----><!----><li class=\"md-list-item\"><div class=\"md-list-item-container\"><svg data-v-3c9dd3dd=\"\" class=\"md-icon\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path data-v-3c9dd3dd=\"\" d=\"M12.87,15.07L10.33,12.56L10.36,12.53C12.1,10.59 13.34,8.36 14.07,6H17V4H10V2H8V4H1V6H12.17C11.5,7.92 10.44,9.75 9,11.35C8.07,10.32 7.3,9.19 6.69,8H4.69C5.42,9.63 6.42,11.17 7.67,12.56L2.58,17.58L4,19L9,14L12.11,17.11L12.87,15.07M18.5,10H16.5L12,22H14L15.12,19H19.87L21,22H23L18.5,10M15.88,17L17.5,12.67L19.12,17H15.88Z\"></path></svg><div class=\"md-list-text-container\"><span class=\"field-name\">Language</span><span class=\"chip-wrapper field-value-text\"><div class=\"md-chip md-theme\" tabindex=\"0\"><div class=\"md-chip-container\"><div>English - USA and Canada</div></div><!----></div></span><div class=\"nested-viewer\"><!----></div></div></div></li></ul></li><li class=\"field-item\"><ul class=\"unestiled-list\"><!----><!----><!----></ul></li><li class=\"field-item\"><ul class=\"unestiled-list\"><!----><!----><li class=\"md-list-item\"><div class=\"md-list-item-container\"><svg data-v-3c9dd3dd=\"\" class=\"md-icon\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path data-v-3c9dd3dd=\"\" d=\"M7.5,2A2,2 0 0,1 9.5,4A2,2 0 0,1 7.5,6A2,2 0 0,1 5.5,4A2,2 0 0,1 7.5,2M6,7H9A2,2 0 0,1 11,9V14.5H9.5V22H5.5V14.5H4V9A2,2 0 0,1 6,7M16.5,2A2,2 0 0,1 18.5,4A2,2 0 0,1 16.5,6A2,2 0 0,1 14.5,4A2,2 0 0,1 16.5,2M15,22V16H12L14.59,8.41C14.84,7.59 15.6,7 16.5,7C17.4,7 18.16,7.59 18.41,8.41L21,16H18V22H15Z\"></path></svg><div class=\"md-list-text-container\"><span class=\"field-name\">Voice gender and age</span><span class=\"chip-wrapper field-value-text\"><div class=\"md",
+      "id": null,
+      "class": "md-list md-theme fields md-double-line",
+      "text": "Voice actor requirements\nLanguage\nEnglish - USA and Canada\nVoice gender and age\nChild\nMale young adult\nFemale young adult\nProject details\nProject name\nSilent screams(a gacha show)\nProject description\n"
+    },
+    {
+      "tag": "LI",
+      "snippet": "<li class=\"field-item\"><ul class=\"unestiled-list\"><!----><!----><li class=\"md-list-item field-item-list\" id=\"offers_wanted\"><div class=\"md-list-item-container\"><svg data-v-3c9dd3dd=\"\" class=\"md-icon\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path data-v-3c9dd3dd=\"\" d=\"M19,11H15V15H13V11H9V9H13V5H15V9H19M20,2H8A2,2 0 0,0 6,4V16A2,2 0 0,0 8,18H20A2,2 0 0,0 22,16V4A2,2 0 0,0 20,2M4,6H2V20A2,2 0 0,0 4,22H18V20H4V6Z\"></path></svg><div class=\"md-list-text-container\"><span class=\"field-name\">Number of proposals wanted</span><div><div><div class=\"vdl-expandable-text field-value-text\"><div class=\"content clickable\" style=\"max-height: 110px;\">30</div><!----></div></div></div><!----><!----><!----><!----></div></div></li></ul></li>",
+      "id": null,
+      "class": "field-item",
+      "text": "Number of proposals wanted\n30"
+    },
+    {
+      "tag": "UL",
+      "snippet": "<ul class=\"unestiled-list\"><!----><!----><li class=\"md-list-item field-item-list\" id=\"offers_wanted\"><div class=\"md-list-item-container\"><svg data-v-3c9dd3dd=\"\" class=\"md-icon\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path data-v-3c9dd3dd=\"\" d=\"M19,11H15V15H13V11H9V9H13V5H15V9H19M20,2H8A2,2 0 0,0 6,4V16A2,2 0 0,0 8,18H20A2,2 0 0,0 22,16V4A2,2 0 0,0 20,2M4,6H2V20A2,2 0 0,0 4,22H18V20H4V6Z\"></path></svg><div class=\"md-list-text-container\"><span class=\"field-name\">Number of proposals wanted</span><div><div><div class=\"vdl-expandable-text field-value-text\"><div class=\"content clickable\" style=\"max-height: 110px;\">30</div><!----></div></div></div><!----><!----><!----><!----></div></div></li></ul>",
+      "id": null,
+      "class": "unestiled-list",
+      "text": "Number of proposals wanted\n30"
+    },
+    {
+      "tag": "LI",
+      "snippet": "<li class=\"md-list-item field-item-list\" id=\"offers_wanted\"><div class=\"md-list-item-container\"><svg data-v-3c9dd3dd=\"\" class=\"md-icon\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path data-v-3c9dd3dd=\"\" d=\"M19,11H15V15H13V11H9V9H13V5H15V9H19M20,2H8A2,2 0 0,0 6,4V16A2,2 0 0,0 8,18H20A2,2 0 0,0 22,16V4A2,2 0 0,0 20,2M4,6H2V20A2,2 0 0,0 4,22H18V20H4V6Z\"></path></svg><div class=\"md-list-text-container\"><span class=\"field-name\">Number of proposals wanted</span><div><div><div class=\"vdl-expandable-text field-value-text\"><div class=\"content clickable\" style=\"max-height: 110px;\">30</div><!----></div></div></div><!----><!----><!----><!----></div></div></li>",
+      "id": "offers_wanted",
+      "class": "md-list-item field-item-list",
+      "text": "Number of proposals wanted\n30"
+    },
+    {
+      "tag": "DIV",
+      "snippet": "<div class=\"md-list-item-container\"><svg data-v-3c9dd3dd=\"\" class=\"md-icon\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path data-v-3c9dd3dd=\"\" d=\"M19,11H15V15H13V11H9V9H13V5H15V9H19M20,2H8A2,2 0 0,0 6,4V16A2,2 0 0,0 8,18H20A2,2 0 0,0 22,16V4A2,2 0 0,0 20,2M4,6H2V20A2,2 0 0,0 4,22H18V20H4V6Z\"></path></svg><div class=\"md-list-text-container\"><span class=\"field-name\">Number of proposals wanted</span><div><div><div class=\"vdl-expandable-text field-value-text\"><div class=\"content clickable\" style=\"max-height: 110px;\">30</div><!----></div></div></div><!----><!----><!----><!----></div></div>",
+      "id": null,
+      "class": "md-list-item-container",
+      "text": "Number of proposals wanted\n30"
+    },
+    {
+      "tag": "DIV",
+      "snippet": "<div class=\"md-list-text-container\"><span class=\"field-name\">Number of proposals wanted</span><div><div><div class=\"vdl-expandable-text field-value-text\"><div class=\"content clickable\" style=\"max-height: 110px;\">30</div><!----></div></div></div><!----><!----><!----><!----></div>",
+      "id": null,
+      "class": "md-list-text-container",
+      "text": "Number of proposals wanted\n30"
+    },
+    {
+      "tag": "SPAN",
+      "snippet": "<span class=\"field-name\">Number of proposals wanted</span>",
+      "id": null,
+      "class": "field-name",
+      "text": "Number of proposals wanted"
+    },
+    {
+      "tag": "LI",
+      "snippet": "<li class=\"field-item\"><ul class=\"unestiled-list\"><!----><!----><li class=\"md-list-item field-item-list\" id=\"deadline\"><div class=\"md-list-item-container\"><svg data-v-3c9dd3dd=\"\" class=\"md-icon\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path data-v-3c9dd3dd=\"\" d=\"M12,20A7,7 0 0,1 5,13A7,7 0 0,1 12,6A7,7 0 0,1 19,13A7,7 0 0,1 12,20M19.03,7.39L20.45,5.97C20,5.46 19.55,5 19.04,4.56L17.62,6C16.07,4.74 14.12,4 12,4A9,9 0 0,0 3,13A9,9 0 0,0 12,22C17,22 21,17.97 21,13C21,10.88 20.26,8.93 19.03,7.39M11,14H13V8H11M15,1H9V3H15V1Z\"></path></svg><div class=\"md-list-text-container\"><span class=\"field-name\">Deadline for getting proposals</span><div><div><div class=\"vdl-expandable-text field-value-text\"><div class=\"content clickable\" style=\"max-height: 110px;\">Oct 1, 2025, 3:54 AM</div><!----></div></div></div><!----><!----><!----><!----></div></div></li></ul></li>",
+      "id": null,
+      "class": "field-item",
+      "text": "Deadline for getting proposals\nOct 1, 2025, 3:54 AM"
+    },
+    {
+      "tag": "UL",
+      "snippet": "<ul class=\"unestiled-list\"><!----><!----><li class=\"md-list-item field-item-list\" id=\"deadline\"><div class=\"md-list-item-container\"><svg data-v-3c9dd3dd=\"\" class=\"md-icon\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path data-v-3c9dd3dd=\"\" d=\"M12,20A7,7 0 0,1 5,13A7,7 0 0,1 12,6A7,7 0 0,1 19,13A7,7 0 0,1 12,20M19.03,7.39L20.45,5.97C20,5.46 19.55,5 19.04,4.56L17.62,6C16.07,4.74 14.12,4 12,4A9,9 0 0,0 3,13A9,9 0 0,0 12,22C17,22 21,17.97 21,13C21,10.88 20.26,8.93 19.03,7.39M11,14H13V8H11M15,1H9V3H15V1Z\"></path></svg><div class=\"md-list-text-container\"><span class=\"field-name\">Deadline for getting proposals</span><div><div><div class=\"vdl-expandable-text field-value-text\"><div class=\"content clickable\" style=\"max-height: 110px;\">Oct 1, 2025, 3:54 AM</div><!----></div></div></div><!----><!----><!----><!----></div></div></li></ul>",
+      "id": null,
+      "class": "unestiled-list",
+      "text": "Deadline for getting proposals\nOct 1, 2025, 3:54 AM"
+    },
+    {
+      "tag": "LI",
+      "snippet": "<li class=\"md-list-item field-item-list\" id=\"deadline\"><div class=\"md-list-item-container\"><svg data-v-3c9dd3dd=\"\" class=\"md-icon\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path data-v-3c9dd3dd=\"\" d=\"M12,20A7,7 0 0,1 5,13A7,7 0 0,1 12,6A7,7 0 0,1 19,13A7,7 0 0,1 12,20M19.03,7.39L20.45,5.97C20,5.46 19.55,5 19.04,4.56L17.62,6C16.07,4.74 14.12,4 12,4A9,9 0 0,0 3,13A9,9 0 0,0 12,22C17,22 21,17.97 21,13C21,10.88 20.26,8.93 19.03,7.39M11,14H13V8H11M15,1H9V3H15V1Z\"></path></svg><div class=\"md-list-text-container\"><span class=\"field-name\">Deadline for getting proposals</span><div><div><div class=\"vdl-expandable-text field-value-text\"><div class=\"content clickable\" style=\"max-height: 110px;\">Oct 1, 2025, 3:54 AM</div><!----></div></div></div><!----><!----><!----><!----></div></div></li>",
+      "id": "deadline",
+      "class": "md-list-item field-item-list",
+      "text": "Deadline for getting proposals\nOct 1, 2025, 3:54 AM"
+    },
+    {
+      "tag": "DIV",
+      "snippet": "<div class=\"md-list-item-container\"><svg data-v-3c9dd3dd=\"\" class=\"md-icon\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path data-v-3c9dd3dd=\"\" d=\"M12,20A7,7 0 0,1 5,13A7,7 0 0,1 12,6A7,7 0 0,1 19,13A7,7 0 0,1 12,20M19.03,7.39L20.45,5.97C20,5.46 19.55,5 19.04,4.56L17.62,6C16.07,4.74 14.12,4 12,4A9,9 0 0,0 3,13A9,9 0 0,0 12,22C17,22 21,17.97 21,13C21,10.88 20.26,8.93 19.03,7.39M11,14H13V8H11M15,1H9V3H15V1Z\"></path></svg><div class=\"md-list-text-container\"><span class=\"field-name\">Deadline for getting proposals</span><div><div><div class=\"vdl-expandable-text field-value-text\"><div class=\"content clickable\" style=\"max-height: 110px;\">Oct 1, 2025, 3:54 AM</div><!----></div></div></div><!----><!----><!----><!----></div></div>",
+      "id": null,
+      "class": "md-list-item-container",
+      "text": "Deadline for getting proposals\nOct 1, 2025, 3:54 AM"
+    },
+    {
+      "tag": "DIV",
+      "snippet": "<div class=\"md-list-text-container\"><span class=\"field-name\">Deadline for getting proposals</span><div><div><div class=\"vdl-expandable-text field-value-text\"><div class=\"content clickable\" style=\"max-height: 110px;\">Oct 1, 2025, 3:54 AM</div><!----></div></div></div><!----><!----><!----><!----></div>",
+      "id": null,
+      "class": "md-list-text-container",
+      "text": "Deadline for getting proposals\nOct 1, 2025, 3:54 AM"
+    },
+    {
+      "tag": "SPAN",
+      "snippet": "<span class=\"field-name\">Deadline for getting proposals</span>",
+      "id": null,
+      "class": "field-name",
+      "text": "Deadline for getting proposals"
+    },
+    {
+      "tag": "DIV",
+      "snippet": "<div class=\"md-layout project-info post-offer\"><div class=\"md-scrollbar\"><!----><!----><div class=\"data-viewer\"><ul class=\"md-list md-theme fields md-double-line\"><li class=\"field-item\"><ul class=\"unestiled-list\"><!----><!----><li class=\"md-list-item field-item-list\" id=\"deadline\"><div class=\"md-list-item-container\"><svg data-v-3c9dd3dd=\"\" class=\"md-icon\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path data-v-3c9dd3dd=\"\" d=\"M19.03 7.39L20.45 5.97C20 5.46 19.55 5 19.04 4.56L17.62 6C16.07 4.74 14.12 4 12 4C7.03 4 3 8.03 3 13S7.03 22 12 22C17 22 21 17.97 21 13C21 10.88 20.26 8.93 19.03 7.39M13 14H11V7H13V14M15 1H9V3H15V1Z\"></path></svg><div class=\"md-list-text-container\"><span class=\"field-name\">Deadline for submitting proposals</span><span class=\"field-value-text\">5 days, 1 hour and 8 minutes</span></div></div></li></ul></li></ul></div><hr class=\"md-divider md-outset\"><div class=\"form-content\"><ul class=\"md-list md-theme\"><li class=\"md-list-item md-double-line field-required\"><div class=\"md-list-item-container\"><div class=\"vdl-uploader\"><svg data-v-3c9dd3dd=\"\" class=\"md-icon\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path data-v-3c9dd3dd=\"\" d=\"style\"></path></svg><div class=\"upload-box-container\"><p class=\"field-name\">Custom audition</p><!----><div class=\"upload-box\"><div class=\"upload-progress\" style=\"width: 0px;\"></div><span class=\"md-body-1 upload-box_caption primaryMessage\">Click or drop file here to upload</span><span class=\"md-body-1 upload-box_caption\">MP3 or WAV files at 44.1kHz, 96-128 Kbps, 16 bit, mono, max peak volume at -3db, smaller than 100 MB</span><div><span class=\"md-body-1 upload-box_caption file-restriction\"></span></div></div><input type=\"file\" name=\"Custom audition\" accept=\"audio/*\"><span class=\"md-error\">A valid file is required</span></div></div></div></li></ul></div><form class=\"formkit-form\" id=\"post-offer-form\" name=\"post-offer-form\" data-hs-cf-bound=\"true\"><div class=\"form-content\"><ul class=\"md-list md-theme fields md-double-line\"><li c",
+      "id": null,
+      "class": "md-layout project-info post-offer",
+      "text": "Deadline for submitting proposals\n5 days, 1 hour and 8 minutes\n\nCustom audition\n\nClick or drop file here to upload\nMP3 or WAV files at 44.1kHz, 96-128 Kbps, 16 bit, mono, max peak volume at -3db, smal"
+    },
+    {
+      "tag": "DIV",
+      "snippet": "<div class=\"md-scrollbar\"><!----><!----><div class=\"data-viewer\"><ul class=\"md-list md-theme fields md-double-line\"><li class=\"field-item\"><ul class=\"unestiled-list\"><!----><!----><li class=\"md-list-item field-item-list\" id=\"deadline\"><div class=\"md-list-item-container\"><svg data-v-3c9dd3dd=\"\" class=\"md-icon\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path data-v-3c9dd3dd=\"\" d=\"M19.03 7.39L20.45 5.97C20 5.46 19.55 5 19.04 4.56L17.62 6C16.07 4.74 14.12 4 12 4C7.03 4 3 8.03 3 13S7.03 22 12 22C17 22 21 17.97 21 13C21 10.88 20.26 8.93 19.03 7.39M13 14H11V7H13V14M15 1H9V3H15V1Z\"></path></svg><div class=\"md-list-text-container\"><span class=\"field-name\">Deadline for submitting proposals</span><span class=\"field-value-text\">5 days, 1 hour and 8 minutes</span></div></div></li></ul></li></ul></div><hr class=\"md-divider md-outset\"><div class=\"form-content\"><ul class=\"md-list md-theme\"><li class=\"md-list-item md-double-line field-required\"><div class=\"md-list-item-container\"><div class=\"vdl-uploader\"><svg data-v-3c9dd3dd=\"\" class=\"md-icon\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path data-v-3c9dd3dd=\"\" d=\"style\"></path></svg><div class=\"upload-box-container\"><p class=\"field-name\">Custom audition</p><!----><div class=\"upload-box\"><div class=\"upload-progress\" style=\"width: 0px;\"></div><span class=\"md-body-1 upload-box_caption primaryMessage\">Click or drop file here to upload</span><span class=\"md-body-1 upload-box_caption\">MP3 or WAV files at 44.1kHz, 96-128 Kbps, 16 bit, mono, max peak volume at -3db, smaller than 100 MB</span><div><span class=\"md-body-1 upload-box_caption file-restriction\"></span></div></div><input type=\"file\" name=\"Custom audition\" accept=\"audio/*\"><span class=\"md-error\">A valid file is required</span></div></div></div></li></ul></div><form class=\"formkit-form\" id=\"post-offer-form\" name=\"post-offer-form\" data-hs-cf-bound=\"true\"><div class=\"form-content\"><ul class=\"md-list md-theme fields md-double-line\"><li class=\"field-item samples-selector\"><ul class=\"u",
+      "id": null,
+      "class": "md-scrollbar",
+      "text": "Deadline for submitting proposals\n5 days, 1 hour and 8 minutes\n\nCustom audition\n\nClick or drop file here to upload\nMP3 or WAV files at 44.1kHz, 96-128 Kbps, 16 bit, mono, max peak volume at -3db, smal"
+    },
+    {
+      "tag": "DIV",
+      "snippet": "<div class=\"data-viewer\"><ul class=\"md-list md-theme fields md-double-line\"><li class=\"field-item\"><ul class=\"unestiled-list\"><!----><!----><li class=\"md-list-item field-item-list\" id=\"deadline\"><div class=\"md-list-item-container\"><svg data-v-3c9dd3dd=\"\" class=\"md-icon\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path data-v-3c9dd3dd=\"\" d=\"M19.03 7.39L20.45 5.97C20 5.46 19.55 5 19.04 4.56L17.62 6C16.07 4.74 14.12 4 12 4C7.03 4 3 8.03 3 13S7.03 22 12 22C17 22 21 17.97 21 13C21 10.88 20.26 8.93 19.03 7.39M13 14H11V7H13V14M15 1H9V3H15V1Z\"></path></svg><div class=\"md-list-text-container\"><span class=\"field-name\">Deadline for submitting proposals</span><span class=\"field-value-text\">5 days, 1 hour and 8 minutes</span></div></div></li></ul></li></ul></div>",
+      "id": null,
+      "class": "data-viewer",
+      "text": "Deadline for submitting proposals\n5 days, 1 hour and 8 minutes"
+    },
+    {
+      "tag": "UL",
+      "snippet": "<ul class=\"md-list md-theme fields md-double-line\"><li class=\"field-item\"><ul class=\"unestiled-list\"><!----><!----><li class=\"md-list-item field-item-list\" id=\"deadline\"><div class=\"md-list-item-container\"><svg data-v-3c9dd3dd=\"\" class=\"md-icon\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path data-v-3c9dd3dd=\"\" d=\"M19.03 7.39L20.45 5.97C20 5.46 19.55 5 19.04 4.56L17.62 6C16.07 4.74 14.12 4 12 4C7.03 4 3 8.03 3 13S7.03 22 12 22C17 22 21 17.97 21 13C21 10.88 20.26 8.93 19.03 7.39M13 14H11V7H13V14M15 1H9V3H15V1Z\"></path></svg><div class=\"md-list-text-container\"><span class=\"field-name\">Deadline for submitting proposals</span><span class=\"field-value-text\">5 days, 1 hour and 8 minutes</span></div></div></li></ul></li></ul>",
+      "id": null,
+      "class": "md-list md-theme fields md-double-line",
+      "text": "Deadline for submitting proposals\n5 days, 1 hour and 8 minutes"
+    },
+    {
+      "tag": "LI",
+      "snippet": "<li class=\"field-item\"><ul class=\"unestiled-list\"><!----><!----><li class=\"md-list-item field-item-list\" id=\"deadline\"><div class=\"md-list-item-container\"><svg data-v-3c9dd3dd=\"\" class=\"md-icon\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path data-v-3c9dd3dd=\"\" d=\"M19.03 7.39L20.45 5.97C20 5.46 19.55 5 19.04 4.56L17.62 6C16.07 4.74 14.12 4 12 4C7.03 4 3 8.03 3 13S7.03 22 12 22C17 22 21 17.97 21 13C21 10.88 20.26 8.93 19.03 7.39M13 14H11V7H13V14M15 1H9V3H15V1Z\"></path></svg><div class=\"md-list-text-container\"><span class=\"field-name\">Deadline for submitting proposals</span><span class=\"field-value-text\">5 days, 1 hour and 8 minutes</span></div></div></li></ul></li>",
+      "id": null,
+      "class": "field-item",
+      "text": "Deadline for submitting proposals\n5 days, 1 hour and 8 minutes"
+    },
+    {
+      "tag": "UL",
+      "snippet": "<ul class=\"unestiled-list\"><!----><!----><li class=\"md-list-item field-item-list\" id=\"deadline\"><div class=\"md-list-item-container\"><svg data-v-3c9dd3dd=\"\" class=\"md-icon\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path data-v-3c9dd3dd=\"\" d=\"M19.03 7.39L20.45 5.97C20 5.46 19.55 5 19.04 4.56L17.62 6C16.07 4.74 14.12 4 12 4C7.03 4 3 8.03 3 13S7.03 22 12 22C17 22 21 17.97 21 13C21 10.88 20.26 8.93 19.03 7.39M13 14H11V7H13V14M15 1H9V3H15V1Z\"></path></svg><div class=\"md-list-text-container\"><span class=\"field-name\">Deadline for submitting proposals</span><span class=\"field-value-text\">5 days, 1 hour and 8 minutes</span></div></div></li></ul>",
+      "id": null,
+      "class": "unestiled-list",
+      "text": "Deadline for submitting proposals\n5 days, 1 hour and 8 minutes"
+    },
+    {
+      "tag": "LI",
+      "snippet": "<li class=\"md-list-item field-item-list\" id=\"deadline\"><div class=\"md-list-item-container\"><svg data-v-3c9dd3dd=\"\" class=\"md-icon\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path data-v-3c9dd3dd=\"\" d=\"M19.03 7.39L20.45 5.97C20 5.46 19.55 5 19.04 4.56L17.62 6C16.07 4.74 14.12 4 12 4C7.03 4 3 8.03 3 13S7.03 22 12 22C17 22 21 17.97 21 13C21 10.88 20.26 8.93 19.03 7.39M13 14H11V7H13V14M15 1H9V3H15V1Z\"></path></svg><div class=\"md-list-text-container\"><span class=\"field-name\">Deadline for submitting proposals</span><span class=\"field-value-text\">5 days, 1 hour and 8 minutes</span></div></div></li>",
+      "id": "deadline",
+      "class": "md-list-item field-item-list",
+      "text": "Deadline for submitting proposals\n5 days, 1 hour and 8 minutes"
+    },
+    {
+      "tag": "DIV",
+      "snippet": "<div class=\"md-list-item-container\"><svg data-v-3c9dd3dd=\"\" class=\"md-icon\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path data-v-3c9dd3dd=\"\" d=\"M19.03 7.39L20.45 5.97C20 5.46 19.55 5 19.04 4.56L17.62 6C16.07 4.74 14.12 4 12 4C7.03 4 3 8.03 3 13S7.03 22 12 22C17 22 21 17.97 21 13C21 10.88 20.26 8.93 19.03 7.39M13 14H11V7H13V14M15 1H9V3H15V1Z\"></path></svg><div class=\"md-list-text-container\"><span class=\"field-name\">Deadline for submitting proposals</span><span class=\"field-value-text\">5 days, 1 hour and 8 minutes</span></div></div>",
+      "id": null,
+      "class": "md-list-item-container",
+      "text": "Deadline for submitting proposals\n5 days, 1 hour and 8 minutes"
+    },
+    {
+      "tag": "DIV",
+      "snippet": "<div class=\"md-list-text-container\"><span class=\"field-name\">Deadline for submitting proposals</span><span class=\"field-value-text\">5 days, 1 hour and 8 minutes</span></div>",
+      "id": null,
+      "class": "md-list-text-container",
+      "text": "Deadline for submitting proposals\n5 days, 1 hour and 8 minutes"
+    },
+    {
+      "tag": "SPAN",
+      "snippet": "<span class=\"field-name\">Deadline for submitting proposals</span>",
+      "id": null,
+      "class": "field-name",
+      "text": "Deadline for submitting proposals"
+    },
+    {
+      "tag": "DIV",
+      "snippet": "<div class=\"form-content\"><ul class=\"md-list md-theme\"><li class=\"md-list-item md-double-line field-required\"><div class=\"md-list-item-container\"><div class=\"vdl-uploader\"><svg data-v-3c9dd3dd=\"\" class=\"md-icon\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path data-v-3c9dd3dd=\"\" d=\"style\"></path></svg><div class=\"upload-box-container\"><p class=\"field-name\">Custom audition</p><!----><div class=\"upload-box\"><div class=\"upload-progress\" style=\"width: 0px;\"></div><span class=\"md-body-1 upload-box_caption primaryMessage\">Click or drop file here to upload</span><span class=\"md-body-1 upload-box_caption\">MP3 or WAV files at 44.1kHz, 96-128 Kbps, 16 bit, mono, max peak volume at -3db, smaller than 100 MB</span><div><span class=\"md-body-1 upload-box_caption file-restriction\"></span></div></div><input type=\"file\" name=\"Custom audition\" accept=\"audio/*\"><span class=\"md-error\">A valid file is required</span></div></div></div></li></ul></div>",
+      "id": null,
+      "class": "form-content",
+      "text": "Custom audition\n\nClick or drop file here to upload\nMP3 or WAV files at 44.1kHz, 96-128 Kbps, 16 bit, mono, max peak volume at -3db, smaller than 100 MB"
+    },
+    {
+      "tag": "UL",
+      "snippet": "<ul class=\"md-list md-theme\"><li class=\"md-list-item md-double-line field-required\"><div class=\"md-list-item-container\"><div class=\"vdl-uploader\"><svg data-v-3c9dd3dd=\"\" class=\"md-icon\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path data-v-3c9dd3dd=\"\" d=\"style\"></path></svg><div class=\"upload-box-container\"><p class=\"field-name\">Custom audition</p><!----><div class=\"upload-box\"><div class=\"upload-progress\" style=\"width: 0px;\"></div><span class=\"md-body-1 upload-box_caption primaryMessage\">Click or drop file here to upload</span><span class=\"md-body-1 upload-box_caption\">MP3 or WAV files at 44.1kHz, 96-128 Kbps, 16 bit, mono, max peak volume at -3db, smaller than 100 MB</span><div><span class=\"md-body-1 upload-box_caption file-restriction\"></span></div></div><input type=\"file\" name=\"Custom audition\" accept=\"audio/*\"><span class=\"md-error\">A valid file is required</span></div></div></div></li></ul>",
+      "id": null,
+      "class": "md-list md-theme",
+      "text": "Custom audition\n\nClick or drop file here to upload\nMP3 or WAV files at 44.1kHz, 96-128 Kbps, 16 bit, mono, max peak volume at -3db, smaller than 100 MB"
+    },
+    {
+      "tag": "LI",
+      "snippet": "<li class=\"md-list-item md-double-line field-required\"><div class=\"md-list-item-container\"><div class=\"vdl-uploader\"><svg data-v-3c9dd3dd=\"\" class=\"md-icon\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path data-v-3c9dd3dd=\"\" d=\"style\"></path></svg><div class=\"upload-box-container\"><p class=\"field-name\">Custom audition</p><!----><div class=\"upload-box\"><div class=\"upload-progress\" style=\"width: 0px;\"></div><span class=\"md-body-1 upload-box_caption primaryMessage\">Click or drop file here to upload</span><span class=\"md-body-1 upload-box_caption\">MP3 or WAV files at 44.1kHz, 96-128 Kbps, 16 bit, mono, max peak volume at -3db, smaller than 100 MB</span><div><span class=\"md-body-1 upload-box_caption file-restriction\"></span></div></div><input type=\"file\" name=\"Custom audition\" accept=\"audio/*\"><span class=\"md-error\">A valid file is required</span></div></div></div></li>",
+      "id": null,
+      "class": "md-list-item md-double-line field-required",
+      "text": "Custom audition\n\nClick or drop file here to upload\nMP3 or WAV files at 44.1kHz, 96-128 Kbps, 16 bit, mono, max peak volume at -3db, smaller than 100 MB"
+    },
+    {
+      "tag": "DIV",
+      "snippet": "<div class=\"md-list-item-container\"><div class=\"vdl-uploader\"><svg data-v-3c9dd3dd=\"\" class=\"md-icon\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path data-v-3c9dd3dd=\"\" d=\"style\"></path></svg><div class=\"upload-box-container\"><p class=\"field-name\">Custom audition</p><!----><div class=\"upload-box\"><div class=\"upload-progress\" style=\"width: 0px;\"></div><span class=\"md-body-1 upload-box_caption primaryMessage\">Click or drop file here to upload</span><span class=\"md-body-1 upload-box_caption\">MP3 or WAV files at 44.1kHz, 96-128 Kbps, 16 bit, mono, max peak volume at -3db, smaller than 100 MB</span><div><span class=\"md-body-1 upload-box_caption file-restriction\"></span></div></div><input type=\"file\" name=\"Custom audition\" accept=\"audio/*\"><span class=\"md-error\">A valid file is required</span></div></div></div>",
+      "id": null,
+      "class": "md-list-item-container",
+      "text": "Custom audition\n\nClick or drop file here to upload\nMP3 or WAV files at 44.1kHz, 96-128 Kbps, 16 bit, mono, max peak volume at -3db, smaller than 100 MB"
+    },
+    {
+      "tag": "DIV",
+      "snippet": "<div class=\"vdl-uploader\"><svg data-v-3c9dd3dd=\"\" class=\"md-icon\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path data-v-3c9dd3dd=\"\" d=\"style\"></path></svg><div class=\"upload-box-container\"><p class=\"field-name\">Custom audition</p><!----><div class=\"upload-box\"><div class=\"upload-progress\" style=\"width: 0px;\"></div><span class=\"md-body-1 upload-box_caption primaryMessage\">Click or drop file here to upload</span><span class=\"md-body-1 upload-box_caption\">MP3 or WAV files at 44.1kHz, 96-128 Kbps, 16 bit, mono, max peak volume at -3db, smaller than 100 MB</span><div><span class=\"md-body-1 upload-box_caption file-restriction\"></span></div></div><input type=\"file\" name=\"Custom audition\" accept=\"audio/*\"><span class=\"md-error\">A valid file is required</span></div></div>",
+      "id": null,
+      "class": "vdl-uploader",
+      "text": "Custom audition\n\nClick or drop file here to upload\nMP3 or WAV files at 44.1kHz, 96-128 Kbps, 16 bit, mono, max peak volume at -3db, smaller than 100 MB"
+    },
+    {
+      "tag": "DIV",
+      "snippet": "<div class=\"upload-box-container\"><p class=\"field-name\">Custom audition</p><!----><div class=\"upload-box\"><div class=\"upload-progress\" style=\"width: 0px;\"></div><span class=\"md-body-1 upload-box_caption primaryMessage\">Click or drop file here to upload</span><span class=\"md-body-1 upload-box_caption\">MP3 or WAV files at 44.1kHz, 96-128 Kbps, 16 bit, mono, max peak volume at -3db, smaller than 100 MB</span><div><span class=\"md-body-1 upload-box_caption file-restriction\"></span></div></div><input type=\"file\" name=\"Custom audition\" accept=\"audio/*\"><span class=\"md-error\">A valid file is required</span></div>",
+      "id": null,
+      "class": "upload-box-container",
+      "text": "Custom audition\n\nClick or drop file here to upload\nMP3 or WAV files at 44.1kHz, 96-128 Kbps, 16 bit, mono, max peak volume at -3db, smaller than 100 MB"
+    },
+    {
+      "tag": "DIV",
+      "snippet": "<div class=\"upload-box\"><div class=\"upload-progress\" style=\"width: 0px;\"></div><span class=\"md-body-1 upload-box_caption primaryMessage\">Click or drop file here to upload</span><span class=\"md-body-1 upload-box_caption\">MP3 or WAV files at 44.1kHz, 96-128 Kbps, 16 bit, mono, max peak volume at -3db, smaller than 100 MB</span><div><span class=\"md-body-1 upload-box_caption file-restriction\"></span></div></div>",
+      "id": null,
+      "class": "upload-box",
+      "text": "Click or drop file here to upload\nMP3 or WAV files at 44.1kHz, 96-128 Kbps, 16 bit, mono, max peak volume at -3db, smaller than 100 MB"
+    },
+    {
+      "tag": "DIV",
+      "snippet": "<div class=\"upload-progress\" style=\"width: 0px;\"></div>",
+      "id": null,
+      "class": "upload-progress",
+      "text": ""
+    },
+    {
+      "tag": "SPAN",
+      "snippet": "<span class=\"md-body-1 upload-box_caption primaryMessage\">Click or drop file here to upload</span>",
+      "id": null,
+      "class": "md-body-1 upload-box_caption primaryMessage",
+      "text": "Click or drop file here to upload"
+    },
+    {
+      "tag": "SPAN",
+      "snippet": "<span class=\"md-body-1 upload-box_caption\">MP3 or WAV files at 44.1kHz, 96-128 Kbps, 16 bit, mono, max peak volume at -3db, smaller than 100 MB</span>",
+      "id": null,
+      "class": "md-body-1 upload-box_caption",
+      "text": "MP3 or WAV files at 44.1kHz, 96-128 Kbps, 16 bit, mono, max peak volume at -3db, smaller than 100 MB"
+    },
+    {
+      "tag": "SPAN",
+      "snippet": "<span class=\"md-body-1 upload-box_caption file-restriction\"></span>",
+      "id": null,
+      "class": "md-body-1 upload-box_caption file-restriction",
+      "text": ""
+    },
+    {
+      "tag": "SPAN",
+      "snippet": "<span class=\"md-error\">A valid file is required</span>",
+      "id": null,
+      "class": "md-error",
+      "text": "A valid file is required"
+    },
+    {
+      "tag": "FORM",
+      "snippet": "<form class=\"formkit-form\" id=\"post-offer-form\" name=\"post-offer-form\" data-hs-cf-bound=\"true\"><div class=\"form-content\"><ul class=\"md-list md-theme fields md-double-line\"><li class=\"field-item samples-selector\"><ul class=\"unestiled-list\"><!----><!----><li data-v-585b8262=\"\" class=\"\"><ul data-v-585b8262=\"\" class=\"unestiled-list\"><div data-v-da8ba575=\"\" data-v-5477b750=\"\" data-v-585b8262=\"\" tabindex=\"-1\" view=\"sample_player\" action=\"favorite\" playeractions=\"\" sampleedit=\"false\" sampleview=\"false\" excludedvalues=\"\" id=\"related_samples\" has-nested-errors=\"false\"><div data-v-da8ba575=\"\" class=\"field-item-list\"><div data-v-da8ba575=\"\" class=\"field-title\"><!----><!----></div><!----><li data-v-da8ba575=\"\" class=\"md-list-item type-samples-selector\"><div class=\"md-list-item-container\"><!----><span data-v-5477b750=\"\" class=\"md-list-text-container\"><div data-v-5477b750=\"\" class=\"md-input-container md-theme md-has-select\"><div data-v-5477b750=\"\" class=\"md-select md-theme\"><div class=\"md-menu md-theme\"><span class=\"md-select-value\" md-menu-trigger=\"\"></span></div><select name=\"Samples from existing work\" id=\"related_samples\" tabindex=\"-1\"><!----><option></option><option></option><option></option><option></option></select></div><label data-v-5477b750=\"\" for=\"related_samples\" class=\"placeholder-label\">Samples from existing work</label><span data-v-5477b750=\"\" class=\"md-error selectors\"></span><!----><!----><!----></div><span data-v-5477b750=\"\" class=\"\"></span></span></div></li></div><div data-v-da8ba575=\"\" class=\"conditional-nested-wrapper\"></div></div></ul></li><!----><!----><!----></ul></li><li class=\"field-item unitInput\"><ul class=\"unestiled-list\"><!----><!----><li data-v-585b8262=\"\" class=\"\"><ul data-v-585b8262=\"\" class=\"unestiled-list\"><div data-v-da8ba575=\"\" data-v-585b8262=\"\" view=\"formatted_read_only\" currencies=\"[object Object]\" textformat=\"function({value:e,model:t,field:n,vm:s}){let r=&quot;&quot;;if(t&amp;&amp;e){const u=t.negotiable_price?&quot; • Negotiable&quot;:&q",
+      "id": "post-offer-form",
+      "class": "formkit-form",
+      "text": "Samples from existing work\nBudget stated by client\nZero Budget • For non-profit\nPrice quote\nUSD $\nUSD $\nPrice quote\nNegotiable\nAdditional proposal details\n0 / 1000"
+    },
+    {
+      "tag": "DIV",
+      "snippet": "<div class=\"form-content\"><ul class=\"md-list md-theme fields md-double-line\"><li class=\"field-item samples-selector\"><ul class=\"unestiled-list\"><!----><!----><li data-v-585b8262=\"\" class=\"\"><ul data-v-585b8262=\"\" class=\"unestiled-list\"><div data-v-da8ba575=\"\" data-v-5477b750=\"\" data-v-585b8262=\"\" tabindex=\"-1\" view=\"sample_player\" action=\"favorite\" playeractions=\"\" sampleedit=\"false\" sampleview=\"false\" excludedvalues=\"\" id=\"related_samples\" has-nested-errors=\"false\"><div data-v-da8ba575=\"\" class=\"field-item-list\"><div data-v-da8ba575=\"\" class=\"field-title\"><!----><!----></div><!----><li data-v-da8ba575=\"\" class=\"md-list-item type-samples-selector\"><div class=\"md-list-item-container\"><!----><span data-v-5477b750=\"\" class=\"md-list-text-container\"><div data-v-5477b750=\"\" class=\"md-input-container md-theme md-has-select\"><div data-v-5477b750=\"\" class=\"md-select md-theme\"><div class=\"md-menu md-theme\"><span class=\"md-select-value\" md-menu-trigger=\"\"></span></div><select name=\"Samples from existing work\" id=\"related_samples\" tabindex=\"-1\"><!----><option></option><option></option><option></option><option></option></select></div><label data-v-5477b750=\"\" for=\"related_samples\" class=\"placeholder-label\">Samples from existing work</label><span data-v-5477b750=\"\" class=\"md-error selectors\"></span><!----><!----><!----></div><span data-v-5477b750=\"\" class=\"\"></span></span></div></li></div><div data-v-da8ba575=\"\" class=\"conditional-nested-wrapper\"></div></div></ul></li><!----><!----><!----></ul></li><li class=\"field-item unitInput\"><ul class=\"unestiled-list\"><!----><!----><li data-v-585b8262=\"\" class=\"\"><ul data-v-585b8262=\"\" class=\"unestiled-list\"><div data-v-da8ba575=\"\" data-v-585b8262=\"\" view=\"formatted_read_only\" currencies=\"[object Object]\" textformat=\"function({value:e,model:t,field:n,vm:s}){let r=&quot;&quot;;if(t&amp;&amp;e){const u=t.negotiable_price?&quot; • Negotiable&quot;:&quot;&quot;,i=t.offer_currencies&amp;&amp;t.offer_currencies.currency||1,a=n.currencies.values.f",
+      "id": null,
+      "class": "form-content",
+      "text": "Samples from existing work\nBudget stated by client\nZero Budget • For non-profit\nPrice quote\nUSD $\nUSD $\nPrice quote\nNegotiable\nAdditional proposal details\n0 / 1000"
+    },
+    {
+      "tag": "UL",
+      "snippet": "<ul class=\"md-list md-theme fields md-double-line\"><li class=\"field-item samples-selector\"><ul class=\"unestiled-list\"><!----><!----><li data-v-585b8262=\"\" class=\"\"><ul data-v-585b8262=\"\" class=\"unestiled-list\"><div data-v-da8ba575=\"\" data-v-5477b750=\"\" data-v-585b8262=\"\" tabindex=\"-1\" view=\"sample_player\" action=\"favorite\" playeractions=\"\" sampleedit=\"false\" sampleview=\"false\" excludedvalues=\"\" id=\"related_samples\" has-nested-errors=\"false\"><div data-v-da8ba575=\"\" class=\"field-item-list\"><div data-v-da8ba575=\"\" class=\"field-title\"><!----><!----></div><!----><li data-v-da8ba575=\"\" class=\"md-list-item type-samples-selector\"><div class=\"md-list-item-container\"><!----><span data-v-5477b750=\"\" class=\"md-list-text-container\"><div data-v-5477b750=\"\" class=\"md-input-container md-theme md-has-select\"><div data-v-5477b750=\"\" class=\"md-select md-theme\"><div class=\"md-menu md-theme\"><span class=\"md-select-value\" md-menu-trigger=\"\"></span></div><select name=\"Samples from existing work\" id=\"related_samples\" tabindex=\"-1\"><!----><option></option><option></option><option></option><option></option></select></div><label data-v-5477b750=\"\" for=\"related_samples\" class=\"placeholder-label\">Samples from existing work</label><span data-v-5477b750=\"\" class=\"md-error selectors\"></span><!----><!----><!----></div><span data-v-5477b750=\"\" class=\"\"></span></span></div></li></div><div data-v-da8ba575=\"\" class=\"conditional-nested-wrapper\"></div></div></ul></li><!----><!----><!----></ul></li><li class=\"field-item unitInput\"><ul class=\"unestiled-list\"><!----><!----><li data-v-585b8262=\"\" class=\"\"><ul data-v-585b8262=\"\" class=\"unestiled-list\"><div data-v-da8ba575=\"\" data-v-585b8262=\"\" view=\"formatted_read_only\" currencies=\"[object Object]\" textformat=\"function({value:e,model:t,field:n,vm:s}){let r=&quot;&quot;;if(t&amp;&amp;e){const u=t.negotiable_price?&quot; • Negotiable&quot;:&quot;&quot;,i=t.offer_currencies&amp;&amp;t.offer_currencies.currency||1,a=n.currencies.values.find(o=>o.id===i)||n.curren",
+      "id": null,
+      "class": "md-list md-theme fields md-double-line",
+      "text": "Samples from existing work\nBudget stated by client\nZero Budget • For non-profit\nPrice quote\nUSD $\nUSD $\nPrice quote\nNegotiable\nAdditional proposal details\n0 / 1000"
+    },
+    {
+      "tag": "LI",
+      "snippet": "<li class=\"field-item textarea\"><ul class=\"unestiled-list\"><!----><!----><li data-v-585b8262=\"\" class=\"\"><ul data-v-585b8262=\"\" class=\"unestiled-list\"><div data-v-da8ba575=\"\" data-v-585b8262=\"\" view=\"read_only\" values=\"\" excludedvalues=\"\" id=\"details\" has-nested-errors=\"false\"><div data-v-da8ba575=\"\" class=\"field-item-list\"><div data-v-da8ba575=\"\" class=\"field-title\"><!----><!----></div><!----><li data-v-da8ba575=\"\" class=\"md-list-item type-textarea\"><div class=\"md-list-item-container\"><svg data-v-3c9dd3dd=\"\" class=\"md-icon\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path data-v-3c9dd3dd=\"\" d=\"M4,5H20V7H4V5M4,9H20V11H4V9M4,13H20V15H4V13M4,17H14V19H4V17Z\"></path></svg><div class=\"no-wrap\"><div class=\"md-input-container md-theme\"><label for=\"details\">Additional proposal details</label><textarea class=\"md-input field-text\" maxlength=\"1000\" scrollparams=\"[object Object]\" id=\"details\" data-hj-allow=\"\" rows=\"1\" style=\"overflow: hidden; overflow-wrap: break-word; text-align: start; height: 32px;\"></textarea><!----><!----><!----><span class=\"md-error\"></span><span class=\"md-count\">0 / 1000</span><!----><!----></div><!----></div></div></li></div><div data-v-da8ba575=\"\" class=\"conditional-nested-wrapper\"><div style=\"display: none;\"></div></div></div></ul></li><!----><!----><!----></ul></li>",
+      "id": null,
+      "class": "field-item textarea",
+      "text": "Additional proposal details\n0 / 1000"
+    },
+    {
+      "tag": "UL",
+      "snippet": "<ul class=\"unestiled-list\"><!----><!----><li data-v-585b8262=\"\" class=\"\"><ul data-v-585b8262=\"\" class=\"unestiled-list\"><div data-v-da8ba575=\"\" data-v-585b8262=\"\" view=\"read_only\" values=\"\" excludedvalues=\"\" id=\"details\" has-nested-errors=\"false\"><div data-v-da8ba575=\"\" class=\"field-item-list\"><div data-v-da8ba575=\"\" class=\"field-title\"><!----><!----></div><!----><li data-v-da8ba575=\"\" class=\"md-list-item type-textarea\"><div class=\"md-list-item-container\"><svg data-v-3c9dd3dd=\"\" class=\"md-icon\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path data-v-3c9dd3dd=\"\" d=\"M4,5H20V7H4V5M4,9H20V11H4V9M4,13H20V15H4V13M4,17H14V19H4V17Z\"></path></svg><div class=\"no-wrap\"><div class=\"md-input-container md-theme\"><label for=\"details\">Additional proposal details</label><textarea class=\"md-input field-text\" maxlength=\"1000\" scrollparams=\"[object Object]\" id=\"details\" data-hj-allow=\"\" rows=\"1\" style=\"overflow: hidden; overflow-wrap: break-word; text-align: start; height: 32px;\"></textarea><!----><!----><!----><span class=\"md-error\"></span><span class=\"md-count\">0 / 1000</span><!----><!----></div><!----></div></div></li></div><div data-v-da8ba575=\"\" class=\"conditional-nested-wrapper\"><div style=\"display: none;\"></div></div></div></ul></li><!----><!----><!----></ul>",
+      "id": null,
+      "class": "unestiled-list",
+      "text": "Additional proposal details\n0 / 1000"
+    },
+    {
+      "tag": "LI",
+      "snippet": "<li data-v-585b8262=\"\" class=\"\"><ul data-v-585b8262=\"\" class=\"unestiled-list\"><div data-v-da8ba575=\"\" data-v-585b8262=\"\" view=\"read_only\" values=\"\" excludedvalues=\"\" id=\"details\" has-nested-errors=\"false\"><div data-v-da8ba575=\"\" class=\"field-item-list\"><div data-v-da8ba575=\"\" class=\"field-title\"><!----><!----></div><!----><li data-v-da8ba575=\"\" class=\"md-list-item type-textarea\"><div class=\"md-list-item-container\"><svg data-v-3c9dd3dd=\"\" class=\"md-icon\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path data-v-3c9dd3dd=\"\" d=\"M4,5H20V7H4V5M4,9H20V11H4V9M4,13H20V15H4V13M4,17H14V19H4V17Z\"></path></svg><div class=\"no-wrap\"><div class=\"md-input-container md-theme\"><label for=\"details\">Additional proposal details</label><textarea class=\"md-input field-text\" maxlength=\"1000\" scrollparams=\"[object Object]\" id=\"details\" data-hj-allow=\"\" rows=\"1\" style=\"overflow: hidden; overflow-wrap: break-word; text-align: start; height: 32px;\"></textarea><!----><!----><!----><span class=\"md-error\"></span><span class=\"md-count\">0 / 1000</span><!----><!----></div><!----></div></div></li></div><div data-v-da8ba575=\"\" class=\"conditional-nested-wrapper\"><div style=\"display: none;\"></div></div></div></ul></li>",
+      "id": null,
+      "class": null,
+      "text": "Additional proposal details\n0 / 1000"
+    },
+    {
+      "tag": "UL",
+      "snippet": "<ul data-v-585b8262=\"\" class=\"unestiled-list\"><div data-v-da8ba575=\"\" data-v-585b8262=\"\" view=\"read_only\" values=\"\" excludedvalues=\"\" id=\"details\" has-nested-errors=\"false\"><div data-v-da8ba575=\"\" class=\"field-item-list\"><div data-v-da8ba575=\"\" class=\"field-title\"><!----><!----></div><!----><li data-v-da8ba575=\"\" class=\"md-list-item type-textarea\"><div class=\"md-list-item-container\"><svg data-v-3c9dd3dd=\"\" class=\"md-icon\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path data-v-3c9dd3dd=\"\" d=\"M4,5H20V7H4V5M4,9H20V11H4V9M4,13H20V15H4V13M4,17H14V19H4V17Z\"></path></svg><div class=\"no-wrap\"><div class=\"md-input-container md-theme\"><label for=\"details\">Additional proposal details</label><textarea class=\"md-input field-text\" maxlength=\"1000\" scrollparams=\"[object Object]\" id=\"details\" data-hj-allow=\"\" rows=\"1\" style=\"overflow: hidden; overflow-wrap: break-word; text-align: start; height: 32px;\"></textarea><!----><!----><!----><span class=\"md-error\"></span><span class=\"md-count\">0 / 1000</span><!----><!----></div><!----></div></div></li></div><div data-v-da8ba575=\"\" class=\"conditional-nested-wrapper\"><div style=\"display: none;\"></div></div></div></ul>",
+      "id": null,
+      "class": "unestiled-list",
+      "text": "Additional proposal details\n0 / 1000"
+    },
+    {
+      "tag": "DIV",
+      "snippet": "<div data-v-da8ba575=\"\" data-v-585b8262=\"\" view=\"read_only\" values=\"\" excludedvalues=\"\" id=\"details\" has-nested-errors=\"false\"><div data-v-da8ba575=\"\" class=\"field-item-list\"><div data-v-da8ba575=\"\" class=\"field-title\"><!----><!----></div><!----><li data-v-da8ba575=\"\" class=\"md-list-item type-textarea\"><div class=\"md-list-item-container\"><svg data-v-3c9dd3dd=\"\" class=\"md-icon\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path data-v-3c9dd3dd=\"\" d=\"M4,5H20V7H4V5M4,9H20V11H4V9M4,13H20V15H4V13M4,17H14V19H4V17Z\"></path></svg><div class=\"no-wrap\"><div class=\"md-input-container md-theme\"><label for=\"details\">Additional proposal details</label><textarea class=\"md-input field-text\" maxlength=\"1000\" scrollparams=\"[object Object]\" id=\"details\" data-hj-allow=\"\" rows=\"1\" style=\"overflow: hidden; overflow-wrap: break-word; text-align: start; height: 32px;\"></textarea><!----><!----><!----><span class=\"md-error\"></span><span class=\"md-count\">0 / 1000</span><!----><!----></div><!----></div></div></li></div><div data-v-da8ba575=\"\" class=\"conditional-nested-wrapper\"><div style=\"display: none;\"></div></div></div>",
+      "id": "details",
+      "class": null,
+      "text": "Additional proposal details\n0 / 1000"
+    },
+    {
+      "tag": "DIV",
+      "snippet": "<div data-v-da8ba575=\"\" class=\"field-item-list\"><div data-v-da8ba575=\"\" class=\"field-title\"><!----><!----></div><!----><li data-v-da8ba575=\"\" class=\"md-list-item type-textarea\"><div class=\"md-list-item-container\"><svg data-v-3c9dd3dd=\"\" class=\"md-icon\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path data-v-3c9dd3dd=\"\" d=\"M4,5H20V7H4V5M4,9H20V11H4V9M4,13H20V15H4V13M4,17H14V19H4V17Z\"></path></svg><div class=\"no-wrap\"><div class=\"md-input-container md-theme\"><label for=\"details\">Additional proposal details</label><textarea class=\"md-input field-text\" maxlength=\"1000\" scrollparams=\"[object Object]\" id=\"details\" data-hj-allow=\"\" rows=\"1\" style=\"overflow: hidden; overflow-wrap: break-word; text-align: start; height: 32px;\"></textarea><!----><!----><!----><span class=\"md-error\"></span><span class=\"md-count\">0 / 1000</span><!----><!----></div><!----></div></div></li></div>",
+      "id": null,
+      "class": "field-item-list",
+      "text": "Additional proposal details\n0 / 1000"
+    },
+    {
+      "tag": "LI",
+      "snippet": "<li data-v-da8ba575=\"\" class=\"md-list-item type-textarea\"><div class=\"md-list-item-container\"><svg data-v-3c9dd3dd=\"\" class=\"md-icon\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path data-v-3c9dd3dd=\"\" d=\"M4,5H20V7H4V5M4,9H20V11H4V9M4,13H20V15H4V13M4,17H14V19H4V17Z\"></path></svg><div class=\"no-wrap\"><div class=\"md-input-container md-theme\"><label for=\"details\">Additional proposal details</label><textarea class=\"md-input field-text\" maxlength=\"1000\" scrollparams=\"[object Object]\" id=\"details\" data-hj-allow=\"\" rows=\"1\" style=\"overflow: hidden; overflow-wrap: break-word; text-align: start; height: 32px;\"></textarea><!----><!----><!----><span class=\"md-error\"></span><span class=\"md-count\">0 / 1000</span><!----><!----></div><!----></div></div></li>",
+      "id": null,
+      "class": "md-list-item type-textarea",
+      "text": "Additional proposal details\n0 / 1000"
+    },
+    {
+      "tag": "DIV",
+      "snippet": "<div class=\"md-list-item-container\"><svg data-v-3c9dd3dd=\"\" class=\"md-icon\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path data-v-3c9dd3dd=\"\" d=\"M4,5H20V7H4V5M4,9H20V11H4V9M4,13H20V15H4V13M4,17H14V19H4V17Z\"></path></svg><div class=\"no-wrap\"><div class=\"md-input-container md-theme\"><label for=\"details\">Additional proposal details</label><textarea class=\"md-input field-text\" maxlength=\"1000\" scrollparams=\"[object Object]\" id=\"details\" data-hj-allow=\"\" rows=\"1\" style=\"overflow: hidden; overflow-wrap: break-word; text-align: start; height: 32px;\"></textarea><!----><!----><!----><span class=\"md-error\"></span><span class=\"md-count\">0 / 1000</span><!----><!----></div><!----></div></div>",
+      "id": null,
+      "class": "md-list-item-container",
+      "text": "Additional proposal details\n0 / 1000"
+    },
+    {
+      "tag": "DIV",
+      "snippet": "<div class=\"no-wrap\"><div class=\"md-input-container md-theme\"><label for=\"details\">Additional proposal details</label><textarea class=\"md-input field-text\" maxlength=\"1000\" scrollparams=\"[object Object]\" id=\"details\" data-hj-allow=\"\" rows=\"1\" style=\"overflow: hidden; overflow-wrap: break-word; text-align: start; height: 32px;\"></textarea><!----><!----><!----><span class=\"md-error\"></span><span class=\"md-count\">0 / 1000</span><!----><!----></div><!----></div>",
+      "id": null,
+      "class": "no-wrap",
+      "text": "Additional proposal details\n0 / 1000"
+    },
+    {
+      "tag": "DIV",
+      "snippet": "<div class=\"md-input-container md-theme\"><label for=\"details\">Additional proposal details</label><textarea class=\"md-input field-text\" maxlength=\"1000\" scrollparams=\"[object Object]\" id=\"details\" data-hj-allow=\"\" rows=\"1\" style=\"overflow: hidden; overflow-wrap: break-word; text-align: start; height: 32px;\"></textarea><!----><!----><!----><span class=\"md-error\"></span><span class=\"md-count\">0 / 1000</span><!----><!----></div>",
+      "id": null,
+      "class": "md-input-container md-theme",
+      "text": "Additional proposal details\n0 / 1000"
+    },
+    {
+      "tag": "LABEL",
+      "snippet": "<label for=\"details\">Additional proposal details</label>",
+      "id": null,
+      "class": null,
+      "text": "Additional proposal details"
+    },
+    {
+      "tag": "SCRIPT",
+      "snippet": "<script>// Autogenerated file\n// npm run create-supported-browsers-banner\n\n(function () {\n  function showBanner() {\n    const banner = createBannerElement();\n    document.body.prepend(banner);\n\n    banner.querySelector('button').addEventListener('click', function() {\n      banner.style.display = 'none';\n    });\n  };\n\n  function createBannerElement() {\n    const div = document.createElement('div');\n    div.innerHTML = `\n<div id=\"unsupportedBanner\">\n  <h3>Browser not supported</h3>\n  <span>For the best experience using Voice123, we suggest updating to the latest versions of Google Chrome, Safari, Mozilla Firefox or Microsoft Edge.</span>\n  <button aria-label=\"close\"><span>&times;</span></button>\n</div>\n`;\n    const banner = div.querySelector('#unsupportedBanner');\n\n    banner.style.cssText = '  position: fixed;  top: 0;  left: 0;  right: 0;  padding: 15px;  z-index: 10;  background-color: #EEFFFF;  color: #1E88E5;';\n    banner.querySelector('button').style.cssText = '  position: absolute;  top: 18px;  right: 10px;  margin: auto;  font-size: 30px;  border: 0;  color: #1E88E5;  cursor: pointer;  background: transparent;';\n    return banner;\n  }\n\n  const supportedBrowsersRegex = /((CPU[ +]OS|iPhone[ +]OS|CPU[ +]iPhone|CPU IPhone OS)[ +]+(13[_.]4|13[_.]([5-9]|\\d{2,})|13[_.]7|13[_.]([8-9]|\\d{2,})|(1[4-9]|[2-9]\\d|\\d{3,})[_.]\\d+|14[_.]0|14[_.]([1-9]|\\d{2,})|14[_.]4|14[_.]([5-9]|\\d{2,})|14[_.]7|14[_.]([8-9]|\\d{2,})|(1[5-9]|[2-9]\\d|\\d{3,})[_.]\\d+)(?:[_.]\\d+)?)|(Opera Mini(?:\\/att)?\\/?(\\d+)?(?:\\.\\d+)?(?:\\.\\d+)?)|((?:Chrome).*OPR\\/(77\\.0|77\\.([1-9]|\\d{2,})|(7[8-9]|[8-9]\\d|\\d{3,})\\.\\d+)\\.\\d+)|(SamsungBrowser\\/(14\\.0|14\\.([1-9]|\\d{2,})|(1[5-9]|[2-9]\\d|\\d{3,})\\.\\d+))|(Edge\\/(92(?:\\.0)?|92(?:\\.([1-9]|\\d{2,}))?|(9[3-9]|\\d{3,})(?:\\.\\d+)?))|((Chromium|Chrome)\\/(85\\.0|85\\.([1-9]|\\d{2,})|(8[6-9]|9\\d|\\d{3,})\\.\\d+|87\\.0|87\\.([1-9]|\\d{2,})|(8[8-9]|9\\d|\\d{3,})\\.\\d+|90\\.0|90\\.([1-9]|\\d{2,})|(9[1-9]|\\d{3,})\\.\\d+)(?:\\.\\d+)?)|(Version\\/(13\\.1|13\\.([2-9]|\\d{2,})|(1[4-9]|[2-9]\\d|\\d{3,})\\.\\d+|14\\.0",
+      "id": null,
+      "class": null,
+      "text": "// Autogenerated file\n// npm run create-supported-browsers-banner\n\n(function () {\n  function showBanner() {\n    const banner = createBannerElement();\n    document.body.prepend(banner);\n\n    banner.que"
+    },
+    {
+      "tag": "DIV",
+      "snippet": "<div id=\"onetrust-pc-sdk\" class=\"otPcCenter ot-hide ot-fade-in\" aria-modal=\"true\" role=\"alertdialog\" lang=\"en\" aria-label=\"Privacy Preference Center\"><!-- Close Button --><div class=\"ot-pc-header\"><!-- Logo Tag --><div class=\"ot-pc-logo\" role=\"img\" aria-label=\"Company Logo\" style=\"background-image: url(&quot;https://cdn.cookielaw.org/logos/static/ot_logo.png&quot;);\n                    background-position: left;\"></div><button id=\"close-pc-btn-handler\" class=\"ot-close-icon\" aria-label=\"Close\"></button></div><!-- Close Button --><div id=\"ot-pc-content\" class=\"ot-pc-scrollbar\"><h2 id=\"ot-pc-title\">Privacy Preference Center</h2><div id=\"ot-pc-desc\">When you visit any website, it may store or retrieve information on your browser, mostly in the form of cookies. This information might be about you, your preferences or your device and is mostly used to make the site work as you expect it to. The information does not usually directly identify you, but it can give you a more personalized web experience. Because we respect your right to privacy, you can choose not to allow some types of cookies. Click on the different category headings to find out more and change our default settings. However, blocking some types of cookies may impact your experience of the site and the services we are able to offer.\n                <br><a href=\"https://voice123.com/about/privacy-policy/\" class=\"privacy-notice-link\" rel=\"noopener\" target=\"_blank\" aria-label=\"More information about your privacy, opens in a new tab\">More information</a></div><button id=\"accept-recommended-btn-handler\">Allow All</button><section class=\"ot-sdk-row ot-cat-grp\"><h3 id=\"ot-category-title\"> Manage Consent Preferences</h3><div class=\"ot-accordion-layout ot-cat-item\" data-optanongroupid=\"C0001\"><button aria-expanded=\"false\" ot-accordion=\"true\" aria-controls=\"ot-desc-id-C0001\" aria-labelledby=\"ot-header-id-C0001\"></button><!-- Accordion header --><div class=\"ot-acc-hdr ot-always-active-group\"><div class=\"ot-plus-minus\">",
+      "id": "onetrust-pc-sdk",
+      "class": "otPcCenter ot-hide ot-fade-in",
+      "text": "Privacy Preference CenterWhen you visit any website, it may store or retrieve information on your browser, mostly in the form of cookies. This information might be about you, your preferences or your "
+    },
+    {
+      "tag": "DIV",
+      "snippet": "<div id=\"ot-pc-content\" class=\"ot-pc-scrollbar\"><h2 id=\"ot-pc-title\">Privacy Preference Center</h2><div id=\"ot-pc-desc\">When you visit any website, it may store or retrieve information on your browser, mostly in the form of cookies. This information might be about you, your preferences or your device and is mostly used to make the site work as you expect it to. The information does not usually directly identify you, but it can give you a more personalized web experience. Because we respect your right to privacy, you can choose not to allow some types of cookies. Click on the different category headings to find out more and change our default settings. However, blocking some types of cookies may impact your experience of the site and the services we are able to offer.\n                <br><a href=\"https://voice123.com/about/privacy-policy/\" class=\"privacy-notice-link\" rel=\"noopener\" target=\"_blank\" aria-label=\"More information about your privacy, opens in a new tab\">More information</a></div><button id=\"accept-recommended-btn-handler\">Allow All</button><section class=\"ot-sdk-row ot-cat-grp\"><h3 id=\"ot-category-title\"> Manage Consent Preferences</h3><div class=\"ot-accordion-layout ot-cat-item\" data-optanongroupid=\"C0001\"><button aria-expanded=\"false\" ot-accordion=\"true\" aria-controls=\"ot-desc-id-C0001\" aria-labelledby=\"ot-header-id-C0001\"></button><!-- Accordion header --><div class=\"ot-acc-hdr ot-always-active-group\"><div class=\"ot-plus-minus\"><span></span><span></span></div><h4 class=\"ot-cat-header\" id=\"ot-header-id-C0001\">Strictly Necessary Cookies</h4><div class=\"ot-always-active\">Always Active</div></div><!-- accordion detail --><div class=\"ot-acc-grpcntr ot-acc-txt\"><p class=\"ot-acc-grpdesc ot-category-desc\" id=\"ot-desc-id-C0001\">These cookies are necessary for the website to function and cannot be switched off in our systems. They are usually only set in response to actions made by you which amount to a request for services, such as setting your privacy preferen",
+      "id": "ot-pc-content",
+      "class": "ot-pc-scrollbar",
+      "text": "Privacy Preference CenterWhen you visit any website, it may store or retrieve information on your browser, mostly in the form of cookies. This information might be about you, your preferences or your "
+    },
+    {
+      "tag": "SECTION",
+      "snippet": "<section class=\"ot-sdk-row ot-cat-grp\"><h3 id=\"ot-category-title\"> Manage Consent Preferences</h3><div class=\"ot-accordion-layout ot-cat-item\" data-optanongroupid=\"C0001\"><button aria-expanded=\"false\" ot-accordion=\"true\" aria-controls=\"ot-desc-id-C0001\" aria-labelledby=\"ot-header-id-C0001\"></button><!-- Accordion header --><div class=\"ot-acc-hdr ot-always-active-group\"><div class=\"ot-plus-minus\"><span></span><span></span></div><h4 class=\"ot-cat-header\" id=\"ot-header-id-C0001\">Strictly Necessary Cookies</h4><div class=\"ot-always-active\">Always Active</div></div><!-- accordion detail --><div class=\"ot-acc-grpcntr ot-acc-txt\"><p class=\"ot-acc-grpdesc ot-category-desc\" id=\"ot-desc-id-C0001\">These cookies are necessary for the website to function and cannot be switched off in our systems. They are usually only set in response to actions made by you which amount to a request for services, such as setting your privacy preferences, logging in or filling in forms. You can set your browser to block or alert you about these cookies, but some parts of the site will not then work. These cookies do not store any personally identifiable information.</p></div></div><div class=\"ot-accordion-layout ot-cat-item\" data-optanongroupid=\"C0002\"><button aria-expanded=\"false\" ot-accordion=\"true\" aria-controls=\"ot-desc-id-C0002\" aria-labelledby=\"ot-header-id-C0002\"></button><!-- Accordion header --><div class=\"ot-acc-hdr\"><div class=\"ot-plus-minus\"><span></span><span></span></div><h4 class=\"ot-cat-header\" id=\"ot-header-id-C0002\">Performance Cookies</h4><div class=\"ot-tgl\"><input type=\"checkbox\" name=\"ot-group-id-C0002\" id=\"ot-group-id-C0002\" aria-checked=\"true\" role=\"switch\" class=\"category-switch-handler\" data-optanongroupid=\"C0002\" checked=\"\" aria-labelledby=\"ot-header-id-C0002\"> <label class=\"ot-switch\" for=\"ot-group-id-C0002\"><span class=\"ot-switch-nob\"></span> <span class=\"ot-label-txt\">Performance Cookies</span></label> </div></div><!-- accordion detail --><div class=\"ot-acc-grpcntr ot-",
+      "id": null,
+      "class": "ot-sdk-row ot-cat-grp",
+      "text": "Manage Consent PreferencesStrictly Necessary CookiesAlways ActiveThese cookies are necessary for the website to function and cannot be switched off in our systems. They are usually only set in respons"
+    },
+    {
+      "tag": "DIV",
+      "snippet": "<div class=\"ot-accordion-layout ot-cat-item\" data-optanongroupid=\"C0004\"><button aria-expanded=\"false\" ot-accordion=\"true\" aria-controls=\"ot-desc-id-C0004\" aria-labelledby=\"ot-header-id-C0004\"></button><!-- Accordion header --><div class=\"ot-acc-hdr\"><div class=\"ot-plus-minus\"><span></span><span></span></div><h4 class=\"ot-cat-header\" id=\"ot-header-id-C0004\">Targeting Cookies</h4><div class=\"ot-tgl\"><input type=\"checkbox\" name=\"ot-group-id-C0004\" id=\"ot-group-id-C0004\" aria-checked=\"true\" role=\"switch\" class=\"category-switch-handler\" data-optanongroupid=\"C0004\" checked=\"\" aria-labelledby=\"ot-header-id-C0004\"> <label class=\"ot-switch\" for=\"ot-group-id-C0004\"><span class=\"ot-switch-nob\"></span> <span class=\"ot-label-txt\">Targeting Cookies</span></label> </div></div><!-- accordion detail --><div class=\"ot-acc-grpcntr ot-acc-txt\"><p class=\"ot-acc-grpdesc ot-category-desc\" id=\"ot-desc-id-C0004\">These cookies may be set through our site by our advertising partners. They may be used by those companies to build a profile of your interests and show you relevant adverts on other sites. They do not store directly personal information, but are based on uniquely identifying your browser and internet device. If you do not allow these cookies, you will experience less targeted advertising.</p></div></div>",
+      "id": null,
+      "class": "ot-accordion-layout ot-cat-item",
+      "text": "Targeting Cookies  Targeting Cookies These cookies may be set through our site by our advertising partners. They may be used by those companies to build a profile of your interests and show you releva"
+    },
+    {
+      "tag": "DIV",
+      "snippet": "<div class=\"ot-acc-grpcntr ot-acc-txt\"><p class=\"ot-acc-grpdesc ot-category-desc\" id=\"ot-desc-id-C0004\">These cookies may be set through our site by our advertising partners. They may be used by those companies to build a profile of your interests and show you relevant adverts on other sites. They do not store directly personal information, but are based on uniquely identifying your browser and internet device. If you do not allow these cookies, you will experience less targeted advertising.</p></div>",
+      "id": null,
+      "class": "ot-acc-grpcntr ot-acc-txt",
+      "text": "These cookies may be set through our site by our advertising partners. They may be used by those companies to build a profile of your interests and show you relevant adverts on other sites. They do no"
+    },
+    {
+      "tag": "P",
+      "snippet": "<p class=\"ot-acc-grpdesc ot-category-desc\" id=\"ot-desc-id-C0004\">These cookies may be set through our site by our advertising partners. They may be used by those companies to build a profile of your interests and show you relevant adverts on other sites. They do not store directly personal information, but are based on uniquely identifying your browser and internet device. If you do not allow these cookies, you will experience less targeted advertising.</p>",
+      "id": "ot-desc-id-C0004",
+      "class": "ot-acc-grpdesc ot-category-desc",
+      "text": "These cookies may be set through our site by our advertising partners. They may be used by those companies to build a profile of your interests and show you relevant adverts on other sites. They do no"
+    }
+  ],
+  "buttonsByText": [
+    {
+      "text": "Client 4039051\n\n5 projects posted\n81.82% proposals reviewed",
+      "outerHTML": "<a href=\"/client/4039051\" class=\"md-list-item-container md-button\"><div class=\"vdl-user-info vdl-user-info_content has-click\"><div><div class=\"md-avatar-container\"><div class=\"md-avatar md-theme\"><div><span class=\"centered-image\" role=\"img\" aria-label=\"Voice123 Membership Plans\" style=\"background-image: url(&quot;/static/profile_pic.png&quot;); width: inherit; height: inherit; display: block;\"></span></div></div><div><!----></div></div></div><div class=\"name\"><!----><div class=\"name-container\"><span class=\"md-subheading\">Client 4039051</span><!----></div><!----><div><p class=\"content-text item-info\">5 projects posted<br>81.82% proposals reviewed</p></div><!----></div></div></a>"
+    }
+  ],
+  "rawPageSearch": true
+}

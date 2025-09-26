@@ -18,7 +18,7 @@ async function main() {
           await voiceBuild.generateAudio(project.id, project.script);
         } else {
           console.log(
-            `⏩ Skipping project ${project.id} - needs manual review`
+            `⏩ Skipping project ${project.id} - Needs Manual Review`
           );
         }
       } catch (error) {

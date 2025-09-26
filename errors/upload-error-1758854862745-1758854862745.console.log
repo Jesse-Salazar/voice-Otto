@@ -1,0 +1,15 @@
+{"type":"error","text":"Attestation check for Attribution Reporting on https://www.facebook.com failed.","location":{"url":"https://accounts.voice123.com/signin/"}}
+{"type":"error","text":"Attestation check for Attribution Reporting on https://www.facebook.com failed.","location":{"url":"https://accounts.voice123.com/choose_login/"}}
+{"type":"error","text":"Attestation check for Attribution Reporting on https://www.facebook.com failed.","location":{"url":"https://accounts.voice123.com/login/"}}
+{"type":"log","text":"JQMIGRATE: Migrate is installed, version 3.4.1","location":{"url":"https://voice123.com/pages/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1","lineNumber":1,"columnNumber":980}}
+{"type":"warn","text":"While parsing speculation rules: A rule contains an unknown key: \"eagerness\".","location":{"url":"https://voice123.com/"}}
+{"type":"error","text":"Attestation check for Attribution Reporting on https://www.facebook.com failed.","location":{"url":"https://voice123.com/signin?code=221b516892694c14bda12d9b038bfed1&state=qkOCPlSaaGIm2iAeP1k_g-lgkgfGIxcTq7_HQQG-RfY"}}
+{"type":"log","text":"target not found .tdl-drawer-options i.mdi-account-outline","location":{"url":"https://static.voice123.com/static/assets/vendor-9bbe0da9.js","lineNumber":561,"columnNumber":34149}}
+{"type":"error","text":"Attestation check for Attribution Reporting on https://www.facebook.com failed.","location":{"url":"https://voice123.com/projects/IL4OPO7KG/silent-screamsa-gacha-show/specs"}}
+{"type":"error","text":"Failed to load resource: net::ERR_BLOCKED_BY_ORB","location":{"url":"https://v1-media.s3.amazonaws.com/pics/users/3462595/r_3CZJB.jpg"}}
+{"type":"error","text":"Error: <path> attribute d: Expected moveto path command ('M' or 'm'), \"style\".","location":{"url":"https://static.voice123.com/static/assets/vendor-9bbe0da9.js","lineNumber":0}}
+{"type":"error","text":"Attestation check for Attribution Reporting on https://www.facebook.com failed.","location":{"url":"https://voice123.com/projects/IL4OPO7KG/silent-screamsa-gacha-show/specs"}}
+{"type":"error","text":"Error: <path> attribute d: Expected moveto path command ('M' or 'm'), \"style\".","location":{"url":"https://static.voice123.com/static/assets/vendor-9bbe0da9.js","lineNumber":0}}
+{"type":"error","text":"Failed to load resource: net::ERR_FILE_NOT_FOUND","location":{"url":"https://api2.transloadit.com/assemblies"}}
+{"type":"error","text":"Failed to load resource: net::ERR_FILE_NOT_FOUND","location":{"url":"https://api2.transloadit.com/assemblies"}}
+{"type":"error","text":"Attestation check for Attribution Reporting on https://www.facebook.com failed.","location":{"url":"https://voice123.com/projects/IL4OPO7KG/silent-screamsa-gacha-show/specs"}}

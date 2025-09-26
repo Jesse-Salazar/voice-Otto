@@ -28,6 +28,7 @@ const VALID_STATUSES = [
   "Uploaded",
   "Upload Failed",
   "Error",
+  "Needs Review"
 ];
 
 REQUIRED_ENV.forEach((variable) => {
@@ -37,6 +38,8 @@ REQUIRED_ENV.forEach((variable) => {
 });
 
 // Configure authentication safely
+const { retry } = require("./helpers");
+
 const serviceAccountAuth = new JWT({
   email: process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL,
   key: process.env.GOOGLE_PRIVATE_KEY.replace(/\\n/g, "\n"),
@@ -53,13 +56,21 @@ async function getSheet() {
     );
 
     try {
-      await doc.loadInfo();
+      // loadInfo can fail due to transient network issues (ECONNRESET). Retry a few times
+      await retry(() => doc.loadInfo(), {
+        retries: 4,
+        delayMs: 1500,
+        backoffFactor: 2,
+        context: "googleSheets.loadInfo",
+      });
+
       _sheet = doc.sheetsByIndex[0];
     } catch (error) {
       console.error("Failed to load Google Sheet:");
       console.error("1. Verify the Sheet ID is correct");
       console.error("2. Ensure service account has editor access");
-      console.error("3. Confirm network connectivity");
+      console.error("3. Confirm network connectivity and that the private key is valid/formatted correctly");
+      // Surface the original error so callers can inspect stack/code (e.g. ECONNRESET)
       throw error;
     }
   }
@@ -85,8 +96,7 @@ module.exports = {
       Status: project.status,
       "Processed At": formattedDate,
       "Client ID": project.clientId,
-      "Audio File URL": "", // New column for audio URL
-      "Approval Notes": "", // New column for rejection reasons
+      "Audio File URL": "",
     });
     return projectId; //Return ID for Tracking
   },
@@ -112,16 +122,16 @@ module.exports = {
   async getProjectsByStatus(status) {
     const sheet = await getSheet();
     const rows = await sheet.getRows();
-    
+
     return rows
-      .filter(row => row.get("Status") === status)
-      .map(row => ({
+      .filter((row) => row.get("Status") === status)
+      .map((row) => ({
         id: row.get("Project ID"),
         title: row.get("Project Title"),
         url: row.get("Project URL"),
         status: row.get("Status"),
         audioFileName: row.get("Audio File URL").split("/").pop(),
-        audioUrl: row.get("Audio File URL")
+        audioUrl: row.get("Audio File URL"),
       }));
-  }
+  },
 };
