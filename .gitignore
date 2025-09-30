@@ -7,3 +7,9 @@ main-backup.js
 googleSheets-backup.js
 elevenlabs-backup.js
 s3-backup.js
+elevenlabs-backup2.js
+upload-backup.js
+helpers-backup.js
+.DS_Store
+.vscode
+.qodo

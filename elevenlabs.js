@@ -1,4 +1,5 @@
-const fs = require("fs");
+const fs = require("fs-extra");
+const path = require("path");
 const { updateProject } = require("./googleSheets");
 const fetch = (...args) =>
   import("node-fetch").then(({ default: fetch }) => fetch(...args));
@@ -15,6 +16,7 @@ const VOICE_SETTINGS = {
 
 module.exports = {
   async generateAudio(projectId, text) {
+    let filename;
     try {
       await updateProject(projectId, { Status: "Processing" });
 
@@ -44,35 +46,49 @@ module.exports = {
       const arrayBuffer = await response.arrayBuffer();
       const buffer = Buffer.from(arrayBuffer);
 
-      const filename = `audio_${projectId}_${Date.now()}.mp3`;
+      // Stable filename used for both local copy and S3 key
+      filename = `audio_${projectId}_${Date.now()}.mp3`;
+
+      // Optionally save a local copy immediately so user can edit before any upload.
+      // Controlled by env var SAVE_LOCAL_AUDIO (default: enabled). Writes to ./tmp_audio.
+      try {
+        if (process.env.SAVE_LOCAL_AUDIO !== "false") {
+          const tmpDir = path.resolve(__dirname, "tmp_audio");
+          fs.ensureDirSync(tmpDir);
+          // Keep filename safe; allow short titles in future if provided
+          const localPath = path.join(tmpDir, filename);
+          fs.writeFileSync(localPath, buffer);
+          console.log(`WROTE_LOCAL_COPY ${localPath}`);
+        }
+      } catch (e) {
+        console.warn(
+          "Failed to write local copy for editing:",
+          e && e.message ? e.message : e
+        );
+      }
+
       const s3Url = await uploadFile(buffer, filename, "audio/mpeg");
 
       await updateProject(projectId, {
         Status: "Pending Approval",
         "Audio File URL": s3Url,
-        "Voice Settings": JSON.stringify(VOICE_SETTINGS), // Optional: Store settings
+        "Voice Settings": JSON.stringify(VOICE_SETTINGS),
       });
 
       return filename;
     } catch (error) {
-      await updateProject(projectId, {
-        Status: "Error",
-        Notes: `Audio generation failed: ${error.message.substring(0, 100)}`,
-      });
-
-      // Delete partial file if exists
-      if (filename) {
-        await s3Client
-          .send(
-            new DeleteObjectCommand({
-              Bucket: process.env.AWS_BUCKET_NAME,
-              Key: filename,
-            })
-          )
-          .catch((deleteErr) => {
-            console.error("Failed to clean up failed upload:", deleteErr);
-          });
+      try {
+        await updateProject(projectId, {
+          Status: "Error",
+          Notes: `Audio generation failed: ${String(error.message || error).substring(
+            0,
+            200
+          )}`,
+        });
+      } catch (e) {
+        console.warn("Failed to update project status after error:", e.message);
       }
+
       throw error;
     }
   },

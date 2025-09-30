@@ -180,21 +180,12 @@ async function transcodeAudio(inputPath, preferredFormats) {
     const tmpDir = path.resolve(__dirname, 'tmp_audio');
     fs.ensureDirSync(tmpDir);
 
-    // Try WAV first (site accepts WAV with 44.1kHz, 16-bit PCM, mono and asks
+    // Try mp3 first (site accepts WAV with 44.1kHz, 16-bit PCM, mono and asks
     // for max peak around -3dB). Use a conservative, explicit -3dB gain rather
     // than loudnorm which can add complexity. Fall back to MP3 with a simple
     // -3dB attenuation if needed.
     const tryFormats =
       preferredFormats || [
-      {
-        ext: 'wav',
-        args: [
-          '-ar', '44100',
-          '-ac', '1',
-          '-c:a', 'pcm_s16le',
-          '-af', 'volume=-3dB'
-        ]
-      },
       {
         ext: 'mp3',
         args: [
@@ -202,6 +193,15 @@ async function transcodeAudio(inputPath, preferredFormats) {
           '-ac', '1',
           '-codec:a', 'libmp3lame',
           '-b:a', '128k',
+          '-af', 'volume=-3dB'
+        ]
+      },
+            {
+        ext: 'wav',
+        args: [
+          '-ar', '44100',
+          '-ac', '1',
+          '-c:a', 'pcm_s16le',
           '-af', 'volume=-3dB'
         ]
       }
