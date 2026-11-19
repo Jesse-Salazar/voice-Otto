@@ -2,8 +2,8 @@
 require('dotenv/config');
 
 function validateEnvironment() {
+  const useBrowserless = String(process.env.USE_BROWSERLESS || '').toLowerCase() === 'true';
   const requiredVars = [
-    'BROWSERLESS_API_KEY',
     'VOICE123_EMAIL',
     'VOICE123_PASSWORD',
     'ELEVENLABS_API_KEY',
@@ -12,6 +12,9 @@ function validateEnvironment() {
     'GOOGLE_SERVICE_ACCOUNT_EMAIL',
     'GOOGLE_PRIVATE_KEY'
   ];
+  if (useBrowserless) {
+    requiredVars.push('BROWSERLESS_API_KEY');
+  }
 
   const missingVars = requiredVars.filter(varName => !process.env[varName]);
 

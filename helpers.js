@@ -317,7 +317,7 @@ module.exports.ensureBudgetFields = ensureBudgetFields;
 module.exports.safeQuerySelector = async (page, selector, fallback = '') => {
   if (!selector) return fallback;
   try {
-    return await page.$eval(selector, el => el.textContent.trim());
+    return await page.$eval(selector, el => (el.innerText || el.textContent || '').trim());
   } catch (error) {
     return fallback;
   }
