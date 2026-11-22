@@ -13,3 +13,14 @@ helpers-backup.js
 .DS_Store
 .vscode
 .qodo
+.voice-otto-local/
+
+# Local Python environment
+.venv/
+
+# Local Chrome browser profile
+.chrome-user-data/
+
+# Python bytecode
+__pycache__/
+*.pyc
