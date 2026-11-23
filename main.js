@@ -1,43 +1,35 @@
 require("dotenv").config({ path: ".env" });
-const validateEnv = require("./validateEnv");
-const voice123 = require("./voice123");
-const voiceBuild = require("./elevenlabs");
-const { updateProject } = require("./googleSheets");
 
 async function main() {
-  try {
-    console.log("🚀 Starting Voice123 Automation...");
+  const dryRun = process.env.DRY_RUN !== "false";
+  const { checkInvites } = require("./voice123");
 
-    // 1. Login and extract project details
-    const projects = await voice123.checkInvites();
-
-    // 2. Process audio for each project
-    for (const project of projects) {
-      try {
-        if (project.status === "Processing" && project.script) {
-          await voiceBuild.generateAudio(project.id, project.script);
-        } else {
-          console.log(
-            `⏩ Skipping project ${project.id} - Needs Manual Review`
-          );
-        }
-      } catch (error) {
-        console.error(`🚧 Project ${project.id} failed:`);
-        console.error(error);
-        await updateProject(project.id, {
-          Status: "Error",
-          Notes: error.message,
-        });
-      }
-    }
-
-    console.log("\n🏁 All projects processed successfully");
-  } catch (error) {
-    console.error("🔥 Critical error:", error);
-    process.exit(1);
+  if (dryRun) {
+    const report = await checkInvites({ dryRun: true });
+    console.log(JSON.stringify(report, null, 2));
+    if (report.sheetsCheck === "Unavailable" || report.projects.some(project => project.error)) process.exitCode = 1;
+    return;
   }
+
+  const { permit } = await require("./execution-permit").openPermit();
+  if (permit.operation === "discovery") return checkInvites({ dryRun: false });
+  if (permit.operation !== "generation" || process.env.ENABLE_PAID_GENERATION !== "true") {
+    throw new Error("The named operation is not enabled for this workflow");
+  }
+
+  require("./validateEnv")();
+  const { generateAudio } = require("./elevenlabs");
+  const { getApprovalProject } = require("./googleSheets");
+  const row = await getApprovalProject({ id: permit.trackingId, voice123Id: permit.projectId });
+  return generateAudio(row.id, row.script);
 }
 
-validateEnv();
+if (require.main === module) {
+  main().catch(error => {
+    if (process.env.DRY_RUN === "false") console.error("Workflow failed:", error);
+    else console.error(JSON.stringify({ dryRun: true, error: error.message }));
+    process.exitCode = 1;
+  });
+}
 
-main();
+module.exports = main;

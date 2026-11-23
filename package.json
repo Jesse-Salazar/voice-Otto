@@ -5,7 +5,8 @@
   "scripts": {
     "generate": "node main.js",
     "approve": "node approval.js",
-    "upload": "node upload.js"
+    "upload": "node upload.js",
+    "test": "ATTACHMENT_PYTHON=\"$PWD/.venv/bin/python\" node --test test/*.test.js"
   },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.808.0",

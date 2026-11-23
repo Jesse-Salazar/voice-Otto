@@ -1,0 +1,2 @@
+-r ../requirements-attachments.txt
+xlwt==1.3.0

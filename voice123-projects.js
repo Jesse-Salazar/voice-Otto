@@ -154,6 +154,7 @@ function auditionReadiness(details, invitationStatus) {
   if (invitationStatus === "Revision requested") return { status: "Needs Review", reason: "Revision request requires manual review" };
   if (invitationStatus !== "New invitation") return { status: "Needs Review", reason: "Invitation status requires review" };
   if (details.proposalEligibility === "No") return { status: "Needs Review", reason: "Project is closed to proposals" };
+  if (details.proposalEligibility !== "Yes") return { status: "Needs Review", reason: "Proposal eligibility is not confirmed" };
   if (details.fieldStatus !== "Valid") return { status: "Needs Review", reason: "Audition field is missing or ambiguous" };
   const text = details.fieldText;
   if (details.attachments.length ||

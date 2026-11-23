@@ -1,64 +1,22 @@
-const { getProjectsByStatus, updateProject } = require("./googleSheets");
-const { downloadFile } = require("./s3");
-const { uploadAudio } = require("./voice123");
-const fs = require("fs");
-const path = require("path");
-
-async function processApproved() {
-  const projects = await getProjectsByStatus("Approved");
-  const tempDir = "./tmp_audio";
-
-  for (const project of projects) {
-    let filePath;
-    try {
-      // Validate project has audio file
-      if (!project.audioFileName) {
-        throw new Error("Missing audio file reference");
-      }
-
-      // Download from S3
-      const audioData = await downloadFile(project.audioFileName);
-
-      // Ensure temp directory exists
-      await fs.promises.mkdir(tempDir, { recursive: true });
-      filePath = path.join(tempDir, project.audioFileName);
-
-      // Write to temp file
-      await fs.promises.writeFile(filePath, audioData);
-
-      const absolutePath = path.resolve(filePath);
-      if (!fs.existsSync(absolutePath)) {
-        throw new Error(
-          `❌ Critical Error: Temp file not created at ${absolutePath}`
-        );
-      }
-
-      // Upload to Voice123
-      const success = await uploadAudio(project.url, filePath);
-
-      // Update status
-      await updateProject(project.id, {
-        Status: success ? "Uploaded" : "Upload Failed",
-        "Uploaded At": new Date().toISOString(),
-        ...(success ? {} : { Notes: "Failed to verify upload completion" }),
-      });
-    } catch (error) {
-      console.error(`Error processing ${project.id}:`, error);
-      await updateProject(project.id, {
-        Status: "Upload Failed",
-        Notes: error.message.substring(0, 200),
-      });
-    } finally {
-      // Cleanup temp file
-      if (filePath) {
-        try {
-          await fs.promises.unlink(filePath);
-        } catch (cleanupError) {
-          console.error("Cleanup failed:", cleanupError);
-        }
-      }
-    }
+async function main(args = process.argv.slice(2)) {
+  require("dotenv").config();
+  if (process.env.DRY_RUN !== "false" || process.env.ENABLE_VOICE123_SUBMISSION !== "true") {
+    throw new Error("Voice123 submission is disabled");
   }
+  const sheets = require("./googleSheets");
+  const { uploadAudio } = require("./voice123");
+  const { permit } = await require("./execution-permit").openPermit("submission");
+  if (args.length === 3 && args[0] === "--local") {
+    if (args[1] !== permit.trackingId) throw new Error("Submission permit targets another tracking ID");
+    const project = await sheets.getApprovalProject({ id: permit.trackingId, voice123Id: permit.projectId });
+    return uploadAudio(project.url, args[2]);
+  }
+  if (args.length) throw new Error("Usage: node upload.js [--local TRACKING_ID AUDIO_FILE]");
+  const project = await sheets.getApprovalProject({ id: permit.trackingId, voice123Id: permit.projectId });
+  return uploadAudio(project.url);
 }
 
-processApproved();
+if (require.main === module) {
+  main().catch(error => { console.error(error.message); process.exitCode = 1; });
+}
+module.exports = main;
