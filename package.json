@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "main.js",
   "scripts": {
+    "evaluate": "node evaluate-opportunities.js",
     "generate": "node main.js",
     "approve": "node approval.js",
     "upload": "node upload.js",

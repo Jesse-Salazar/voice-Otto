@@ -1,0 +1,5 @@
+{
+  "preferredTerms": ["narration", "museum"],
+  "avoidTerms": ["radio spot"],
+  "budgetTargets": { "USD": 400 }
+}

@@ -7,6 +7,7 @@ A setting that enables an operation does not authorize using it.
 
 | Entry point | Required conditions and effects |
 | --- | --- |
+| `npm run evaluate -- <invitations.json> [preferences.json]` | Reads operator-supplied local JSON and prints a ranked shortlist. No browser, credentials, network access, or production state are needed. |
 | `node connectivity-check.js` | Dry-run with generation and submission disabled. Only the scoped read-only probes. |
 | `node main.js` or `checkInvites()` | Default dry-run reads and previews. Exact `DRY_RUN=false` and one discovery permit allow locking and persisting that one project to Sheets and local history. This holds even when both provider switches are disabled. Explicit `checkInvites({dryRun:false})` cannot override dry-run. |
 | `generateAudio(id, script)` or generation via `node main.js` | Exact `DRY_RUN=false` and `ENABLE_PAID_GENERATION=true`. Requires a generation permit, the matching project, current project review, generation approval, settings and free local worker lock. It may claim the row, call ElevenLabs, store audio in S3, and update Sheets. `SAVE_LOCAL_AUDIO=false` disables only the extra local audio copy. |
@@ -19,6 +20,91 @@ tracking ID named by the current permit and verify its Voice123 project.
 The approval CLI still records a separate interactive human decision for
 one named tracking ID. An execution permit cannot grant a project review,
 paid-generation approval, submission approval, or voice-rights clearance.
+
+## Offline opportunity evaluation
+
+From the repository root, try the evaluator with synthetic data:
+
+```sh
+npm run --silent evaluate -- test/fixtures/offline-invitations.json test/fixtures/offline-preferences.json
+```
+
+For real intake, save a private JSON file outside the repository. Its top
+level is an array of invitations. Use the synthetic fixture as the schema
+example. Paste the project description and record what you can verify from
+the invitation. Leave uncertain values absent or use `null` for data and
+`unknown` for states. Duplicate project IDs, invalid dates, invalid enum
+values, and unexpected fields fail the intake with a nonzero exit. Fix the
+input before relying on any ranking.
+
+| Field | What to enter |
+| --- | --- |
+| `projectId`, `title` | Required. Use the actual alphanumeric Voice123 project ID and invitation title. |
+| `deadline` | ISO date and time with a timezone such as `2027-01-20T17:00:00-06:00`. Use `null` if you cannot establish the time or timezone. |
+| `budget` | An object such as `{"amount":500,"currency":"USD"}` for a confirmed single amount. Use `null` for an unreported budget or a range with no confirmed amount. |
+| `description` | The project description or a faithful summary. |
+| `invitationStatus` | `new`, `revision_requested`, `closed`, `withdrawn`, `declined`, or `unknown`. |
+| `proposalStatus` | `open`, `closed`, or `unknown`. Record `open` only when the invitation explicitly supports it. |
+| `scriptAvailability` | `verified_usable` after you reviewed actual audition copy, `available` if copy exists and usability is unverified, `missing`, or `unknown`. |
+| `scriptText` | Optional. If provided, the existing script heuristic flags likely instructions, attachment references, and short material for review. You can use `verified_usable` without copying client script into the intake. |
+| `attachmentRequirements` | `none`, `required`, or `unknown`. Required files keep the item in manual review. |
+| `rightsStatus` | `reviewed_no_concerns` after reviewing the usage terms for this opportunity, `review_required`, or `unknown`. This is triage evidence only. |
+
+An optional separate preferences JSON file has `preferredTerms` and
+`avoidTerms` arrays and a `budgetTargets` object keyed by currency. Terms
+are case-insensitive substrings matched against title and description.
+Each distinct preferred hit adds two points, each avoid hit subtracts
+two, and a reported budget earns or loses two relative to its currency's
+target. Unreported budgets and currencies without a target earn zero.
+Preferences affect ordering only. If the preferences file is omitted or
+empty, opportunities within a classification sort by earliest known
+deadline, then project ID.
+
+Run with your own local paths:
+
+```sh
+npm run --silent evaluate -- /absolute/path/invitations.json /absolute/path/preferences.json
+```
+
+Review `eligible` items first. They have a confirmed future deadline, a
+new invitation open to proposals, and usable audition material based on
+the supplied evidence. Resolve the listed reasons for `needs_review`
+items and rerun with updated evidence. `ineligible` indicates a confirmed
+closed or inactive invitation or a passed deadline. A report is a
+point-in-time shortlist and grants no operational approval. Output
+contains title, deadline, budget, findings, and score breakdown. Keep it
+private as opportunity data.
+
+### Salazar Media Business Policy v1
+
+Use the existing preferences format with the supplied
+`salazar-media-preferences.json` and opt in explicitly:
+
+```sh
+npm run --silent evaluate -- --salazar-policy-v1 test/fixtures/offline-invitations.json salazar-media-preferences.json
+```
+
+The preferences object still accepts only `preferredTerms` and `avoidTerms`
+(arrays of nonempty strings) and `budgetTargets` (three-letter uppercase
+currency codes mapped to nonnegative numbers). The flag requires a
+preferences file. Omitting it retains the existing evaluation and scoring.
+
+With this policy, a reported zero amount or a clear, uncontradicted
+compensation statement in the description makes an invitation ineligible.
+The text check is intentionally conservative. Title-only, conditional,
+and ambiguous wording can flag business risk. Common negations such as
+“This is not unpaid work” do not count as risk matches. Conflicting budget
+evidence requires review and contributes zero budget points.
+
+A positive USD budget below the configured target of $100 requires
+review unless an independent disqualification applies. $100 and above
+earn the existing positive budget points. Unreported budgets earn no
+budget points. Preferred-category aliases count once per category, and
+risk terms affect fit without independently disqualifying an opportunity.
+An open proposal deadline less than 24 hours away adds an `Urgent:`
+reason without changing classification. The report fields and existing
+classification values are unchanged. Disqualifying reasons appear before
+secondary review reasons and warnings.
 
 ## Single-use permits
 

@@ -1,0 +1,5 @@
+{
+  "preferredTerms": ["narration", "commercials", "corporate / explainer", "e-learning", "audiobooks"],
+  "avoidTerms": ["unpaid work", "volunteer work", "zero budget", "just for fun"],
+  "budgetTargets": { "USD": 100 }
+}

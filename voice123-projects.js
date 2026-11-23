@@ -150,21 +150,23 @@ function readSpecs() {
   };
 }
 
+function auditionMaterialNeedsReview(text) {
+  return /\.(?:xlsx|xls|pdf|docx|doc|txt)\b|\b(?:attached|attachments?|spreadsheet)\b|\b(?:role|project|character|job) description\b|\b(?:see|refer to|read from|follow|use)\b.{0,60}\b(?:brief|specs|document|link|provided script|script below|script above)\b|\b(?:script|copy|lines) (?:will (?:be sent|follow|be provided)|to (?:come|follow))\b/i.test(text) ||
+      /^(?:please\s+)?(?:send|provide|submit|record)\b.{0,100}\b(?:a sample|an audition|a demo|your demo)\b/i.test(text) ||
+      text.length < 50;
+}
+
 function auditionReadiness(details, invitationStatus) {
   if (invitationStatus === "Revision requested") return { status: "Needs Review", reason: "Revision request requires manual review" };
   if (invitationStatus !== "New invitation") return { status: "Needs Review", reason: "Invitation status requires review" };
   if (details.proposalEligibility === "No") return { status: "Needs Review", reason: "Project is closed to proposals" };
   if (details.proposalEligibility !== "Yes") return { status: "Needs Review", reason: "Proposal eligibility is not confirmed" };
   if (details.fieldStatus !== "Valid") return { status: "Needs Review", reason: "Audition field is missing or ambiguous" };
-  const text = details.fieldText;
-  if (details.attachments.length ||
-      /\.(?:xlsx|xls|pdf|docx|doc|txt)\b|\b(?:attached|attachments?|spreadsheet)\b|\b(?:role|project|character|job) description\b|\b(?:see|refer to|read from|follow|use)\b.{0,60}\b(?:brief|specs|document|link|provided script|script below|script above)\b|\b(?:script|copy|lines) (?:will (?:be sent|follow|be provided)|to (?:come|follow))\b/i.test(text) ||
-      /^(?:please\s+)?(?:send|provide|submit|record)\b.{0,100}\b(?:a sample|an audition|a demo|your demo)\b/i.test(text) ||
-      text.length < 50) {
+  if (details.attachments.length || auditionMaterialNeedsReview(details.fieldText)) {
     return { status: "Needs Review", reason: "Audition material may be incomplete" };
   }
   if (details.rightsFlags?.length) return { status: "Needs Review", reason: "Voice rights require manual review" };
   return { status: "Processing", reason: null };
 }
 
-module.exports = { ORIGIN, PROJECT_PATH, projectIdentity, projectLinks, readSpecs, auditionReadiness };
+module.exports = { ORIGIN, PROJECT_PATH, projectIdentity, projectLinks, readSpecs, auditionReadiness, auditionMaterialNeedsReview };

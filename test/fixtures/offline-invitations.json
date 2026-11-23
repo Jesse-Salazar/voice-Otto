@@ -1,0 +1,33 @@
+[
+  {
+    "projectId": "SYNTHVO01",
+    "title": "Museum narration",
+    "deadline": "2099-05-20T16:00:00-05:00",
+    "budget": { "amount": 500, "currency": "USD" },
+    "description": "Narrate a synthetic museum exhibit for a family audience.",
+    "scriptAvailability": "verified_usable",
+    "attachmentRequirements": "none",
+    "invitationStatus": "new",
+    "proposalStatus": "open",
+    "rightsStatus": "reviewed_no_concerns"
+  },
+  {
+    "projectId": "SYNTHVO02",
+    "title": "Character dialogue",
+    "deadline": "2099-05-18T12:00:00Z",
+    "description": "Record dialogue for a fictional character.",
+    "scriptAvailability": "available",
+    "attachmentRequirements": "required",
+    "invitationStatus": "new",
+    "proposalStatus": "open",
+    "rightsStatus": "unknown"
+  },
+  {
+    "projectId": "SYNTHVO03",
+    "title": "Closed radio spot",
+    "deadline": "2099-06-01T22:00:00Z",
+    "description": "Read a synthetic radio spot.",
+    "invitationStatus": "closed",
+    "proposalStatus": "closed"
+  }
+]
