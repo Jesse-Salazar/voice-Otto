@@ -52,7 +52,7 @@ function termEvidence(clauses, term) {
   return { affirmed, negated };
 }
 
-function assessSalazarPolicy(project, preferences, now) {
+function assessSharedSalazarPolicy(project, preferences) {
   const descriptionClauses = compensationClauses(project.description ?? "");
   const clauses = [...compensationClauses(project.title), ...descriptionClauses];
   const text = (project.title + " " + (project.description ?? "")).toLowerCase().replace(/[‐‑–—]/g, "-");
@@ -79,11 +79,6 @@ function assessSalazarPolicy(project, preferences, now) {
     review.push("Reported USD budget is below the preferred target of $" + usdTarget);
   }
   if (avoidMatches.length) warnings.push("Business-risk wording matched; verify the context before deciding");
-  const leadTime = project.deadline === null ? null : project.deadline - now;
-  if (project.proposalStatus === "open" && !inactiveInvitations.includes(project.invitationStatus) &&
-      leadTime > 0 && leadTime < minimumLeadTime) {
-    warnings.push("Urgent: open proposal deadline is less than 24 hours away");
-  }
 
   return {
     ineligible, review, warnings, avoidMatches, compensationConflict,
@@ -91,4 +86,14 @@ function assessSalazarPolicy(project, preferences, now) {
   };
 }
 
-module.exports = { assessSalazarPolicy };
+function assessSalazarPolicy(project, preferences, now) {
+  const assessment = assessSharedSalazarPolicy(project, preferences);
+  const leadTime = project.deadline === null ? null : project.deadline - now;
+  if (project.proposalStatus === "open" && !inactiveInvitations.includes(project.invitationStatus) &&
+      leadTime > 0 && leadTime < minimumLeadTime) {
+    assessment.warnings.push("Urgent: open proposal deadline is less than 24 hours away");
+  }
+  return assessment;
+}
+
+module.exports = { assessSalazarPolicy, assessSharedSalazarPolicy, minimumLeadTime };

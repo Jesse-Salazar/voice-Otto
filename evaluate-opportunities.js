@@ -2,6 +2,7 @@ const fs = require("node:fs/promises");
 const { parseArgs } = require("node:util");
 const { auditionMaterialNeedsReview, auditionReadiness } = require("./voice123-projects");
 const { assessSalazarPolicy } = require("./salazar-media-policy");
+const { assessSalazarPolicyV2 } = require("./salazar-media-policy-v2");
 
 const invitationStatuses = ["new", "revision_requested", "closed", "withdrawn", "declined", "unknown"];
 const proposalStatuses = ["open", "closed", "unknown"];
@@ -9,6 +10,16 @@ const scriptStatuses = ["verified_usable", "available", "missing", "unknown"];
 const attachmentStatuses = ["none", "required", "unknown"];
 const rightsStatuses = ["reviewed_no_concerns", "review_required", "unknown"];
 const classifications = ["eligible", "needs_review", "ineligible"];
+const channelEvidence = ["voice123", "external"];
+const evidenceChoices = {
+  scriptLanguage: ["english", "non_english", "mixed"],
+  paymentChannel: channelEvidence,
+  paymentSecurity: ["secured", "unsecured"],
+  paymentTerms: ["platform_standard", "nonstandard"],
+  auditionChannel: channelEvidence,
+  communicationChannel: channelEvidence,
+  transactionChannel: channelEvidence
+};
 
 class InputError extends Error {}
 
@@ -19,6 +30,24 @@ function requireObject(value, fields, label) {
   if (fields && Object.keys(value).some(key => !fields.includes(key))) {
     throw new InputError(label + " contains an unexpected field");
   }
+}
+
+function readOwnDataObject(value, fields, label) {
+  requireObject(value, null, label);
+  const prototype = Object.getPrototypeOf(value);
+  if (prototype !== Object.prototype && prototype !== null) {
+    throw new InputError(label + " must be a plain data object");
+  }
+  const data = Object.create(null);
+  for (const key of Reflect.ownKeys(value)) {
+    const descriptor = Object.getOwnPropertyDescriptor(value, key);
+    if (typeof key !== "string" || !descriptor.enumerable || !Object.hasOwn(descriptor, "value")) {
+      throw new InputError(label + " must contain only enumerable string-keyed data properties");
+    }
+    if (!fields.includes(key)) throw new InputError(label + " contains an unexpected field");
+    data[key] = descriptor.value;
+  }
+  return data;
 }
 
 function optionalText(value, label) {
@@ -45,20 +74,33 @@ function readDeadline(value, label) {
   return time;
 }
 
-function readBudget(value, label) {
+function readBudget(value, label, ownDataOnly = false) {
   if (value == null) return null;
-  requireObject(value, ["amount", "currency"], label);
-  const { amount, currency } = value;
+  const fields = ["amount", "currency"];
+  if (!ownDataOnly) requireObject(value, fields, label);
+  const { amount, currency } = ownDataOnly ? readOwnDataObject(value, fields, label) : value;
   if (!Number.isFinite(amount) || amount < 0 || typeof currency !== "string" || !/^[A-Z]{3}$/.test(currency)) {
     throw new InputError(label + " requires a nonnegative amount and a three-letter uppercase currency");
   }
   return { amount, currency };
 }
 
-function readInvitation(value, index) {
+function readSalazarEvidence(value, label) {
+  const evidence = readOwnDataObject(value ?? {}, Object.keys(evidenceChoices), label);
+  return Object.fromEntries(Object.entries(evidenceChoices).map(([field, choices]) => [
+    field, readStatus(evidence[field], [...choices, "unknown", "conflicting"], label + "." + field)
+  ]));
+}
+
+function readInvitation(value, index, salazarPolicyV2) {
   const label = "Invitation " + (index + 1);
-  requireObject(value, ["projectId", "title", "deadline", "budget", "description", "scriptAvailability",
-    "scriptText", "attachmentRequirements", "invitationStatus", "proposalStatus", "rightsStatus"], label);
+  const fields = ["projectId", "title", "deadline", "budget", "description", "scriptAvailability",
+    "scriptText", "attachmentRequirements", "invitationStatus", "proposalStatus", "rightsStatus"];
+  if (salazarPolicyV2) {
+    value = readOwnDataObject(value, [...fields, "salazarEvidence"], label);
+  } else {
+    requireObject(value, fields, label);
+  }
   const projectId = optionalText(value.projectId, label + " projectId");
   const title = optionalText(value.title, label + " title");
   if (!projectId || !/^[a-z0-9]+$/i.test(projectId) || !title) {
@@ -67,14 +109,15 @@ function readInvitation(value, index) {
   return {
     projectId: projectId.toUpperCase(), title,
     deadline: readDeadline(value.deadline, label + " deadline"),
-    budget: readBudget(value.budget, label + " budget"),
+    budget: readBudget(value.budget, label + " budget", salazarPolicyV2),
     description: optionalText(value.description, label + " description"),
     scriptText: optionalText(value.scriptText, label + " scriptText"),
     scriptAvailability: readStatus(value.scriptAvailability, scriptStatuses, label + " scriptAvailability"),
     attachmentRequirements: readStatus(value.attachmentRequirements, attachmentStatuses, label + " attachmentRequirements"),
     invitationStatus: readStatus(value.invitationStatus, invitationStatuses, label + " invitationStatus"),
     proposalStatus: readStatus(value.proposalStatus, proposalStatuses, label + " proposalStatus"),
-    rightsStatus: readStatus(value.rightsStatus, rightsStatuses, label + " rightsStatus")
+    rightsStatus: readStatus(value.rightsStatus, rightsStatuses, label + " rightsStatus"),
+    ...(salazarPolicyV2 ? { salazarEvidence: readSalazarEvidence(value.salazarEvidence, label + " salazarEvidence") } : {})
   };
 }
 
@@ -151,15 +194,27 @@ function scoreFit(project, preferences, policy) {
   };
 }
 
-function evaluateOpportunities(invites, settings = {}, now = Date.now(), { salazarPolicyV1 = false } = {}) {
+function requireSinglePolicy({ salazarPolicyV1, salazarPolicyV2 }) {
+  if (salazarPolicyV1 && salazarPolicyV2) {
+    throw new InputError("Salazar Media Policy v1 and v2 are mutually exclusive");
+  }
+}
+
+function evaluateOpportunities(invites, settings = {}, now = Date.now(), options = {}) {
+  requireSinglePolicy(options);
+  const { salazarPolicyV1 = false, salazarPolicyV2 = false } = options;
   if (!Array.isArray(invites)) throw new InputError("Invitations must be a JSON array");
   const preferences = readPreferences(settings);
   const seen = new Set();
-  const ranked = invites.map((entry, index) => {
-    const project = readInvitation(entry, index);
+  const projects = invites.map((entry, index) => {
+    const project = readInvitation(entry, index, salazarPolicyV2);
     if (seen.has(project.projectId)) throw new InputError("Duplicate Voice123 project ID in intake");
     seen.add(project.projectId);
-    const policy = salazarPolicyV1 ? assessSalazarPolicy(project, preferences, now) : null;
+    return project;
+  });
+  const assessPolicy = salazarPolicyV2 ? assessSalazarPolicyV2 : salazarPolicyV1 ? assessSalazarPolicy : null;
+  const ranked = projects.map(project => {
+    const policy = assessPolicy?.(project, preferences, now);
     return { project, result: classify(project, now, policy), fit: scoreFit(project, preferences, policy) };
   });
   ranked.sort((a, b) =>
@@ -191,19 +246,28 @@ async function readLocalJson(filename, label) {
 
 if (require.main === module) {
   (async () => {
-    const usage = "Usage: npm run evaluate -- [--salazar-policy-v1] <invitations.json> [preferences.json]";
+    const usage = "Usage: npm run evaluate -- [--salazar-policy-v1 | --salazar-policy-v2] <invitations.json> [preferences.json]";
     let args;
     try {
-      args = parseArgs({ options: { "salazar-policy-v1": { type: "boolean" } }, allowPositionals: true });
+      args = parseArgs({
+        options: { "salazar-policy-v1": { type: "boolean" }, "salazar-policy-v2": { type: "boolean" } },
+        allowPositionals: true
+      });
     } catch {
       throw new InputError(usage);
     }
     const [invitesPath, preferencesPath, ...extra] = args.positionals;
-    const salazarPolicyV1 = args.values["salazar-policy-v1"];
-    if (!invitesPath || extra.length || (salazarPolicyV1 && !preferencesPath)) throw new InputError(usage);
+    const options = {
+      salazarPolicyV1: args.values["salazar-policy-v1"],
+      salazarPolicyV2: args.values["salazar-policy-v2"]
+    };
+    requireSinglePolicy(options);
+    if (!invitesPath || extra.length || ((options.salazarPolicyV1 || options.salazarPolicyV2) && !preferencesPath)) {
+      throw new InputError(usage);
+    }
     const invites = await readLocalJson(invitesPath, "Invitations");
     const settings = preferencesPath ? await readLocalJson(preferencesPath, "Preferences") : {};
-    console.log(JSON.stringify(evaluateOpportunities(invites, settings, Date.now(), { salazarPolicyV1 }), null, 2));
+    console.log(JSON.stringify(evaluateOpportunities(invites, settings, Date.now(), options), null, 2));
   })().catch(error => {
     console.error(error instanceof InputError ? error.message : "Offline evaluation failed");
     process.exitCode = 1;

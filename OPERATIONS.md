@@ -106,6 +106,148 @@ reason without changing classification. The report fields and existing
 classification values are unchanged. Disqualifying reasons appear before
 secondary review reasons and warnings.
 
+### Salazar Media Business Policy v2
+
+Use v2 to assess business eligibility from local, operator-supplied
+invitation JSON. Required recording material must be English. Payment
+must go through Voice123, be explicitly secured, and follow standard
+Voice123 secured payment terms without separately negotiated extensions.
+Compensation must be positive. Auditions, project communications, and
+business transactions must stay on Voice123.
+
+Run from the repository root with the existing Salazar preferences:
+
+```sh
+npm run --silent evaluate -- --salazar-policy-v2 /absolute/path/invitations.json salazar-media-preferences.json
+```
+
+The CLI uses the current clock. For a reproducible comparison, pass a
+fixed timestamp in milliseconds to the exported evaluator:
+
+```js
+const { readFileSync } = require("node:fs");
+const { evaluateOpportunities } = require("./evaluate-opportunities");
+const invitations = JSON.parse(readFileSync("/absolute/path/invitations.json", "utf8"));
+const preferences = require("./salazar-media-preferences.json");
+const now = Date.parse("2099-05-18T00:00:00Z");
+const report = evaluateOpportunities(invitations, preferences, now, { salazarPolicyV2: true });
+console.log(JSON.stringify(report, null, 2));
+```
+
+The CLI requires a preferences file with either policy flag. Use only
+one of `--salazar-policy-v1` and `--salazar-policy-v2`, or only one of the
+corresponding programmatic options `salazarPolicyV1` and
+`salazarPolicyV2`. Selecting both is an input error. Omit both for the
+default evaluator. Legacy invitations remain valid in all modes. Remove
+`salazarEvidence` from invitations for default or v1 evaluation because
+their strict schemas reject the field.
+
+#### Evidence and classification
+
+Supply the optional nested `salazarEvidence` object with these
+case-sensitive values.
+
+| Field | Accepted values |
+| --- | --- |
+| `scriptLanguage` | `english`, `non_english`, `mixed`, `unknown`, `conflicting` |
+| `paymentChannel` | `voice123`, `external`, `unknown`, `conflicting` |
+| `paymentSecurity` | `secured`, `unsecured`, `unknown`, `conflicting` |
+| `paymentTerms` | `platform_standard`, `nonstandard`, `unknown`, `conflicting` |
+| `auditionChannel` | `voice123`, `external`, `unknown`, `conflicting` |
+| `communicationChannel` | `voice123`, `external`, `unknown`, `conflicting` |
+| `transactionChannel` | `voice123`, `external`, `unknown`, `conflicting` |
+
+- Determine script language from all required recording material, including
+  required alternate takes. Use `mixed` when required material includes
+  English and non-English copy. Description language alone establishes
+  neither.
+- Record `secured` and `platform_standard` only with explicit evidence for
+  each. A positive budget, an invitation, visible upload controls, or
+  Voice123 as the payment channel are insufficient. Record separately
+  negotiated payment extensions as `nonstandard`.
+- Record `external` when off-platform activity is required. If an external
+  route is optional and a fully compliant Voice123 route is explicitly
+  available, record the compliant route. The evaluator never recommends
+  an external route. External reference links alone do not establish
+  off-platform business activity.
+- Use `unknown` when evidence is insufficient and `conflicting` when
+  evidence contradicts itself. Omitted or null objects and values become
+  `unknown`. Unexpected keys, invalid types, and unsupported values fail
+  input validation.
+
+Confirmed disqualifications make a project `ineligible`. Otherwise,
+unconfirmed or conflicting evidence and other review findings make it
+`needs_review`. With both sets of findings clear, it is `eligible`.
+Reports list disqualifications first, review findings next, and advisory
+warnings last. Existing proposal, invitation, deadline, script usability,
+attachment, and usage-rights checks still apply.
+
+Keep the existing `budget` object with `amount` and `currency`. Confirmed
+unpaid work and a reported zero budget disqualify. An unreported amount
+or conflicting compensation evidence requires review. Positive USD
+amounts below the preferred USD 100 target also require review. Budget
+and category fit cannot override a disqualification.
+
+V2 adds an urgency advisory when the deadline is strictly between now
+and 24 hours away, the invitation is new, a revision request, or unknown,
+and proposal status is open or unknown. With unknown proposal status,
+the advisory explicitly preserves that uncertainty. Urgency can accompany
+an ineligible result and does not change classification.
+
+#### Synthetic compliant invitation
+
+With the fixed timestamp above, this invitation is eligible.
+
+```json
+[
+  {
+    "projectId": "SYNTHV2",
+    "title": "Museum narration",
+    "deadline": "2099-05-20T16:00:00-05:00",
+    "budget": { "amount": 500, "currency": "USD" },
+    "description": "Record an English narration for a synthetic museum exhibit.",
+    "scriptText": "The harbor lanterns cast a warm glow over the boats as visitors arrived for the evening tour.",
+    "scriptAvailability": "verified_usable",
+    "attachmentRequirements": "none",
+    "invitationStatus": "new",
+    "proposalStatus": "open",
+    "rightsStatus": "reviewed_no_concerns",
+    "salazarEvidence": {
+      "scriptLanguage": "english",
+      "paymentChannel": "voice123",
+      "paymentSecurity": "secured",
+      "paymentTerms": "platform_standard",
+      "auditionChannel": "voice123",
+      "communicationChannel": "voice123",
+      "transactionChannel": "voice123"
+    }
+  }
+]
+```
+
+#### Colgate acceptance comparison
+
+The inline evaluator regression test reproduces invitation `IO0BMO0L0`
+at `2026-11-26T05:20:00Z`. The provisional CST offset yields a normalized
+deadline of `2026-11-26T19:09:00.000Z`, 13 hours and 49 minutes away.
+
+| Policy | Classification and findings | Fit |
+| --- | --- | --- |
+| v1 | `needs_review` for unknown proposal and attachment status and pending rights review. No urgency advisory. | 4, with `commercials` preferred, no avoid matches, and `meets_target` budget fit. |
+| v2 | `ineligible` for non-English required copy, external payment and transactions (one combined finding), unsecured payment, nonstandard terms, external audition submission, and external communications. The same review findings follow, then an urgency advisory that preserves proposal uncertainty. | Same as v1. |
+
+The operator supplied the English description summary and structured
+evidence. The regression preserves the Spanish script. The timezone,
+proposal eligibility, attachment requirements, and usage approval retain
+their stated qualifications. The native-speaker requirement and external
+references add no separate disqualification.
+
+Evidence collection is manual. The evaluator does not fetch links, verify
+platform status or payment terms, detect script language, or independently
+validate the operator's evidence. Offline eligibility grants no approval
+to generate audio, upload files, submit proposals, or take other live
+actions.
+
 ## Single-use permits
 
 The local issue, revoke and reconcile APIs are in `execution-permit.js`.
